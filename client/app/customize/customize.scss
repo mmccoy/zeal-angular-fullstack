@@ -1,0 +1,130 @@
+@import "partials/scss/vars";
+@import "partials/scss/mixins";
+@import "partials/scss/global";
+@import "partials/scss/typography";
+@import "partials/scss/select-player";
+@import "partials/scss/select-profile";
+@import "partials/scss/select-model";
+@import "partials/scss/select-options";
+@import "partials/scss/select-review";
+@import "partials/scss/default-stick-colors";
+@import "partials/scss/cart";
+@import "partials/scss/mobile";
+
+[ui-view=""] {
+  height: calc(100% - 51px);
+  width: 100%;
+}
+
+.navbar-right {
+  margin-right: 10px;
+}
+
+.gutter-column {
+  padding-right: 0;
+}
+
+.navbar {
+  margin-bottom: 0 !important;
+}
+
+.list-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  text-transform: uppercase;
+}
+
+.gutter,
+.player-actions,
+.profile-actions {
+  flex-direction: column;
+
+  > li {
+    display: flex;
+    background-color: $darkGreyBg;
+    color: white;
+    border-bottom: 1px solid #000;
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      padding: 4px 0;
+    }
+
+    &:hover,
+    &.active {
+      cursor: pointer;
+      background-color: $zealRed;
+      color: white;
+    }
+  }
+
+  > li:last-child {
+    border-bottom: 0;
+  }
+
+  li.disabled {
+    background-color: #ddd;
+
+    &:hover,
+    &.active {
+      cursor: not-allowed;
+    }
+  }
+}
+
+.stage-left {
+  overflow-x: auto;
+  @include diagonalBackground(-45deg, #f8f8f8, #f5f5f5, 2px, 6px);
+}
+
+.stage-right {
+  overflow-x: auto;
+
+  > div {
+    position: absolute;
+    top: 46px;
+  }
+}
+
+.stage-right.shadowed {
+  box-shadow: -2px 0 3px #d4d4d4;
+}
+
+.options-accordian {
+  .panel {
+    margin-top: 0 !important;
+    border-radius: 0px !important;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+// Animations
+.ng-enter, .ng-leave {
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.ng-enter {
+  opacity: 0;
+}
+
+.ng-enter-active {
+  opacity: 1;
+}
+
+.ng-leave {
+  opacity: 1;
+}
+
+.ng-leave-active {
+  opacity: 0;
+}

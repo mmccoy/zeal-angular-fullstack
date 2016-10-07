@@ -1,0 +1,31 @@
+<div class="stick-details-card" ng-if="!customize.userStick.id">
+  <div class="content-wrap">
+    <h5>Select a stick</h5>
+    <p>Pick a stick on the left, and we'll tell you more about it over here.</p>
+  </div>
+</div>
+
+<div class="stick-details-card" ng-if="customize.userStick.id">
+  <h3>{{customize.userStick.series}} {{customize.userStick.name}}</h3>
+  <p class="stick-price">${{customize.userStick.price}}</p>
+  <ul class="stick-specs">
+    <li>
+      <h6>Kick point</h6>
+      <p>{{customize.userStick.features.kickpoint}}</p>
+    </li>
+    <li>
+      <h6>Weight</h6>
+      <p>{{customize.userStick.weight}}</p>
+    </li>
+    <li>
+      <h6>Blade</h6>
+      <p>{{customize.userStick.features.blade}}</p>
+    </li>
+    <li>
+      <h6>Shaft</h6>
+      <p>{{customize.userStick.features.shaft}}</p>
+    </li>
+  </ul>
+  <p class="stick-description">{{customize.userStick.description}}</p>
+  <button class="customize-button" ng-click="updateUserStick(customize.userStick)" ui-sref="customize.options">Customize It <img src="assets/images/icon_arrow_fwd.svg" alt=""></button>
+</div>

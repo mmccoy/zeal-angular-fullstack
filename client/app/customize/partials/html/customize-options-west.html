@@ -1,0 +1,54 @@
+{{optionStage}}
+<div class="content-wrap svg-canvas active-option-{{customize.optionStage}}">
+  <h3>Select the options for your {{customize.userStick.name}}</h3>
+  <div ng-if="customize.userStick.images" ng-init="svginclude = customize.userStick.images.root_path + '/' + customize.userStick.images.svg" class="options-stage-section options-stage-color">
+    <ng-include src="svginclude" style="width: 100%;"></ng-include>
+  </div>
+  <div class="options-stage-section options-stage-orientation {{customize.userStick.orientation|lowercase}}">
+    <h4 ng-if="!customize.userStick.orientation">Are you left or right handed?</h4>
+    <img ng-if="customize.userStick.orientation" ng-srcset="assets/images/orientation/right.png 1x" alt="{{customize.userStick.orientation}} handed" />
+  </div>
+  <div class="options-stage-section options-stage-pattern">
+    <img ng-srcset="assets/images/patterns/{{customize.userStick.pattern|lowercase}}.png 1x, assets/images/patterns/{{customize.userStick.pattern|lowercase}}@2x.png 2x" alt="{{customize.userStick.pattern}} Blade Pattern" />
+    <table class="pattern-chart">
+      <tr>
+        <td colspan="2">
+          <h5>Utility</h5>
+          <p>Utility copy</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h5>Compared</h5>
+          <p>Compared copy</p>
+        </td>
+        <td>
+          <h5>Face</h5>
+          <p>Face copy</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h5>Curved</h5>
+          <p>Curve copy</p>
+        </td>
+        <td>
+          <h5>Lie</h5>
+          <p>Lie copy</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="options-stage-section options-stage-flex">
+    <img ng-srcset="assets/images/flex/{{customize.userStick.orientation|lowercase}}/{{customize.userStick.flex}}.png 1x, assets/images/flex/{{customize.userStick.orientation|lowercase}}/{{customize.userStick.flex}}@2x.png 2x" alt="{{customize.userStick.flex}} Flex" />
+  </div>
+  <div class="options-stage-section options-stage-finish">
+    <h4 ng-if="!customize.userStick.finish">Choose a shaft coating</h4>
+    <img ng-if="customize.userStick.finish" class="zoom" data-magnify-src="assets/images/coating/{{customize.userStick.finish}}@2x.png" ng-srcset="assets/images/coating/{{customize.userStick.finish}}.png 1x, assets/images/coating/{{customize.userStick.finish}}@2x.png 2x" alt="{{customize.userStick.finish}} Coating" />
+  </div>
+  <!-- <script>$('.zoom').magnify();</script> -->
+  <div ng-init="persinclude = customize.userStick.images.root_path + '/' + customize.userStick.images.personalize" class="options-stage-section options-stage-personalize">
+    <div class="personalize-preview-text">&nbsp;{{customize.userStick.player.name}} {{customize.userStick.player.number}}&nbsp;</div>
+    <ng-include src="persinclude|lowercase" style="width: 100%;"></ng-include>
+  </div>
+</div>

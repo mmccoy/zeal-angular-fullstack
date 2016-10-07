@@ -1,0 +1,22 @@
+.player-actions {
+  li {
+    align-items: flex-start !important;
+    padding: 0 5rem;
+    position: relative;
+
+    h4 {
+      font-size: 55px;
+      text-transform: capitalize;
+    }
+  }
+
+  li:not(.disabled) {
+    background: repeating-linear-gradient(
+      -45deg,
+      #d61648,
+      #d61648 2px,
+      $zealRed 2px,
+      $zealRed 8px
+    );
+  }
+}

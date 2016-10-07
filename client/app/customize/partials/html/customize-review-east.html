@@ -1,0 +1,86 @@
+<table class="stick-review">
+  <tr>
+    <td>Position <i class="material-icons">edit</i></td>
+    <td>{{customize.userStick.position || 'Skater'}}</td>
+  </tr>
+  <tr>
+    <td>Size <i class="material-icons">edit</i></td>
+    <td>{{customize.userStick.profile || 'Senior'}}</td>
+  </tr>
+  <tr>
+    <td>Stick <i class="material-icons">edit</i></td>
+    <td>{{customize.userStick.name || 'PK1000'}}</td>
+  </tr>
+  <tr>
+    <td>Color <i class="material-icons">edit</i></td>
+    <td>
+      <div class="colors-review" ng-if="customize.userStick.customColor">
+        <div class="color-review">
+          <h6>Shaft</h6>
+          <span class="swatch" style="background-color: {{customize.userStick.customColor.shaft}}"></span>
+        </div>
+        <div class="color-review">
+          <h6>Accents</h6>
+          <span class="swatch" style="background-color: {{customize.userStick.customColor.accent}}"></span>
+        </div>
+        <div class="color-review">
+          <h6>Logo</h6>
+          <span class="swatch" style="background-color: {{customize.userStick.customColor.logo}}"></span>
+        </div>
+      </div>
+      <span ng-if="!customize.userStick.customColor">Colors</span>
+    </td>
+  </tr>
+  <tr>
+    <td>Orientation <i class="material-icons">edit</i></td>
+    <td>{{customize.userStick.orientation || 'Right Handed'}}</td>
+  </tr>
+  <tr>
+    <td>Blade Shape <i class="material-icons">edit</i></td>
+    <td>{{customize.userStick.pattern || 'Z90'}}</td>
+  </tr>
+  <tr>
+    <td>Flex <i class="material-icons">edit</i></td>
+    <td>{{customize.userStick.flex || '78'}}</td>
+  </tr>
+  <tr>
+    <td>Coating <i class="material-icons">edit</i></td>
+    <td>{{customize.userStick.finish || 'Matte'}}</td>
+  </tr>
+  <tr>
+    <td>Personalize <i class="material-icons">edit</i></td>
+    <td>
+      <div class="player-name-review" ng-if="customize.userStick.player">
+        <h6>Player Name</h6>
+        <span>{{customize.userStick.player.name}}</span>
+        <h6>Player Number</h6>
+        <span>{{customize.userStick.player.number}}</span>
+      </div>
+      <span ng-if="!customize.userStick.player">Player Name</span>
+    </td>
+  </tr>
+  <tr>
+    <td>Total Price</td>
+    <td>{{customize.userStick.price || '$199.99'}}</td>
+  </tr>
+</table>
+<!-- <button type="button" class="btn btn-primary review-button" ng-click="changeState('customize.review')">Add to cart <img src="assets/images/icon_arrow_fwd.svg" alt=""></button> -->
+<ngcart-addtocart id="{{ customize.userStick.id }}" name="{{ customize.userStick.name }}" price="{{ customize.userStick.price }}"
+                  quantity="1" quantity-max="30" data="customize.userStick"></ngcart-addtocart>
+
+<script type="text/ng-template" id="template/ngCart/addtocart.html">
+  <div ng-hide="attrs.id">
+    <a class="btn btn-lg btn-primary" ng-disabled="true" ng-transclude>Nope</a>
+  </div>
+  <div ng-show="attrs.id">
+    <div>
+      <button type="button" class="btn btn-primary review-button"
+              ng-click="ngCart.addItem(id, name, price, q, data);$state.go('customize.cart');"
+              ng-transclude>
+        Add to cart
+        <img src="assets/images/icon_arrow_fwd.svg" alt="">
+      </button>
+    </div>
+  </div>
+</script>
+

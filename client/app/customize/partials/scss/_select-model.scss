@@ -1,0 +1,122 @@
+.stick-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  img {
+    max-width: 100%;
+    margin: 2rem 0;
+  }
+
+  .stick-model-label {
+    border: 1px solid #222;
+    padding: .8rem 1.6rem;
+    margin-bottom: 1rem;
+    float: right;
+  }
+}
+
+.stick-list li.category-label {
+  line-height: 200%;
+  background-color: #111;
+  color: white;
+  padding: 4px 8px 4px 3rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+
+  span {
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-left: 8px;
+  }
+}
+
+.stick-list li.selected {
+  background-color: #b4b4b4 !important;
+  border-right: 10px solid $zealRed;
+
+  .stick-model-label {
+    border: 1px solid #444444;
+    background-color: #444444;
+    color: white;
+  }
+}
+
+.stick-list li.disabled {
+  filter: saturate(20%);
+  opacity: .2;
+  pointer-events: none;
+}
+
+.stick-list li:not(.category-label) {
+  padding: 3.5rem 4.5rem;
+  cursor: pointer;
+  background-color: #e9e9e9;
+}
+
+.stick-details-card {
+  width: 100%;
+  background-color: #f3f3f3;
+  padding: 1.5rem 3rem;
+  min-height: 150px;
+  transition: all 0.3s ease-out;
+
+  h3 {
+    font-size: 5.5rem;
+    font-weight: 700;
+  }
+
+  .stick-summary {
+    font-size: 2.4rem;
+  }
+
+  .stick-description {
+    margin-bottom: 2rem;
+  }
+
+  .stick-features {
+    font-size: 1.8rem;
+    color: #888;
+  }
+
+  .stick-price {
+    font-size: 2.8rem;
+  }
+
+  .stick-specs {
+    margin-bottom: 2rem;
+
+    h6 {
+      font-weight: 500;
+      font-size: 1.8rem;
+    }
+
+    display: flex;
+    width: 100%;
+    font-size: 1.5rem;
+
+    > li {
+      flex-basis: 25%;
+    }
+  }
+
+  .customize-button {
+    display: flex;
+    align-items: center;
+    min-width: 180px;
+    color: white;
+    font-size: 2.4rem;
+    font-weight: 500;
+    border: 0;
+    padding: 8px 24px;
+    text-align: left;
+    text-transform: uppercase;
+    @include diagonalBackground(-45deg, #d61648, $zealRed, 2px, 4px);
+
+    img {
+      margin-left: 2rem;
+    }
+  }
+}

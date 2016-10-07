@@ -1,0 +1,27 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300,300italic,400italic,700italic);
+
+.section-header {
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+.section-subheader {
+  font-size: 15px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-top: 0;
+  padding-top: 0;
+  color: rgba(0,0,0,.4);
+}
+
+.section-copy {
+  font-size: 25px;
+  margin: 35px 0;
+}
+
+.section-action-copy {
+  font-size: 25px;
+  font-weight: bold;
+}

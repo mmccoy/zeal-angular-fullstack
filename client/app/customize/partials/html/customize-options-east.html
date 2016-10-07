@@ -1,0 +1,91 @@
+<uib-accordion close-others="customize.accordionOptions.oneAtATime" class="options-accordian">
+  <!-- Color Options -->
+  <div uib-accordion-group class="panel-default" is-open="customize.accordionOptions.isFirstOpen" ng-click="customize.setOptionStage('color')">
+    <uib-accordion-heading>
+        Color <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+    </uib-accordion-heading>
+    <div class="btn-group">
+      <header>Shaft</header>
+      <ul class="color-list">
+        <li ng-repeat="(name, value) in customize.userStick.colors.shaft" ng-click="changeColorSegment('shaft', value.hex);">
+          <label class="btn btn-primary" ng-model="customize.userStick.customColor.shaft"
+                 uib-btn-radio="'{{value.hex}}'" style="background-color: {{value.hex}}" ng-class="{'weave': name === 'weave'}">
+          </label>
+        </li>
+      </ul>
+      <header>Accent</header>
+      <ul class="color-list">
+        <li ng-repeat="(name, value) in customize.userStick.colors.accent" ng-click="changeColorSegment('accent', value.hex);">
+          <label class="btn btn-primary" ng-model="customize.userStick.customColor.accent"
+                 uib-btn-radio="'{{value.hex}}'" style="background-color: {{value.hex}}" ng-class="{'weave': name === 'weave'}">
+          </label>
+        </li>
+      </ul>
+      <header>Logo</header>
+      <ul class="color-list">
+        <li ng-repeat="(name, value) in customize.userStick.colors.logo" ng-click="changeColorSegment('logo', value.hex);">
+          <label class="btn btn-primary" ng-model="customize.userStick.customColor.logo"
+                 uib-btn-radio="'{{value.hex}}'" style="background-color: {{value.hex}}" ng-class="{'weave': name === 'weave'}">
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Orientation Options -->
+  <div uib-accordion-group class="panel-default" ng-click="customize.setOptionStage('orientation')">
+    <uib-accordion-heading>
+      Orientation <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+    </uib-accordion-heading>
+    <div class="btn-group btn-switch">
+      <label class="btn btn-stick-option" ng-model="customize.userStick.orientation" uib-btn-radio="'Left'">Left</label>
+      <label class="btn btn-stick-option" ng-model="customize.userStick.orientation" uib-btn-radio="'Right'">Right</label>
+    </div>
+  </div>
+
+  <!-- Blade Options -->
+  <div uib-accordion-group class="panel-default" ng-click="customize.setOptionStage('pattern')">
+    <uib-accordion-heading>
+      Blade Pattern
+    </uib-accordion-heading>
+    <rzslider rz-slider-model="customize.userStick.pattern"
+              rz-slider-options="customize.patternSlider.options" class="with-legend"></rzslider>
+  </div>
+
+  <!-- Flex Options -->
+  <div uib-accordion-group class="panel-default" ng-click="customize.setOptionStage('flex')">
+    <uib-accordion-heading>
+      Flex
+    </uib-accordion-heading>
+    <rzslider rz-slider-model="customize.userStick.flex"
+              rz-slider-options="customize.flexSlider.options" class="with-legend"></rzslider>
+  </div>
+
+  <!-- Coating Options -->
+  <div uib-accordion-group class="panel-default" ng-click="customize.setOptionStage('finish')">
+    <uib-accordion-heading>
+      Coating
+    </uib-accordion-heading>
+    <div class="btn-group btn-switch">
+      <label class="btn btn-stick-option" ng-model="customize.userStick.finish" uib-btn-radio="'Grip'">Grip</label>
+      <label class="btn btn-stick-option" ng-model="customize.userStick.finish" uib-btn-radio="'Matte'">Matte</label>
+    </div>
+  </div>
+
+  <!-- Personalize Options -->
+  <div uib-accordion-group class="panel-default personalize-input" ng-click="customize.setOptionStage('personalize')">
+    <uib-accordion-heading>
+        Personalize
+    </uib-accordion-heading>
+    <div class="personalize-input-name">
+      <input type="text" value="player-name" ng-model="customize.userStick.player.name" placeholder="Player name">
+      <label for="player-name" ng-class="{'invisible': !customize.userStick.player.name}">Player name</label>
+    </div>
+    <div class="personalize-input-number">
+      <input type="text" value="player-number" ng-model="customize.userStick.player.number" placeholder="Player number">
+      <label for="player-number" ng-class="{'invisible': !customize.userStick.player.number}">Player Number</label>
+    </div>
+  </div>
+
+  <button ui-sref="customize.review" type="button" class="btn btn-primary review-button">Review <img src="assets/images/icon_arrow_fwd.svg" alt=""></button>
+</uib-accordion>

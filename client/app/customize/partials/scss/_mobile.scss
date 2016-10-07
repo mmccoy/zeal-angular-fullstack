@@ -1,0 +1,42 @@
+@media only screen and (max-width : 700px) {
+
+  .main-ui-row > div {
+    height: auto;
+  }
+
+  .content-wrap {
+    padding: 25px 25px;
+  }
+
+  .mobile-header-nav {
+    height: auto !important;
+    background-color: $zealRed;
+    padding-top: 40px;
+    padding-top: 3rem;
+
+    .mobile-nav {
+      overflow: hidden;
+      display: flex;
+      height: 40px;
+      align-items: center;
+      color: white;
+      font-weight: 400;
+      text-transform: uppercase;
+
+      li {
+        flex-basis: 100%;
+        text-align: center;
+        min-width: 100%;
+      }
+    }
+  }
+
+  .player-actions > li {
+    padding: 25px 25px;
+  }
+
+  .section-actions {
+    right: 20px;
+    bottom: 20px;
+  }
+}

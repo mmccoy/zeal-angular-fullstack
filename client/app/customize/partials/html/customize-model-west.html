@@ -1,0 +1,30 @@
+<ul class="stick-list">
+  <li class="category-label">Primo Series <span>(Medium Kick-Point)</span></li>
+  <li ng-repeat="stick in customize.sticks | filter:{'series': 'Primo', 'category': 'senior'}"
+      ng-click="customize.updateUserStick(stick)"
+      ng-class="{'selected': customize.userStick.name == stick.name}">
+    <span class="stick-model-label">{{stick.name}}</span>
+    <img ng-src="{{stick.images.root_path}}{{stick.images.profile}}" alt="">
+  </li>
+</ul>
+
+<ul class="stick-list">
+  <li class="category-label">Nova Series <span>(Low Kick-Point)</span></li>
+  <li ng-repeat="stick in customize.sticks | filter:{'series': 'Nova', 'category': 'senior'}"
+      ng-click="customize.updateUserStick(stick)"
+      ng-class="{'selected': customize.userStick.name == stick.name}">
+    <span class="stick-model-label">{{stick.name}}</span>
+    <img ng-src="{{stick.images.root_path}}{{stick.images.profile}}" alt="">
+  </li>
+</ul>
+
+<ul class="stick-list">
+  <li class="category-label">Alpha Series <span>(High Kick-Point)</span></li>
+  <li ng-repeat="stick in customize.sticks | filter:{'series': 'Alpha', 'category': 'senior'}"
+      ng-click="customize.updateUserStick(stick)"
+      ng-class="{'selected': customize.userStick.name == stick.name, 'disabled': stick.disabled}">
+    <span ng-if="stick.disabled" class="coming-soon-banner">Coming soon!</span>
+    <span class="stick-model-label">{{stick.name}}</span>
+    <img ng-src="{{stick.images.root_path}}{{stick.images.profile}}" alt="">
+  </li>
+</ul>
