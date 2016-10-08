@@ -2,7 +2,8 @@
   <!-- Color Options -->
   <div uib-accordion-group class="panel-default" is-open="customize.accordionOptions.isFirstOpen" ng-click="customize.setOptionStage('color')">
     <uib-accordion-heading>
-        Color <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+        Color
+        <i class="material-icons panel-open-indicator">keyboard_arrow_down</i>
     </uib-accordion-heading>
     <div class="btn-group">
       <header>Shaft</header>
@@ -35,7 +36,8 @@
   <!-- Orientation Options -->
   <div uib-accordion-group class="panel-default" ng-click="customize.setOptionStage('orientation')">
     <uib-accordion-heading>
-      Orientation <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+      Orientation
+      <i class="material-icons panel-open-indicator">keyboard_arrow_down</i>
     </uib-accordion-heading>
     <div class="btn-group btn-switch">
       <label class="btn btn-stick-option" ng-model="customize.userStick.orientation" uib-btn-radio="'Left'">Left</label>
@@ -47,6 +49,7 @@
   <div uib-accordion-group class="panel-default" ng-click="customize.setOptionStage('pattern')">
     <uib-accordion-heading>
       Blade Pattern
+      <i class="material-icons panel-open-indicator">keyboard_arrow_down</i>
     </uib-accordion-heading>
     <rzslider rz-slider-model="customize.userStick.pattern"
               rz-slider-options="customize.patternSlider.options" class="with-legend"></rzslider>
@@ -56,6 +59,7 @@
   <div uib-accordion-group class="panel-default" ng-click="customize.setOptionStage('flex')">
     <uib-accordion-heading>
       Flex
+      <i class="material-icons panel-open-indicator">keyboard_arrow_down</i>
     </uib-accordion-heading>
     <rzslider rz-slider-model="customize.userStick.flex"
               rz-slider-options="customize.flexSlider.options" class="with-legend"></rzslider>
@@ -65,6 +69,7 @@
   <div uib-accordion-group class="panel-default" ng-click="customize.setOptionStage('finish')">
     <uib-accordion-heading>
       Coating
+      <i class="material-icons panel-open-indicator">keyboard_arrow_down</i>
     </uib-accordion-heading>
     <div class="btn-group btn-switch">
       <label class="btn btn-stick-option" ng-model="customize.userStick.finish" uib-btn-radio="'Grip'">Grip</label>
@@ -76,6 +81,7 @@
   <div uib-accordion-group class="panel-default personalize-input" ng-click="customize.setOptionStage('personalize')">
     <uib-accordion-heading>
         Personalize
+        <i class="material-icons panel-open-indicator">keyboard_arrow_down</i>
     </uib-accordion-heading>
     <div class="personalize-input-name">
       <input type="text" value="player-name" ng-model="customize.userStick.player.name" placeholder="Player name">
@@ -87,5 +93,5 @@
     </div>
   </div>
 
-  <button ui-sref="customize.review" type="button" class="btn btn-primary review-button">Review <img src="assets/images/icon_arrow_fwd.svg" alt=""></button>
+  <button ui-sref="customize.review" type="button" class="btn btn-primary review-button">Review <img src="/assets/images/icon_arrow_fwd.svg" alt=""></button>
 </uib-accordion>

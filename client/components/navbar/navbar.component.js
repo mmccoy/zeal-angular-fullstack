@@ -6,10 +6,10 @@ import angular from 'angular';
 export class NavbarComponent {
   menu = {
     states: [
-      {
-        title: 'Home',
-        state: 'main'
-      },
+      // {
+      //   title: 'Home',
+      //   state: 'main'
+      // },
       {
         title: 'Custom Sticks',
         state: 'customize'

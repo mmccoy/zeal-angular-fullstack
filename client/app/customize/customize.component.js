@@ -110,7 +110,7 @@ export class CustomizeComponent {
 
   addToCartAndCheckout (stick) {
     console.log(stick);
-  }
+  };
 }
 
 

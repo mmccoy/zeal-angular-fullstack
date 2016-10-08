@@ -1,0 +1,14 @@
+.navbar-lockup {
+  width: 8.25rem;
+}
+
+.navbar-default .navbar-nav {
+  text-transform: uppercase;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a {
+  font-weight: 400;
+  color: #e8124a;
+  background-color: transparent;
+}

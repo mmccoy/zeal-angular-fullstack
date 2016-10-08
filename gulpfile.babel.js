@@ -34,8 +34,9 @@ const paths = {
         ],
         styles: [`${clientPath}/{app,components}/**/*.scss`],
         mainStyle: `${clientPath}/app/app.scss`,
-        views: `${clientPath}/{app,components}/**/*.pug`,
+        views: [`${clientPath}/{app,components}/**/*.pug`, `${clientPath}/{app,components}/**/partials/*.html`],
         mainView: `${clientPath}/index.html`,
+        partialViews: `${clientPath}/{app,components}/**/partials/*.html`,
         test: [`${clientPath}/{app,components}/**/*.{spec,mock}.js`],
         e2e: ['e2e/**/*.spec.js']
     },
@@ -497,12 +498,12 @@ gulp.task('build:images', () => {
             plugins.imagemin.jpegtran({progressive: true}),
             plugins.imagemin.gifsicle({interlaced: true})
         ]))
-        .pipe(plugins.rev())
+        // .pipe(plugins.rev())
         .pipe(gulp.dest(`${paths.dist}/${clientPath}/assets/images`))
-        .pipe(plugins.rev.manifest(`${paths.dist}/${paths.client.revManifest}`, {
-            base: `${paths.dist}/${clientPath}/assets`,
-            merge: true
-        }))
+        // .pipe(plugins.rev.manifest(`${paths.dist}/${paths.client.revManifest}`, {
+        //     base: `${paths.dist}/${clientPath}/assets`,
+        //     merge: true
+        // }))
         .pipe(gulp.dest(`${paths.dist}/${clientPath}/assets`));
 });
 

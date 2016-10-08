@@ -1,5 +1,20 @@
 'use strict';
 
+var playerWest = require('ngtemplate!html!./partials/html/customize-player-west.html');
+var playerEast = require('ngtemplate!html!./partials/html/customize-player-east.html');
+var profileWest = require('ngtemplate!html!./partials/html/customize-profile-west.html');
+var profileEast = require('ngtemplate!html!./partials/html/customize-profile-east.html');
+var modelWest = require('ngtemplate!html!./partials/html/customize-model-west.html');
+var modelEast = require('ngtemplate!html!./partials/html/customize-model-east.html');
+var optionsWest = require('ngtemplate!html!./partials/html/customize-options-west.html');
+var optionsEast = require('ngtemplate!html!./partials/html/customize-options-east.html');
+var reviewWest = require('ngtemplate!html!./partials/html/customize-review-west.html');
+var reviewEast = require('ngtemplate!html!./partials/html/customize-review-east.html');
+var cartWest = require('ngtemplate!html!./partials/html/customize-cart-west.html');
+var cartEast = require('ngtemplate!html!./partials/html/customize-cart-east.html');
+var checkoutWest = require('ngtemplate!html!./partials/html/customize-checkout-west.html');
+var checkoutEast = require('ngtemplate!html!./partials/html/customize-checkout-east.html');
+
 export default function($stateProvider, $urlRouterProvider) {
   'ngInject';
   $stateProvider
@@ -12,10 +27,10 @@ export default function($stateProvider, $urlRouterProvider) {
       url: '/player',
       views: {
         'stage-left': {
-          templateUrl: 'app/customize/partials/html/customize-player-west.html'
+          templateUrl: playerWest
         },
         'stage-right': {
-          templateUrl: 'app/customize/partials/html/customize-player-east.html'
+          templateUrl: playerEast
         }
       },
       data: {
@@ -28,10 +43,10 @@ export default function($stateProvider, $urlRouterProvider) {
       url: '/profile',
       views: {
         'stage-left': {
-          templateUrl: 'app/customize/partials/html/customize-profile-west.html'
+          templateUrl: profileWest
         },
         'stage-right': {
-          templateUrl: 'app/customize/partials/html/customize-profile-east.html'
+          templateUrl: profileEast
         }
       },
       data: {
@@ -44,10 +59,10 @@ export default function($stateProvider, $urlRouterProvider) {
       url: '/model',
       views: {
         'stage-left': {
-          templateUrl: 'app/customize/partials/html/customize-model-west.html'
+          templateUrl: modelWest
         },
         'stage-right': {
-          templateUrl: 'app/customize/partials/html/customize-model-east.html'
+          templateUrl: modelEast
         }
       },
       data: {
@@ -60,10 +75,10 @@ export default function($stateProvider, $urlRouterProvider) {
       url: '/options',
       views: {
         'stage-left': {
-          templateUrl: 'app/customize/partials/html/customize-options-west.html'
+          templateUrl: optionsWest
         },
         'stage-right': {
-          templateUrl: 'app/customize/partials/html/customize-options-east.html'
+          templateUrl: optionsEast
         }
       },
       data: {
@@ -76,10 +91,10 @@ export default function($stateProvider, $urlRouterProvider) {
       url: '/review',
       views: {
         'stage-left': {
-          templateUrl: 'app/customize/partials/html/customize-review-west.html'
+          templateUrl: reviewWest
         },
         'stage-right': {
-          templateUrl: 'app/customize/partials/html/customize-review-east.html'
+          templateUrl: reviewEast
         }
       },
       data: {
@@ -92,10 +107,10 @@ export default function($stateProvider, $urlRouterProvider) {
       url: '/cart',
       views: {
         'stage-left': {
-          templateUrl: 'app/customize/partials/html/customize-cart-west.html'
+          templateUrl: cartWest
         },
         'stage-right': {
-          templateUrl: 'app/customize/partials/html/customize-cart-east.html'
+          templateUrl: cartEast
         }
       },
       data: {
@@ -108,10 +123,10 @@ export default function($stateProvider, $urlRouterProvider) {
       url: '/checkout',
       views: {
         'stage-left': {
-          templateUrl: 'app/customize/partials/html/customize-checkout-west.html'
+          templateUrl: checkoutWest
         },
         'stage-right': {
-          templateUrl: 'app/customize/partials/html/customize-checkout-east.html'
+          templateUrl: checkoutEast
         }
       },
       data: {

@@ -64,7 +64,7 @@
     <td>{{customize.userStick.price || '$199.99'}}</td>
   </tr>
 </table>
-<!-- <button type="button" class="btn btn-primary review-button" ng-click="changeState('customize.review')">Add to cart <img src="assets/images/icon_arrow_fwd.svg" alt=""></button> -->
+<!-- <button type="button" class="btn btn-primary review-button" ng-click="changeState('customize.review')">Add to cart <img src="/assets/images/icon_arrow_fwd.svg" alt=""></button> -->
 <ngcart-addtocart id="{{ customize.userStick.id }}" name="{{ customize.userStick.name }}" price="{{ customize.userStick.price }}"
                   quantity="1" quantity-max="30" data="customize.userStick"></ngcart-addtocart>
 
@@ -78,7 +78,7 @@
               ng-click="ngCart.addItem(id, name, price, q, data);$state.go('customize.cart');"
               ng-transclude>
         Add to cart
-        <img src="assets/images/icon_arrow_fwd.svg" alt="">
+        <img src="/assets/images/icon_arrow_fwd.svg" alt="">
       </button>
     </div>
   </div>
