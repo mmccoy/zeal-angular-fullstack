@@ -1,6 +1,7 @@
 /**
  * Using Rails-like standard naming convention for endpoints.
  * GET     /api/checkouts              ->  index
+ * GET     /api/checkouts/token        ->  getToken
  * POST    /api/checkouts              ->  create
  * GET     /api/checkouts/:id          ->  show
  * PUT     /api/checkouts/:id          ->  upsert
@@ -99,6 +100,13 @@ function handleError(res, statusCode) {
 
 // Gets a list of Checkouts
 export function index(req, res) {
+  gateway.clientToken.generate({}, function (err, response) {
+    res.send(response.clientToken);
+  });
+}
+
+// Gets a list of Checkouts
+export function getToken(req, res) {
   gateway.clientToken.generate({}, function (err, response) {
     res.send(response.clientToken);
   });

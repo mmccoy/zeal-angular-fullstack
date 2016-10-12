@@ -6,6 +6,7 @@ var controller = require('./checkout.controller');
 var router = express.Router();
 
 router.get('/', controller.index);
+router.get('/token', controller.getToken);
 router.get('/:id', controller.show);
 router.post('/', controller.create);
 router.put('/:id', controller.upsert);
