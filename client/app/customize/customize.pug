@@ -6,19 +6,19 @@
         img(src="assets/images/icon_player.svg", alt="Player Icon")
         span
           | Player Info
-      li.gutter-stick(ui-sref="customize.model")
+      li.gutter-stick(ui-sref="customize.model", ui-sref-active="active")
         img(src="assets/images/icon_stick.svg", alt="Stick Icon")
         span
           | Pick a Stick
-      li.gutter-model
+      li.gutter-model(ui-sref="customize.options", ui-sref-active="active")
         img(src="assets/images/icon_customize.svg", alt="Customize Icon")
         span
           | Customize
-      li.gutter-review
+      li.gutter-review(ui-sref="customize.review", ui-sref-active="active")
         img(src="assets/images/icon_review.svg", alt="Review Icon")
         span
           | Review
-      li.gutter-checkout
+      li.gutter-checkout(ui-sref="customize.cart", ui-sref-active="active")
         img(src="assets/images/icon_cart.svg", alt="Cart Icon")
         span
           | Checkout

@@ -1,7 +1,7 @@
 <div class="content-wrap svg-canvas active-option-{{customize.optionStage}}">
   <h3>Select the options for your {{customize.userStick.name}}</h3>
   <div ng-if="customize.userStick.images" ng-init="svginclude = customize.userStick.images.root_path + '/' + customize.userStick.images.svg" class="options-stage-section options-stage-color">
-    <ng-include src="svginclude" style="width: 100%;"></ng-include>
+    <ng-include src="svginclude" style="width: 100%; height: 100vh;"></ng-include>
   </div>
   <div class="options-stage-section options-stage-orientation {{customize.userStick.orientation|lowercase}}">
     <h4 ng-if="!customize.userStick.orientation">Are you left or right handed?</h4>
@@ -9,31 +9,56 @@
   </div>
   <div class="options-stage-section options-stage-pattern">
     <img ng-srcset="assets/images/patterns/{{customize.userStick.pattern|lowercase}}.png 1x, assets/images/patterns/{{customize.userStick.pattern|lowercase}}@2x.png 2x" alt="{{customize.userStick.pattern}} Blade Pattern" />
-    <table class="pattern-chart">
+    <table class="pattern-chart" ng-switch="customize.userStick.pattern">
       <tr>
         <td colspan="2">
           <h5>Utility</h5>
-          <p>Utility copy</p>
+          <p ng-switch-when="Z39">Accuracy, Toe Drags, Puck Control</p>
+          <p ng-switch-when="Z11">Wrist Shot, Puck Handling, Toe Drags</p>
+          <p ng-switch-when="Z9C">Passing, Backhand Shots</p>
+          <p ng-switch-when="ZM83">Rising Shots, Accurancy</p>
+          <p ng-switch-when="Z20">Slap Shots, Toe Drags, Poke Checks</p>
+          <p ng-switch-when="Z28">Snap Shots</p>
         </td>
       </tr>
       <tr>
         <td>
           <h5>Compared</h5>
-          <p>Compared copy</p>
+          <p ng-switch-when="Z39">P92, E3, P87a</p>
+          <p ng-switch-when="Z11">P88, C40</p>
+          <p ng-switch-when="Z9C">PM9, E4</p>
+          <p ng-switch-when="ZM83">P91a, E6</p>
+          <p ng-switch-when="Z20">P02, E5</p>
+          <p ng-switch-when="Z28">P28, E28</p>
         </td>
         <td>
-          <h5>Face</h5>
-          <p>Face copy</p>
+          <h5>Toe</h5>
+          <p ng-switch-when="Z39">Round</p>
+          <p ng-switch-when="Z11">Round &amp; Squared</p>
+          <p ng-switch-when="Z9C">Round</p>
+          <p ng-switch-when="ZM83">Round</p>
+          <p ng-switch-when="Z20">Square</p>
+          <p ng-switch-when="Z28">Round</p>
         </td>
       </tr>
       <tr>
         <td>
-          <h5>Curved</h5>
-          <p>Curve copy</p>
+          <h5>Curve</h5>
+          <p ng-switch-when="Z39">Mid-Toe / Open</p>
+          <p ng-switch-when="Z11">Mid / Slightly Open</p>
+          <p ng-switch-when="Z9C">Mid-Heel / Wedge</p>
+          <p ng-switch-when="ZM83">Heel / Wedge</p>
+          <p ng-switch-when="Z20">Heel / Open</p>
+          <p ng-switch-when="Z28">Very Open</p>
         </td>
         <td>
           <h5>Lie</h5>
-          <p>Lie copy</p>
+          <p ng-switch-when="Z39">6</p>
+          <p ng-switch-when="Z11">6</p>
+          <p ng-switch-when="Z9C">5</p>
+          <p ng-switch-when="ZM83">5.5</p>
+          <p ng-switch-when="Z20">7</p>
+          <p ng-switch-when="Z28">6 &amp; 5</p>
         </td>
       </tr>
     </table>

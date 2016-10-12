@@ -20,7 +20,6 @@ export class CustomizeComponent {
     // Cart configurations
     ngCart.setTaxRate(7.5);
     ngCart.setShipping(14.99);
-    // console.log($rootScope);
 
     if ($state.is('customize')) {
       $state.go('customize.player');
@@ -33,6 +32,12 @@ export class CustomizeComponent {
       $scope.stageLeftSpan = 6;
       $scope.stageRightSpan = 5;
     }
+
+    // Stick defaults
+    this.userStick.orientation = 'Right';
+    this.userStick.pattern = 'Z28';
+    this.userStick.flex = '77';
+    this.userStick.finish = 'Grip';
 
     this.accordionOptions = {
       oneAtATime: true,
@@ -84,7 +89,7 @@ export class CustomizeComponent {
     });
 
     $scope.$on("slideEnded", function(e) {
-      // console.log(e);
+      console.log(e);
     });
   };
 
@@ -102,6 +107,7 @@ export class CustomizeComponent {
         this.userStick[prop] = propertyObj[prop];
       }
     }
+    console.log(this.userStick);
   };
 
   setOptionStage (stage) {

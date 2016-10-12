@@ -21,6 +21,11 @@
         flex-basis: 25%;
         padding: 0;
       }
+
+      > li:last-child p {
+        display: flex;
+        justify-content: flex-end;
+      }
     }
   }
 
