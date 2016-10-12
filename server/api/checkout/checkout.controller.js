@@ -130,24 +130,25 @@ export function create(req, res) {
   // return Checkout.create(req.body)
   //   .then(respondWithResult(res, 201))
   //   .catch(handleError(res));
+  console.log(req.body);
   var transactionErrors;
   // var amount = req.body.amount; // In production you should not take amounts directly from clients
-  var nonce = req.body.payment_method_nonce;
+  var nonce = req.body['payment-method-nonce'];
 
   gateway.transaction.sale({
-    amount: "10.00",
+    amount: "45.00",
     paymentMethodNonce: nonce,
     options: {
       submitForSettlement: true
     }
   }, function (err, result) {
     if (result.success || result.transaction) {
-      res.redirect('checkouts/' + result.transaction.id);
+      res.redirect('../orders/' + result.transaction.id);
     } else {
       transactionErrors = result.errors.deepErrors();
       console.log(formatErrors(transactionErrors))
       // req.flash('error', {msg: formatErrors(transactionErrors)});
-      res.redirect('checkouts/new');
+      // res.redirect('checkouts/new');
     }
   });
 }

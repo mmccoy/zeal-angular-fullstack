@@ -1,26 +1,21 @@
-<div class="panel panel-default bootstrap-basic">
-  <div class="panel-heading">
-    <h3 class="panel-title">Enter Card Details</h3>
-  </div>
-  <form id="checkout-form" action="/api/checkouts" method="post">
-    <div id="error-message"></div>
+<form id="checkout-form" action="/api/checkouts" method="post">
+  <div id="error-message"></div>
 
-    <label for="card-number">Card Number</label>
-    <div class="hosted-field" id="card-number"></div>
+  <label for="card-number">Card Number</label>
+  <div class="hosted-field" id="card-number"></div>
 
-    <label for="cvv">CVV</label>
-    <div class="hosted-field" id="cvv"></div>
+  <label for="cvv">CVV</label>
+  <div class="hosted-field" id="cvv"></div>
 
-    <label for="expiration-date">Expiration Date</label>
-    <div class="hosted-field" id="expiration-date"></div>
+  <label for="expiration-date">Expiration Date</label>
+  <div class="hosted-field" id="expiration-date"></div>
 
-    <input type="hidden" name="payment-method-nonce">
-    <input type="submit" value="Pay $10" disabled>
-  </form>
-</div>
+  <input type="hidden" name="payment-method-nonce">
+  <input type="submit" value="Pay $10" disabled>
+</form>
 
-<!-- Load the required client component. -->
-<script src="https://js.braintreegateway.com/web/3.3.0/js/client.min.js"></script>
+<!-- Load the Client component. -->
+<script src="https://js.braintreegateway.com/web/3.4.0/js/client.min.js"></script>
 
-<!-- Load Hosted Fields component. -->
-<script src="https://js.braintreegateway.com/web/3.3.0/js/hosted-fields.min.js"></script>
+<!-- Load the Hosted Fields component. -->
+<script src="https://js.braintreegateway.com/web/3.4.0/js/hosted-fields.min.js"></script>
