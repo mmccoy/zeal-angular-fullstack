@@ -16,15 +16,20 @@ import Checkout from './checkout.model';
 import braintree from 'braintree';
 
 var environment, gateway;
-require('dotenv').load();
+// require('dotenv').load();
+//
+var BT_ENVIRONMENT='Sandbox'
+var BT_MERCHANT_ID='8xckn8z7n2nbjnx3'
+var BT_PUBLIC_KEY='c33zskmxg3x2w73m'
+var BT_PRIVATE_KEY='b7e5fb979d22f37fde49b872846696c5'
 
-environment = process.env.BT_ENVIRONMENT.charAt(0).toUpperCase() + process.env.BT_ENVIRONMENT.slice(1);
+environment = BT_ENVIRONMENT.charAt(0).toUpperCase() + BT_ENVIRONMENT.slice(1);
 
 gateway = braintree.connect({
   environment: braintree.Environment[environment],
-  merchantId: process.env.BT_MERCHANT_ID,
-  publicKey: process.env.BT_PUBLIC_KEY,
-  privateKey: process.env.BT_PRIVATE_KEY
+  merchantId: BT_MERCHANT_ID,
+  publicKey: BT_PUBLIC_KEY,
+  privateKey: BT_PRIVATE_KEY
 });
 
 var TRANSACTION_SUCCESS_STATUSES = [
