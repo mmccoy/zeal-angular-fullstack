@@ -75,7 +75,7 @@
   <div ng-show="attrs.id">
     <div>
       <button type="button" class="btn btn-primary review-button"
-              ng-click="ngCart.addItem(id, name, price, q, data);$state.go('customize.cart');"
+              ng-click="ngCart.addItem(id, name, price, q, data);$state.go('customize.cart');$state.go('customize.cart');"
               ng-transclude>
         Add to cart
         <img src="/assets/images/icon_arrow_fwd.svg" alt="">
