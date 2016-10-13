@@ -84,8 +84,10 @@ export class CustomizeComponent {
     });
 
     $scope.$on('$stateChangeSuccess', function(event, toState) {
-      $scope.stageLeftSpan = toState.data.stageLeftSpan;
-      $scope.stageRightSpan = toState.data.stageRightSpan;
+      if (toState.data) {
+        $scope.stageLeftSpan = toState.data.stageLeftSpan;
+        $scope.stageRightSpan = toState.data.stageRightSpan;
+      }
     });
 
     $scope.$on("slideEnded", function(e) {
@@ -112,10 +114,6 @@ export class CustomizeComponent {
 
   setOptionStage (stage) {
     this.optionStage = stage;
-  };
-
-  addToCartAndCheckout (stick) {
-    console.log(stick);
   };
 }
 

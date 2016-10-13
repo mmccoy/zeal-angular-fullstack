@@ -14,3 +14,20 @@
   color: #e8124a;
   background-color: transparent;
 }
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+
+  li {
+    i {
+      color: #888;
+    }
+  }
+
+  li.active {
+    i {
+      color: $zealRed;
+    }
+  }
+}

@@ -1,10 +1,14 @@
 'use strict';
+
+import '../../bower_components/ngCart/dist/ngCart.min.js';
+
 const angular = require('angular');
+var template = require('ngtemplate!html!./checkoutForm.html');
 
 export default angular.module('customizerApp.checkoutForm', ['ngCart'])
-  .directive('checkoutForm', function($http) {
+  .directive('checkoutForm', function($http, ngCart) {
     return {
-      templateUrl: 'app/checkoutForm/checkoutForm.html',
+      templateUrl: template,
       restrict: 'EA',
       link: function(scope, element, attrs) {
         $http({
@@ -12,6 +16,8 @@ export default angular.module('customizerApp.checkoutForm', ['ngCart'])
           url: '/api/checkouts/token'
         }).then(function successCallback(response) {
             console.log('Success');
+            console.log(ngCart.totalCost());
+
             scope.clientToken = response.data;
             var form = document.querySelector('#checkout-form');
             var submit = document.querySelector('input[type="submit"]');
@@ -58,7 +64,9 @@ export default angular.module('customizerApp.checkoutForm', ['ngCart'])
                     // Put `payload.nonce` into the `payment-method-nonce` input, and then
                     // submit the form. Alternatively, you could send the nonce to your server
                     // with AJAX.
+
                     document.querySelector('input[name="payment-method-nonce"]').value = payload.nonce;
+
                     form.submit();
                   });
                 }, false);

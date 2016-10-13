@@ -118,20 +118,4 @@ export default function($stateProvider, $urlRouterProvider) {
         stageRightSpan: 0
       }
     });
-
-    // .state('customize.checkout', {
-    //   url: '/checkout',
-    //   views: {
-    //     'stage-left': {
-    //       templateUrl: checkoutWest
-    //     },
-    //     'stage-right': {
-    //       templateUrl: checkoutEast
-    //     }
-    //   },
-    //   data: {
-    //     stageLeftSpan: 11,
-    //     stageRightSpan: 0
-    //   }
-    // });
 }
