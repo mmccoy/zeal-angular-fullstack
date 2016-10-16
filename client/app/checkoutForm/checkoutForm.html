@@ -1,17 +1,64 @@
 <form id="checkout-form" action="/api/checkouts" method="post">
-  <div id="error-message"></div>
+  <div class="checkout-form-container">
+    <div>
+      <h4>Your Details</h4>
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input class="form-control" type="text" name="firstName" id="firstName">
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input class="form-control" type="text" name="lastName" id="lastName">
+      </div>
+      <div class="form-group">
+        <label for="addressA">Address</label>
+        <input class="form-control" type="text" name="addressA" id="addressA">
+        <input class="form-control" type="text" name="addressB" id="addressB">
+      </div>
+      <div class="form-group">
+        <label for="city">City</label>
+        <input class="form-control" type="text" name="city" id="city">
+      </div>
+      <div class="form-group">
+        <label for="city">Zip Code</label>
+        <input class="form-control" type="text" name="zipcode" id="zipcode">
+      </div>
+      <div class="form-group">
+        <label for="city">Country</label>
+        <input class="form-control" type="text" name="country" id="country">
+      </div>
+    </div>
+    <div>
+      <h4>Payment Details</h4>
+        <div id="error-message"></div>
 
-  <label for="card-number">Card Number</label>
-  <div class="hosted-field" id="card-number"></div>
+        <div class="form-group">
+          <label for="card-number">Card Number</label>
+          <div class="hosted-field" id="card-number"></div>
+        </div>
 
-  <label for="cvv">CVV</label>
-  <div class="hosted-field" id="cvv"></div>
+        <div class="form-group">
+          <label for="cvv">CVV</label>
+          <div class="hosted-field" id="cvv"></div>
+        </div>
 
-  <label for="expiration-date">Expiration Date</label>
-  <div class="hosted-field" id="expiration-date"></div>
+        <div class="form-group">
+          <label for="expiration-date">Expiration Date</label>
+          <div class="hosted-field" id="expiration-date"></div>
+        </div>
 
-  <input type="hidden" name="payment-method-nonce">
-  <input type="submit" value="Pay $10" disabled>
+        <input type="hidden" name="order-total" id="order-toal">
+        <input type="hidden" name="payment-method-nonce">
+        <input type="hidden" name="_csrf" value="_csrf">
+
+        <div class="form-group">
+          <!-- <button type="submit" class="btn btn-primary">Pay</button> -->
+          <!-- <ngcart-checkout service="log" settings="{ url:'/api/checkouts' }"></ngcart-checkout> -->
+          <button class="btn checkout-button" type="submit">Checkout</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </form>
 
 <!-- Load the Client component. -->
@@ -19,3 +66,8 @@
 
 <!-- Load the Hosted Fields component. -->
 <script src="https://js.braintreegateway.com/web/3.4.0/js/hosted-fields.min.js"></script>
+
+<script type="text/ng-template" id="template/ngCart/checkout.html">
+  <div class="btn checkout-button" ng-click="checkout()" ng-disabled="!ngCart.getTotalItems()" ng-transclude>Checkout</div>
+</script>
+

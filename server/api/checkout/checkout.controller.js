@@ -14,14 +14,22 @@
 import jsonpatch from 'fast-json-patch';
 import Checkout from './checkout.model';
 import braintree from 'braintree';
+import postmark from 'postmark';
 
 var environment, gateway;
 // require('dotenv').load();
-//
+
+// Devision sandbox
 var BT_ENVIRONMENT='Sandbox'
 var BT_MERCHANT_ID='8xckn8z7n2nbjnx3'
 var BT_PUBLIC_KEY='c33zskmxg3x2w73m'
 var BT_PRIVATE_KEY='b7e5fb979d22f37fde49b872846696c5'
+
+// Zeal Production
+// var BT_ENVIRONMENT='Production'
+// var BT_MERCHANT_ID='7hhdq8qffbmmdrjc'
+// var BT_PUBLIC_KEY='8zj5dpbwf82hp9jq'
+// var BT_PRIVATE_KEY='b9321cf408ddda7d5cf559343ade2687'
 
 environment = BT_ENVIRONMENT.charAt(0).toUpperCase() + BT_ENVIRONMENT.slice(1);
 
@@ -103,6 +111,23 @@ function handleError(res, statusCode) {
   };
 }
 
+function createOrder(data) {
+  // postmark.send({
+  //   "From": "orders@zealhockey.com",
+  //   "To": "mmccoy@gmail.com",
+  //   "Subject": "Your Custom Zeal Stick",
+  //   "TextBody": "Its gonna be awesome!",
+  // }, function(error, success) {
+  //     if(error) {
+  //         console.error("Unable to send via postmark: " + error.message);
+  //        return;
+  //     }
+  //     console.info("Sent to postmark for delivery")
+  // });
+
+  Checkout.create(data);
+}
+
 // Gets a list of Checkouts
 export function index(req, res) {
   gateway.clientToken.generate({}, function (err, response) {
@@ -127,23 +152,28 @@ export function show(req, res) {
 
 // Creates a new Checkout in the DB
 export function create(req, res) {
-  // return Checkout.create(req.body)
-  //   .then(respondWithResult(res, 201))
-  //   .catch(handleError(res));
-  console.log(req.body);
+
+  createOrder(req.body);
+
+  var nonce = req.body.payload.nonce;
+  var amount = req.body.totalCost;
+  var formdata = req.body.formData;
+
   var transactionErrors;
-  // var amount = req.body.amount; // In production you should not take amounts directly from clients
-  var nonce = req.body['payment-method-nonce'];
 
   gateway.transaction.sale({
-    amount: "45.00",
+    amount: amount,
     paymentMethodNonce: nonce,
     options: {
       submitForSettlement: true
     }
   }, function (err, result) {
     if (result.success || result.transaction) {
-      res.redirect('../orders/' + result.transaction.id);
+      // console.log(result);
+      res.send(result.transaction)
+      // result.setHeader('Content-Type', 'application/json');
+      // res.send(JSON.stringify({ a: 1 }, null, 3));
+      // res.redirect('../orders/' + result.transaction.id);
     } else {
       transactionErrors = result.errors.deepErrors();
       console.log(formatErrors(transactionErrors))

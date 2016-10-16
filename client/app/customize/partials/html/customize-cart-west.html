@@ -47,15 +47,6 @@
       <td>Subtotal</td>
       <td>{{ ngCart.totalCost() | currency }}</td>
     </tr>
-    <tr class="checkout-row">
-      <td></td>
-      <td colspan="3"></td>
-      <td><ngcart-checkout service="http" settings="{ url:'/api/checkouts' }"></ngcart-checkout></td>
-    </tr>
 
   </table>
-</script>
-
-<script type="text/ng-template" id="template/ngCart/checkout.html">
-  <div class="btn review-button" ng-click="checkout()" ng-disabled="!ngCart.getTotalItems()" ng-transclude>Checkout</div>
 </script>

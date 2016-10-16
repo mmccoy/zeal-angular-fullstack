@@ -21,6 +21,13 @@
   }
 }
 
+.checkout-button {
+  @extend .review-button;
+  position: relative;
+  width: auto;
+  display: inline-block;
+}
+
 
 .color-list {
   display: flex;
@@ -313,4 +320,8 @@ svg {
 }
 .rzslider .rz-pointer.rz-active:after {
   background-color: #fff;
+}
+
+.rzslider .rz-tick-value {
+  font-size: 1rem;
 }

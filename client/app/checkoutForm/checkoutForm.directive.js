@@ -16,11 +16,14 @@ export default angular.module('customizerApp.checkoutForm', ['ngCart'])
           url: '/api/checkouts/token'
         }).then(function successCallback(response) {
             console.log('Success');
-            console.log(ngCart.totalCost());
 
             scope.clientToken = response.data;
-            var form = document.querySelector('#checkout-form');
-            var submit = document.querySelector('input[type="submit"]');
+            scope.totalCost = ngCart.totalCost();
+
+            // var form = document.querySelector('#checkout-form');
+            var form = $('#checkout-form');
+            var submit = document.querySelector('button[type="submit"]');
+            var nonce = document.querySelector('input[name="payment-method-nonce"]');
 
             braintree.client.create({
               authorization: scope.clientToken
@@ -30,7 +33,7 @@ export default angular.module('customizerApp.checkoutForm', ['ngCart'])
               braintree.hostedFields.create({
                 client: clientInstance,
                 styles: {
-                  'input': { 'font-size': '14pt' },
+                  'input': { 'font-size': '14px' },
                   'input.invalid': { 'color': 'red' },
                   'input.valid': { 'color': 'green' }
                 },
@@ -55,21 +58,33 @@ export default angular.module('customizerApp.checkoutForm', ['ngCart'])
                 }
 
                 submit.removeAttribute('disabled');
-                form.addEventListener('submit', function (event) {
-                  event.preventDefault();
 
+                form.on('submit', function(event) {
+                  event.preventDefault();
                   hostedFieldsInstance.tokenize(function (tokenizeErr, payload) {
                     if (tokenizeErr) { return; }
-
                     // Put `payload.nonce` into the `payment-method-nonce` input, and then
                     // submit the form. Alternatively, you could send the nonce to your server
                     // with AJAX.
+                    var formData = JSON.parse(JSON.stringify(form.serializeArray()));
 
-                    document.querySelector('input[name="payment-method-nonce"]').value = payload.nonce;
-
-                    form.submit();
+                    var req = {
+                      method: 'POST',
+                      url: '/api/checkouts',
+                      data: {
+                        formData: formData,
+                        totalCost: ngCart.totalCost(),
+                        payload: payload,
+                        cartData: ngCart.getItems()._data
+                      }
+                    }
+                    $http(req).then(function(response){
+                      console.log(response);
+                    }, function(response){
+                      console.log(response);
+                    });
                   });
-                }, false);
+                });
               })
             });
         });

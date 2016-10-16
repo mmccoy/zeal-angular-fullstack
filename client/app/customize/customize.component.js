@@ -13,9 +13,11 @@ export class CustomizeComponent {
   constructor($http, $scope, socket, $state, $rootScope, ngCart) {
     this.$http = $http;
     this.$state = $state;
+    this.ngCart = ngCart;
 
     this.socket = socket;
     this.optionStage = 'color';
+
 
     // Cart configurations
     ngCart.setTaxRate(7.5);
@@ -70,6 +72,21 @@ export class CustomizeComponent {
           {value: "87"},
           {value: "102"},
           {value: "112", legend: 'Stiff'}
+        ]
+      }
+    };
+
+    this.finishSlider = {
+      value: this.userStick.finish,
+      options: {
+        id: 'finishChoice',
+        showTicksValues: true,
+        stepsArray: [
+          {value: "Matte"},
+          {value: "Glossy"},
+          {value: "HighTac"},
+          {value: "Sandblast"},
+          {value: "MatteGrip"}
         ]
       }
     };
