@@ -1,10 +1,10 @@
 .container.order-confirmation
   h2
     | Thank you for your order!<br>
-    | (\#{{ordersCtrl.order.orderId}})
+    //- | (\#{{ordersCtrl.order.orderId}})
   p
     | You will receive an email confirmation with your order number and details.
-  img(ng-src="{{ordersCtrl.order.stick.images.root_path + ordersCtrl.order.stick.images.key}}_checkout.svg")
+  img(ng-src="{{ordersCtrl.order.stick.images.root_path + ordersCtrl.order.stick.images.key}}checkout.svg")
   div.order-info
     p
       | We are really excited to start production of your custom stick.
@@ -12,3 +12,6 @@
       | We will send you updates as your stick moves through the production process.
     p
       | Your stick is estimate to be done in 3 to 6 weeks.
+  p.contact
+    | If you have a question, please call us at 401-861-ZEAL (9325)<br>
+    | or email us at #[a(href="mailto:info@zealhockey.com") info@zealhockey.com]
