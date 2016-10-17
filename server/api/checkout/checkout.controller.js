@@ -114,18 +114,33 @@ function handleError(res, statusCode) {
 function createOrder(data, transaction) {
 
   var client = new postmark.Client("53f7ddd2-f777-40df-b9b4-2f0db0848923");
-
   var customerData = {};
   data.formData.forEach(function (entry) {
     customerData[entry.name] = entry.value;
   });
 
+  // Customer order confirmation email
   client.sendEmail({
-      "From": "orders@devision.us",
-      "To": customerData.email,
-      "Subject": "Your Custom Zeal Stick",
-      "TextBody": "Its gonna be awesome!",
+    "From": "orders@devision.us",
+    "To": customerData.email,
+    "TemplateId": 1008382,
+    "TemplateModel": {
+      "firstName": customerData.firstName,
+      "stickModel": data.cartData.items[0]._data.name,
+      "orderNumber": transaction.id
+    }
   });
+
+  // Send team zeal order info
+  client.sendEmail({
+    "From": "orders@devision.us",
+    "To": "mmccoy@gmail.com",
+    "TemplateId": 1008542,
+    "TemplateModel": {
+      "orderNumber": transaction.id,
+      "stick": data.cartData.items[0]._data
+    }
+  })
 
   Checkout.create({
     orderId: transaction.id,
@@ -166,16 +181,6 @@ export function show(req, res) {
     .then(handleEntityNotFound(res))
     .then(respondWithResult(res))
     .catch(handleError(res));
-  // Checkout.find({orderId: req.params.id}).exec()
-  //   .then(function(res) {
-  //     // console.log(res);
-  //   })
-  //   .then(function(res) {
-  //     // console.log(res);
-  //   })
-  //   .catch(function(res) {
-  //     console.log("error: ", res)
-  //   });
 }
 
 // Creates a new Checkout in the DB
