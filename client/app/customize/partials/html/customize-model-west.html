@@ -4,7 +4,7 @@
       ng-click="customize.updateUserStick(stick)"
       ng-class="{'selected': customize.userStick.name == stick.name}">
     <span class="stick-model-label">{{stick.name}}</span>
-    <img ng-src="{{stick.images.root_path}}{{stick.images.profile}}" alt="">
+    <img ng-src="{{stick.images.root_path}}{{stick.images.key}}profile.png" alt="">
   </li>
 </ul>
 
@@ -14,7 +14,7 @@
       ng-click="customize.updateUserStick(stick)"
       ng-class="{'selected': customize.userStick.name == stick.name}">
     <span class="stick-model-label">{{stick.name}}</span>
-    <img ng-src="{{stick.images.root_path}}{{stick.images.profile}}" alt="">
+    <img ng-src="{{stick.images.root_path}}{{stick.images.key}}profile.png" alt="">
   </li>
 </ul>
 
@@ -25,6 +25,6 @@
       ng-class="{'selected': customize.userStick.name == stick.name, 'disabled': stick.disabled}">
     <span ng-if="stick.disabled" class="coming-soon-banner">Coming soon!</span>
     <span class="stick-model-label">{{stick.name}}</span>
-    <img ng-src="{{stick.images.root_path}}{{stick.images.profile}}" alt="">
+    <img ng-src="{{stick.images.root_path}}{{stick.images.key}}profile.png" alt="">
   </li>
 </ul>

@@ -78,6 +78,7 @@ Stick.find({}).remove()
         },
         "images": {
           "root_path": "/assets/images/sticks/pk/",
+          "key": "pk100_",
           "profile": "pk100_profile.png",
           "personalize": "pk100_personalize.svg",
           "svg": "pk100_scene.svg"
@@ -128,6 +129,7 @@ Stick.find({}).remove()
         },
         "images": {
           "root_path": "/assets/images/sticks/pk/",
+          "key": "pk100_",
           "profile": "pk100_profile.png",
           "personalize": "pk100_personalize.svg",
           "svg": "pk100_scene.svg"
@@ -178,6 +180,7 @@ Stick.find({}).remove()
         },
         "images": {
           "root_path": "/assets/images/sticks/pk/",
+          "key": "pk100_",
           "profile": "pk100_profile.png",
           "personalize": "pk100_personalize.svg",
           "svg": "pk100_scene.svg"
@@ -228,6 +231,7 @@ Stick.find({}).remove()
         },
         "images": {
           "root_path": "/assets/images/sticks/pk/",
+          "key": "pk1000_",
           "profile": "pk1000_profile.png",
           "personalize": "pk1000_personalize.svg",
           "svg": "pk1000_scene.svg"
@@ -272,6 +276,7 @@ Stick.find({}).remove()
         },
         "images": {
           "root_path": "/assets/images/sticks/pk/",
+          "key": "pk1000_",
           "profile": "pk1000_profile.png",
           "personalize": "pk1000_personalize.svg",
           "svg": "pk1000_scene.svg"
@@ -316,6 +321,7 @@ Stick.find({}).remove()
         },
         "images": {
           "root_path": "/assets/images/sticks/pk/",
+          "key": "pk1000_",
           "profile": "pk1000_profile.png",
           "personalize": "pk1000_personalize.svg",
           "svg": "pk1000_scene.svg"
@@ -360,6 +366,7 @@ Stick.find({}).remove()
         },
         "images": {
           "root_path": "/assets/images/sticks/nova/",
+          "key": "nova_k1_",
           "profile": "nova_k1_profile.png",
           "personalize": "nova_k1_personalize.svg",
           "svg": "nova_k1_scene.svg"
@@ -399,6 +406,7 @@ Stick.find({}).remove()
         },
         "images": {
           "root_path": "/assets/images/sticks/nova/",
+          "key": "nova_k1_",
           "profile": "nova_k1_profile.png",
           "personalize": "nova_k1_personalize.svg",
           "svg": "nova_k1_scene.svg"
@@ -438,6 +446,7 @@ Stick.find({}).remove()
         },
         "images": {
           "root_path": "/assets/images/sticks/nova/",
+          "key": "nova_k1_",
           "profile": "nova_k1_profile.png",
           "personalize": "nova_k1_personalize.svg",
           "svg": "nova_k1_scene.svg"
@@ -478,6 +487,7 @@ Stick.find({}).remove()
         },
         "images": {
           "root_path": "/assets/images/sticks/alpha/",
+          "key": "alpha_rx1_",
           "profile": "alpha_rx1_profile.png",
           "personalize": "alpha_rx1_personalize.png",
           "svg": "alpha_rx1_scene.svg"
@@ -500,6 +510,7 @@ Stick.find({}).remove()
         },
         "images": {
           "root_path": "/assets/images/sticks/alpha/",
+          "key": "alpha_rx1_",
           "profile": "alpha_rx1_profile.png",
           "personalize": "alpha_rx1_personalize.svg",
           "svg": "alpha_rx1_scene.svg"
@@ -522,6 +533,7 @@ Stick.find({}).remove()
         },
         "images": {
           "root_path": "/assets/images/sticks/alpha/",
+          "key": "alpha_rx1_",
           "profile": "alpha_rx1_profile.png",
           "personalize": "alpha_rx1_personalize.svg",
           "svg": "alpha_rx1_scene.svg"

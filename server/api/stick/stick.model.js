@@ -19,6 +19,7 @@ var StickSchema = new mongoose.Schema({
   },
   images: {
     root_path: String,
+    key: String,
     profile: String,
     personalize: String,
     svg: String
