@@ -119,6 +119,28 @@ function createOrder(data, transaction) {
     customerData[entry.name] = entry.value;
   });
 
+  // var emails = [
+  //   {
+  //     "From": "orders@devision.us",
+  //     "To": customerData.email,
+  //     "TemplateId": 1008382,
+  //     "TemplateModel": {
+  //       "firstName": customerData.firstName,
+  //       "stickModel": data.cartData.items[0]._data.name,
+  //       "orderNumber": transaction.id
+  //     }
+  //   },
+  //   {
+  //     "From": "orders@devision.us",
+  //     "To": "mmccoy@gmail.com",
+  //     "TemplateId": 1008542,
+  //     "TemplateModel": {
+  //       "orderNumber": transaction.id,
+  //       "stick": data.cartData.items[0]._data
+  //     }
+  //   }
+  // ];
+
   // Customer order confirmation email
   client.sendEmail({
     "From": "orders@devision.us",
@@ -129,6 +151,12 @@ function createOrder(data, transaction) {
       "stickModel": data.cartData.items[0]._data.name,
       "orderNumber": transaction.id
     }
+  }, function(error, success) {
+    if(error) {
+      console.error("Unable to send via postmark: " + error.message);
+      return;
+    }
+    console.info("Custom order confirmation email sent to postmark for delivery");
   });
 
   // Send team zeal order info
@@ -140,6 +168,12 @@ function createOrder(data, transaction) {
       "orderNumber": transaction.id,
       "stick": data.cartData.items[0]._data
     }
+  }, function(error, success) {
+    if(error) {
+      console.error("Unable to send via postmark: " + error.message);
+      return;
+    }
+    console.info("Production order email sent to postmark for delivery");
   })
 
   Checkout.create({
