@@ -1,5 +1,14 @@
-.container(style="text-align: center;")
+.container.order-confirmation
   h2
-    | Your order number is {{ordersCtrl.orderId}}
+    | Thank you for your order!<br>
+    | (\#{{ordersCtrl.order.orderId}})
   p
-    | Order detail design here.
+    | You will receive an email confirmation with your order number and details.
+  img(src="{{ordersCtrl.order.stick.images.root_path + ordersCtrl.order.stick.images.checkout}}")
+  div.order-info
+    p
+      | We are really excited to start production of your custom stick.
+    p
+      | We will send you updates as your stick moves through the production process.
+    p
+      | Your stick is estimate to be done in 3 to 6 weeks.

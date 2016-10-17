@@ -3,9 +3,17 @@
 import mongoose from 'mongoose';
 
 var CheckoutSchema = new mongoose.Schema({
-  name: String,
-  info: String,
-  active: Boolean
+  orderId: String,
+  firstName: String,
+  lastName: String,
+  email: String,
+  addressA: String,
+  addressB: String,
+  city: String,
+  zipcode: String,
+  country: String,
+  stick: Object,
+  orderTotal: Number
 });
 
 export default mongoose.model('Checkout', CheckoutSchema);

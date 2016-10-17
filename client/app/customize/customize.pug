@@ -34,7 +34,7 @@
         | Review
   .stage-left(class="col-md-{{stageLeftSpan || 6}}"
               ui-view="stage-left",
-              ng-class="{'hidden-of': customize.$state.includes('customize.options')}")
+              ng-class="{'hidden-of': customize.$state.includes('customize.options') || customize.$state.includes('customize.review')}")
   .stage-right(class="col-md-{{stageRightSpan || 5}}"
                ui-view="stage-right",
                ng-if="!customize.$state.includes('customize.cart')",

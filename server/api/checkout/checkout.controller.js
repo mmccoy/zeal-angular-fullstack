@@ -111,28 +111,46 @@ function handleError(res, statusCode) {
   };
 }
 
-function createOrder(data) {
-  // postmark.send({
-  //   "From": "orders@zealhockey.com",
-  //   "To": "mmccoy@gmail.com",
-  //   "Subject": "Your Custom Zeal Stick",
-  //   "TextBody": "Its gonna be awesome!",
-  // }, function(error, success) {
-  //     if(error) {
-  //         console.error("Unable to send via postmark: " + error.message);
-  //        return;
-  //     }
-  //     console.info("Sent to postmark for delivery")
-  // });
+function createOrder(data, transaction) {
 
-  Checkout.create(data);
+  var client = new postmark.Client("53f7ddd2-f777-40df-b9b4-2f0db0848923");
+
+  var customerData = {};
+  data.formData.forEach(function (entry) {
+    customerData[entry.name] = entry.value;
+  });
+
+  client.sendEmail({
+      "From": "orders@devision.us",
+      "To": customerData.email,
+      "Subject": "Your Custom Zeal Stick",
+      "TextBody": "Its gonna be awesome!",
+  });
+
+  Checkout.create({
+    orderId: transaction.id,
+    orderTotal: data.totalCost,
+    firstName: customerData.firstName,
+    lastName: customerData.lastName,
+    email: customerData.email,
+    addressA: customerData.addressA,
+    addressB: customerData.addressB,
+    stick: data.cartData.items[0]._data
+  })
+    .then(function(res) {
+      // Successful order creation
+      // console.log(res);
+    })
+    .catch(function(res) {
+      // Error
+    });
 }
 
 // Gets a list of Checkouts
 export function index(req, res) {
-  gateway.clientToken.generate({}, function (err, response) {
-    res.send(response.clientToken);
-  });
+  return Checkout.find().exec()
+    .then(respondWithResult(res))
+    .catch(handleError(res));
 }
 
 // Gets a list of Checkouts
@@ -144,21 +162,29 @@ export function getToken(req, res) {
 
 // Gets a single Checkout from the DB
 export function show(req, res) {
-  return Checkout.findById(req.params.id).exec()
+  return Checkout.find({orderId: req.params.id}).exec()
     .then(handleEntityNotFound(res))
     .then(respondWithResult(res))
     .catch(handleError(res));
+  // Checkout.find({orderId: req.params.id}).exec()
+  //   .then(function(res) {
+  //     // console.log(res);
+  //   })
+  //   .then(function(res) {
+  //     // console.log(res);
+  //   })
+  //   .catch(function(res) {
+  //     console.log("error: ", res)
+  //   });
 }
 
 // Creates a new Checkout in the DB
 export function create(req, res) {
 
-  createOrder(req.body);
-
   var nonce = req.body.payload.nonce;
   var amount = req.body.totalCost;
   var formdata = req.body.formData;
-
+  var cartData = req.body.cartData;
   var transactionErrors;
 
   gateway.transaction.sale({
@@ -169,11 +195,13 @@ export function create(req, res) {
     }
   }, function (err, result) {
     if (result.success || result.transaction) {
-      // console.log(result);
-      res.send(result.transaction)
-      // result.setHeader('Content-Type', 'application/json');
-      // res.send(JSON.stringify({ a: 1 }, null, 3));
-      // res.redirect('../orders/' + result.transaction.id);
+      createOrder(req.body, result.transaction);
+      var responseObj = {
+        transaction: result.transaction,
+        items: cartData.items
+      }
+      res.setHeader('Content-Type', 'application/json');
+      res.send(responseObj);
     } else {
       transactionErrors = result.errors.deepErrors();
       console.log(formatErrors(transactionErrors))

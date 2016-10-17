@@ -2,8 +2,6 @@
 
 export function routeConfig($urlRouterProvider, $locationProvider) {
   'ngInject';
-
-  $urlRouterProvider.otherwise('/customize');
-
+  $urlRouterProvider.when('/', '/customize');
   $locationProvider.html5Mode(true);
 }

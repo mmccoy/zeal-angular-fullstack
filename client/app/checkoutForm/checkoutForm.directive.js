@@ -10,13 +10,12 @@ export default angular.module('customizerApp.checkoutForm', ['ngCart'])
     return {
       templateUrl: template,
       restrict: 'EA',
-      link: function(scope, element, attrs) {
+      link: function(scope, element, attrs, ctrl) {
         $http({
           method: 'GET',
           url: '/api/checkouts/token'
         }).then(function successCallback(response) {
-            console.log('Success');
-
+            console.log('Token retreived');
             scope.clientToken = response.data;
             scope.totalCost = ngCart.totalCost();
 
@@ -63,10 +62,9 @@ export default angular.module('customizerApp.checkoutForm', ['ngCart'])
                   event.preventDefault();
                   hostedFieldsInstance.tokenize(function (tokenizeErr, payload) {
                     if (tokenizeErr) { return; }
-                    // Put `payload.nonce` into the `payment-method-nonce` input, and then
-                    // submit the form. Alternatively, you could send the nonce to your server
-                    // with AJAX.
+
                     var formData = JSON.parse(JSON.stringify(form.serializeArray()));
+                    var cartData = ngCart.getCart();
 
                     var req = {
                       method: 'POST',
@@ -75,12 +73,15 @@ export default angular.module('customizerApp.checkoutForm', ['ngCart'])
                         formData: formData,
                         totalCost: ngCart.totalCost(),
                         payload: payload,
-                        cartData: ngCart.getItems()._data
+                        cartData: cartData
                       }
                     }
                     $http(req).then(function(response){
-                      console.log(response);
+                      // Successful order
+                      ngCart.empty();
+                      ctrl.redirectToOrder({orderId: response.data.transaction.id, stick: response.data.items[0]._data});
                     }, function(response){
+                      // Error
                       console.log(response);
                     });
                   });
@@ -88,7 +89,12 @@ export default angular.module('customizerApp.checkoutForm', ['ngCart'])
               })
             });
         });
-
+      },
+      // end link
+      controller : function($state, $stateParams) {
+        this.redirectToOrder = function(params) {
+          $state.go('orders', params);
+        }
       }
     }
   })

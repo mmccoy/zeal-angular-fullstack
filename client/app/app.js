@@ -24,7 +24,7 @@ import account from './account';
 import admin from './admin';
 import navbar from '../components/navbar/navbar.component';
 import footer from '../components/footer/footer.component';
-import main from './main/main.component';
+// import main from './main/main.component';
 import customize from './customize/customize.component';
 import orders from './orders/orders.component';
 import checkoutForm from './checkoutForm/checkoutForm.directive';
@@ -35,7 +35,7 @@ import socket from '../components/socket/socket.service';
 import './app.scss';
 
 angular.module('customizerApp', [ngCookies, ngResource, ngSanitize, 'btford.socket-io', uiRouter,
-    'ui.bootstrap', _Auth, account, admin, navbar, footer, main, customize, constants, socket, util,
+    'ui.bootstrap', _Auth, account, admin, navbar, footer, customize, constants, socket, util,
     ngAnimate, 'rzModule', 'ngCart', checkoutForm, orders])
   .config(routeConfig)
   .run(function($rootScope, $location, Auth) {

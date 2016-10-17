@@ -5,6 +5,9 @@ export default function($stateProvider) {
   $stateProvider
     .state('orders', {
       url: '/orders/:orderId',
-      template: '<orders></orders>'
+      template: '<orders></orders>',
+      params: {
+        stick: {}
+      }
     });
 }

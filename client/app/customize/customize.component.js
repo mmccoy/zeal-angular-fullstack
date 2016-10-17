@@ -4,6 +4,7 @@ const angular = require('angular');
 const uiRouter = require('angular-ui-router');
 
 import routes from './customize.routes';
+import md5 from 'js-md5';
 
 export class CustomizeComponent {
   sticks = [];
@@ -126,7 +127,7 @@ export class CustomizeComponent {
         this.userStick[prop] = propertyObj[prop];
       }
     }
-    console.log(this.userStick);
+    this.userStick.customHash = md5(this.userStick);
   };
 
   setOptionStage (stage) {
