@@ -20,7 +20,7 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 // Component styles are injected through gulp
 /* inject:scss */
 @import 'admin/admin';
-@import 'checkoutForm/checkoutForm';
+@import 'checkout/checkout';
 @import 'customize/customize';
 @import 'customize/partials/scss/cart';
 @import 'customize/partials/scss/default-stick-colors';

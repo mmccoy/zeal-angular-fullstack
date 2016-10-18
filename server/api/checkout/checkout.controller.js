@@ -114,32 +114,12 @@ function handleError(res, statusCode) {
 function createOrder(data, transaction) {
 
   var client = new postmark.Client("53f7ddd2-f777-40df-b9b4-2f0db0848923");
+
+  var stick = data.cartData.items[0]._data;
   var customerData = {};
   data.formData.forEach(function (entry) {
     customerData[entry.name] = entry.value;
   });
-
-  // var emails = [
-  //   {
-  //     "From": "orders@devision.us",
-  //     "To": customerData.email,
-  //     "TemplateId": 1008382,
-  //     "TemplateModel": {
-  //       "firstName": customerData.firstName,
-  //       "stickModel": data.cartData.items[0]._data.name,
-  //       "orderNumber": transaction.id
-  //     }
-  //   },
-  //   {
-  //     "From": "orders@devision.us",
-  //     "To": "mmccoy@gmail.com",
-  //     "TemplateId": 1008542,
-  //     "TemplateModel": {
-  //       "orderNumber": transaction.id,
-  //       "stick": data.cartData.items[0]._data
-  //     }
-  //   }
-  // ];
 
   // Customer order confirmation email
   client.sendEmailWithTemplate({
@@ -159,14 +139,34 @@ function createOrder(data, transaction) {
     console.info("Custom order confirmation email sent to postmark for delivery");
   });
 
-  // Send team zeal order info
+  // Send Zeal order info so they can make the stick.
   client.sendEmailWithTemplate({
     "From": "orders@devision.us",
-    "To": "mmccoy@gmail.com",
+    "To": "mmccoy@gmail.com, zealhockey@gmail.com",
     "TemplateId": 1008542,
     "TemplateModel": {
       "orderNumber": transaction.id,
-      "stick": data.cartData.items[0]._data
+      "stick": data.cartData.items[0]._data,
+      "profile": stick.category,
+      "model": stick.series + ' ' + stick.name,
+      "orientation": stick.orientation,
+      "colorShaft": stick.customColor.shaft,
+      "colorAccent": stick.customColor.accent,
+      "colorLogo": stick.customColor.logo,
+      "flex": stick.flex,
+      "blade": stick.pattern,
+      "coating": stick.finish,
+      "playerName": stick.player.name,
+      "playerNumber": stick.player.number,
+      "name": customerData.firstName + ' ' + customerData.lastName,
+      "phone": customerData.phone,
+      "email": customerData.email,
+      "addressA": customerData.addressA,
+      "addressB": customerData.addressB,
+      "city": customerData.city,
+      "state": customerData.state,
+      "zipcode": customerData.zipcode,
+      "country": customerData.country
     }
   }, function(error, success) {
     if(error) {
