@@ -1264,7 +1264,7 @@ export class checkoutComponent {
   $onInit() {
     var _this = this;
     this.zipcodeInput.on('blur', function() {
-      var dataUrl = 'http://api.zippopotam.us/us/' + this.value;
+      var dataUrl = 'https://api.zippopotam.us/us/' + this.value;
       _this.$http.get(dataUrl)
         .success(function (res){
           // console.log(res);
@@ -1329,6 +1329,8 @@ export class checkoutComponent {
 
             _this.form.on('submit', function(event) {
               event.preventDefault();
+              submit.prop("disabled", true);
+
               hostedFieldsInstance.tokenize(function (tokenizeErr, payload) {
                 if (tokenizeErr) { return; }
 
