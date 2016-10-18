@@ -114,8 +114,8 @@ export default function($stateProvider, $urlRouterProvider) {
         }
       },
       data: {
-        stageLeftSpan: 11,
-        stageRightSpan: 0
+        stageLeftSpan: 8,
+        stageRightSpan: 3
       }
     });
 }

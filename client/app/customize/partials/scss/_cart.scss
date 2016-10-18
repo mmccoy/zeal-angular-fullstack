@@ -45,3 +45,20 @@
     }
   }
 }
+
+.production-disclaimer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2rem;
+  background-color: white;
+  border: 1px solid #ddd;
+  width: 50%;
+  float: right;
+  margin-top: 2rem;
+
+  i {
+    margin-right: 2rem;
+    color: red;
+  }
+}

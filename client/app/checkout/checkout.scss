@@ -1,15 +1,58 @@
+$border-color: #c8c8c8;
+$active-bg: #f5f8fc;
+$active-color: #52a6e1;
+$anim: cubic-bezier(0.215, 0.610, 0.355, 1.00);
+$error-bg: #feeeee;
+$error-color: darken($error-bg, 35);
+$goodGreen: #64d18a;
+
 #checkout-form {
   background-color: #f1f1f1;
   padding: 2rem;
 }
 
 .checkout-form-container {
+
+  input {
+    margin: .4rem 0;
+  }
+
+  .ng-valid-required {
+    border: 1px solid $goodGreen;
+  }
+
   display: flex;
   flex-direction: row;
 
   > div {
-    flex-basis: 50%;
-    padding: 2rem;
+    width: 100%;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    color: #e8124a;
+  }
+
+  h4 {
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-size: 15px;
+    color: #999;
+  }
+
+  .form-area {
+    margin: 2rem auto;
+  }
+
+  button {
+    transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+    &:hover {
+      color: white;
+      box-shadow: 0 1px 4px #888;
+      transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
   }
 }
 
@@ -78,7 +121,7 @@
 }
 
 .braintree-hosted-fields-focused {
-  border: 1px solid #64d18a;
+  border: 1px solid $goodGreen;
   border-radius: 1px;
   background-position: left bottom;
 }

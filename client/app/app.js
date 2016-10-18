@@ -27,7 +27,7 @@ import footer from '../components/footer/footer.component';
 // import main from './main/main.component';
 import customize from './customize/customize.component';
 import orders from './orders/orders.component';
-import checkoutForm from './checkoutForm/checkoutForm.directive';
+import checkout from './checkout/checkout.component';
 import constants from './app.constants';
 import util from '../components/util/util.module';
 import socket from '../components/socket/socket.service';
@@ -36,7 +36,7 @@ import './app.scss';
 
 angular.module('customizerApp', [ngCookies, ngResource, ngSanitize, 'btford.socket-io', uiRouter,
     'ui.bootstrap', _Auth, account, admin, navbar, footer, customize, constants, socket, util,
-    ngAnimate, 'rzModule', 'ngCart', checkoutForm, orders])
+    ngAnimate, 'rzModule', 'ngCart', orders, checkout])
   .config(routeConfig)
   .run(function($rootScope, $location, Auth) {
     'ngInject';

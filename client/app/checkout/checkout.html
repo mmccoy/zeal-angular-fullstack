@@ -1,0 +1,101 @@
+<form id="checkout-form" action="/api/checkouts" method="post">
+  <div class="checkout-form-container">
+    <div>
+      <h3>Checkout</h3>
+      <div class="form-area">
+        <h4>Customer Info</h4>
+        <div class="form-group">
+          <label for="lastName">Email Address</label>
+          <input class="form-control" type="email" name="email" id="email" ng-model="emailValue" required>
+        </div>
+      </div>
+
+      <div class="form-area">
+        <h4>Shipping Info</h4>
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input class="form-control" type="text" name="firstName" id="firstName" ng-model="firstNameValue" required>
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input class="form-control" type="text" name="lastName" id="lastName" ng-model="lastNameValue" required>
+        </div>
+
+        <div class="form-group">
+          <label for="addressA">Address</label>
+          <input class="form-control" type="text" name="addressA" id="addressA" ng-model="addressAValue" required>
+          <input class="form-control" type="text" name="addressB" id="addressB" ng-model="addressBValue">
+        </div>
+
+        <div class="form-group">
+          <label for="city">Zip Code</label>
+          <input class="form-control" type="text" pattern="[0-9]{5}" name="zipcode" id="zipcode" ng-model="zipcodeValue" required>
+        </div>
+
+        <div class="form-group">
+          <label for="city">City</label>
+          <input class="form-control" type="text" name="city" id="city" ng-model="cityValue" required>
+        </div>
+
+        <div class="form-group">
+          <label for="state">State</label>
+          <select class="form-control" name="state" id="state" ng-model="stateValue" required>
+            <option value="" disabled selected style="display: none;">State / Province</option>
+            <option ng-repeat="state in checkout.states" value="{{state.value}}">{{state.name}}</option>
+            {{state.value}}
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="city">Country</label>
+          <select class="form-control" name="country" id="country" ng-model="countryValue" required>
+            <option value="" disabled selected style="display: none;">Country</option>
+            <option ng-repeat="country in checkout.countries" value="{{country.value}}">{{country.name}}</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-area">
+        <h4>Payment Details</h4>
+        <div id="error-message"></div>
+
+        <div class="form-group">
+          <label for="card-number">Card Number</label>
+          <div class="hosted-field" id="card-number"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="cvv">CVV</label>
+          <div class="hosted-field" id="cvv"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="expiration-date">Expiration Date</label>
+          <div class="hosted-field" id="expiration-date"></div>
+        </div>
+
+        <input type="hidden" id="order-total" name="order-total" ng-model="orderTotalValue">
+        <input type="hidden" id="payment-method-nonce" name="payment-method-nonce" ng-model="paymentMethodNonceValue">
+        <input type="hidden" name="_csrf" value="_csrf">
+
+        <div class="form-group">
+          <!-- <button type="submit" class="btn btn-primary">Pay</button> -->
+          <!-- <ngcart-checkout service="log" settings="{ url:'/api/checkouts' }"></ngcart-checkout> -->
+          <button class="btn checkout-button" id="checkoutBtn" type="submit">Checkout</button>
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
+</form>
+
+<!-- Load the Client component. -->
+<script src="https://js.braintreegateway.com/web/3.4.0/js/client.min.js"></script>
+
+<!-- Load the Hosted Fields component. -->
+<script src="https://js.braintreegateway.com/web/3.4.0/js/hosted-fields.min.js"></script>
+
+<script type="text/ng-template" id="template/ngCart/checkout.html">
+  <div class="btn checkout-button" ng-click="checkout()" ng-disabled="!ngCart.getTotalItems()" ng-transclude>Checkout</div>
+</script>
+

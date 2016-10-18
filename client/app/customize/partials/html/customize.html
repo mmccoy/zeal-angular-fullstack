@@ -45,5 +45,5 @@
     </ul>
   </div>
   <div class="col-md-{{stageLeftSpan || 6}} stage-left" ui-view="stage-left" ng-class="{'hidden-of': customize.$state.includes('customize.options')}"></div>
-  <div ng-if="!customize.$state.includes('customize.cart')" class="col-md-{{stageRightSpan || 5}} stage-right" ui-view="stage-right" ng-class="{'shadowed': customize.$state.includes('customize.options')}"></div>
+  <div class="col-md-{{stageRightSpan || 5}} stage-right" ui-view="stage-right" ng-class="{'shadowed': customize.$state.includes('customize.options')}"></div>
 </div>
