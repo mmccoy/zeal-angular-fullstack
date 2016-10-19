@@ -4,9 +4,10 @@ const template = require('ngtemplate!html!./checkout.html');
 
 export class checkoutComponent {
   /*@ngInject*/
-  constructor(ngCart, $http, $state) {
+  constructor(ngCart, $http, $state, $timeout) {
     this.$http = $http;
     this.$state = $state;
+    this.$timeout = $timeout;
     this.ngCart = ngCart;
     this.message = 'World';
     this.totalCost = this.ngCart.totalCost();
@@ -1263,6 +1264,7 @@ export class checkoutComponent {
 
   $onInit() {
     var _this = this;
+
     this.zipcodeInput.on('blur', function() {
       var dataUrl = 'https://api.zippopotam.us/us/' + this.value;
       _this.$http.get(dataUrl)
@@ -1272,12 +1274,27 @@ export class checkoutComponent {
           _this.country.val(res['country abbreviation']);
           _this.city.val(place['place name']);
           _this.state.val(place['state abbreviation']);
+          _this.$timeout(function() {
+            _this.country.trigger('change');
+            _this.city.trigger('change');
+            _this.state.trigger('change');
+          });
+
         })
         .error(function (error, status){
           var fetchError = { message: error, status: status};
           console.log(fetchError);
         });
-    })
+    });
+
+    this.state.change(function(event) {
+      if (event.currentTarget.value == "RI") {
+        _this.ngCart.setTaxRate(7.5);
+      } else {
+        _this.ngCart.setTaxRate(0);
+      };
+    });
+
     this.setupBraintree();
   }
 

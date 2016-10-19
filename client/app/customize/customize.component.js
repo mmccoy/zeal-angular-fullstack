@@ -20,8 +20,7 @@ export class CustomizeComponent {
     this.optionStage = 'color';
 
 
-    // Cart configurations
-    ngCart.setTaxRate(7.5);
+    // Default cart configurations
     ngCart.setShipping(14.99);
 
     if ($state.is('customize')) {
@@ -127,7 +126,7 @@ export class CustomizeComponent {
         this.userStick[prop] = propertyObj[prop];
       }
     }
-    this.userStick.customHash = md5(this.userStick);
+    this.userStick.customHash = md5(this.userStick.toString());
   };
 
   setOptionStage (stage) {

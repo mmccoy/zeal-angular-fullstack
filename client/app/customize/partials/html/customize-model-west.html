@@ -1,4 +1,5 @@
-<ul class="stick-list">
+<!-- desktop -->
+<ul class="stick-list hidden-xs">
   <li class="category-label">Primo Series <span>(Medium Kick-Point)</span></li>
   <li ng-repeat="stick in customize.sticks | filter:{'series': 'Primo', 'category': 'senior'}"
       ng-click="customize.updateUserStick(stick)"
@@ -8,7 +9,7 @@
   </li>
 </ul>
 
-<ul class="stick-list">
+<ul class="stick-list hidden-xs">
   <li class="category-label">Nova Series <span>(Low Kick-Point)</span></li>
   <li ng-repeat="stick in customize.sticks | filter:{'series': 'Nova', 'category': 'senior'}"
       ng-click="customize.updateUserStick(stick)"
@@ -18,7 +19,7 @@
   </li>
 </ul>
 
-<ul class="stick-list">
+<ul class="stick-list hidden-xs">
   <li class="category-label">Alpha Series <span>(High Kick-Point)</span></li>
   <li ng-repeat="stick in customize.sticks | filter:{'series': 'Alpha', 'category': 'senior'}"
       ng-click="customize.updateUserStick(stick)"
@@ -26,5 +27,78 @@
     <span ng-if="stick.disabled" class="coming-soon-banner">Coming soon!</span>
     <span class="stick-model-label">{{stick.name}}</span>
     <img ng-src="{{stick.images.root_path}}{{stick.images.key}}profile.png" alt="">
+  </li>
+</ul>
+
+
+<!-- mobile -->
+<ul class="mobile-stick-list visible-xs-block">
+  <li class="category-label">Primo Series <span>(Medium Kick-Point)</span></li>
+  <li ng-repeat="stick in customize.sticks | filter:{'series': 'Primo', 'category': 'senior'}"
+      ng-click="customize.updateUserStick(stick)"
+      ng-class="{'selected': customize.userStick.name == stick.name}">
+    <div class="stick-header">
+      <i class="material-icons">chevron_right</i>
+      <span class="stick-model-label">{{stick.name}}</span>
+      <img class="img-responsive" ng-src="{{stick.images.root_path}}{{stick.images.key}}profile.png" alt="">
+    </div>
+    <div class="mobile-stick-details">
+      <h3>{{customize.userStick.series}} {{customize.userStick.name}}</h3>
+      <p class="stick-price">${{customize.userStick.price}}</p>
+      <ul class="stick-specs">
+        <li>
+          <h6>Kick point</h6>
+          <p>{{customize.userStick.features.kickpoint}}</p>
+        </li>
+        <li>
+          <h6>Weight</h6>
+          <p>{{customize.userStick.weight}}</p>
+        </li>
+        <li>
+          <h6>Blade</h6>
+          <p>{{customize.userStick.features.blade}}</p>
+        </li>
+        <li>
+          <h6>Shaft</h6>
+          <p>{{customize.userStick.features.shaft}}</p>
+        </li>
+      </ul>
+      <p class="stick-description">{{customize.userStick.description}}</p>
+      <button class="customize-button" ng-click="updateUserStick(customize.userStick)" ui-sref="customize.options">Customize It <img src="/assets/images/icon_arrow_fwd.svg" alt=""></button>
+    </div>
+  </li>
+  <li class="category-label">Nova Series <span>(Low Kick-Point)</span></li>
+  <li ng-repeat="stick in customize.sticks | filter:{'series': 'Nova', 'category': 'senior'}"
+      ng-click="customize.updateUserStick(stick)"
+      ng-class="{'selected': customize.userStick.name == stick.name}">
+    <div class="stick-header">
+      <i class="material-icons">chevron_right</i>
+      <span class="stick-model-label">{{stick.name}}</span>
+      <img class="img-responsive" ng-src="{{stick.images.root_path}}{{stick.images.key}}profile.png" alt="">
+    </div>
+    <div class="mobile-stick-details">
+      <h3>{{customize.userStick.series}} {{customize.userStick.name}}</h3>
+      <p class="stick-price">${{customize.userStick.price}}</p>
+      <ul class="stick-specs">
+        <li>
+          <h6>Kick point</h6>
+          <p>{{customize.userStick.features.kickpoint}}</p>
+        </li>
+        <li>
+          <h6>Weight</h6>
+          <p>{{customize.userStick.weight}}</p>
+        </li>
+        <li>
+          <h6>Blade</h6>
+          <p>{{customize.userStick.features.blade}}</p>
+        </li>
+        <li>
+          <h6>Shaft</h6>
+          <p>{{customize.userStick.features.shaft}}</p>
+        </li>
+      </ul>
+      <p class="stick-description">{{customize.userStick.description}}</p>
+      <button class="customize-button" ng-click="updateUserStick(customize.userStick)" ui-sref="customize.options">Customize It <img src="/assets/images/icon_arrow_fwd.svg" alt=""></button>
+    </div>
   </li>
 </ul>

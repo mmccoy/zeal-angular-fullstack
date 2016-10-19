@@ -39,4 +39,92 @@
     right: 20px;
     bottom: 20px;
   }
+
+  .list-nav.player-actions,
+  .list-nav.profile-actions {
+    li {
+      padding: 3rem;
+    }
+  }
+
+  .mobile-stick-list {
+    .category-label {
+      line-height: 3rem;
+      background-color: #111;
+      color: white;
+      padding: 4px 10px;
+    }
+
+    .stick-model-label {
+      padding: 12px 18px;
+      border: 1px solid #444;
+    }
+
+    li {
+      overflow: auto;
+
+      .stick-header {
+        padding: 12px;
+        margin-top: 12px;
+        position: relative;
+
+        > img {
+          margin: 20px auto;
+        }
+
+        > i {
+          color: #444;
+          position: absolute;
+          right: 10px;
+          font-size: 36px;
+          transform: rotate(90deg);
+          top: 0;
+        }
+      }
+
+      .mobile-stick-details {
+        display: none;
+
+        .stick-specs{
+          display: flex;
+          text-transform: uppercase;
+
+          li {
+            flex-basis: 25%;
+
+            > p {
+              font-weight: 700;
+            }
+          }
+        }
+      }
+
+      &.selected {
+        background-color: #b4b4b4;
+
+        .stick-header {
+          > i {
+            color: white;
+            transform: rotate(-90deg);
+          }
+        }
+
+        .stick-model-label {
+          background-color: #444444;
+          color: white;
+        }
+
+        .mobile-stick-details {
+          display: block;
+          background-color: white;
+          padding: 12px 12px 36px;
+
+          .stick-description {
+            margin: 12px 0 36px;
+          }
+        }
+      }
+    }
+  }
+
 }

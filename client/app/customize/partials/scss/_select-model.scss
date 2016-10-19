@@ -101,22 +101,22 @@
       flex-basis: 25%;
     }
   }
+}
 
-  .customize-button {
-    display: flex;
-    align-items: center;
-    min-width: 180px;
-    color: white;
-    font-size: 2.4rem;
-    font-weight: 500;
-    border: 0;
-    padding: 8px 24px;
-    text-align: left;
-    text-transform: uppercase;
-    @include diagonalBackground(-45deg, #d61648, $zealRed, 2px, 4px);
+.customize-button {
+  display: flex;
+  align-items: center;
+  min-width: 180px;
+  color: white;
+  font-size: 2.4rem;
+  font-weight: 500;
+  border: 0;
+  padding: 8px 24px;
+  text-align: left;
+  text-transform: uppercase;
+  @include diagonalBackground(-45deg, #d61648, $zealRed, 2px, 4px);
 
-    img {
-      margin-left: 2rem;
-    }
+  img {
+    margin-left: 2rem;
   }
 }
