@@ -126,7 +126,7 @@ export class CustomizeComponent {
         this.userStick[prop] = propertyObj[prop];
       }
     }
-    this.userStick.customHash = md5(this.userStick.toString());
+    this.userStick.customHash = md5(this.userStick.toString()) + new Date().toString();
   };
 
   setOptionStage (stage) {

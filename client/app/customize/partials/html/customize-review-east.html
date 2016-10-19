@@ -65,7 +65,7 @@
   </tr>
 </table>
 <!-- <button type="button" class="btn btn-primary review-button" ng-click="changeState('customize.review')">Add to cart <img src="/assets/images/icon_arrow_fwd.svg" alt=""></button> -->
-<ngcart-addtocart id="{{ customize.userStick.customHash }}" name="{{ customize.userStick.name }}" price="{{ customize.userStick.price }}"
+<ngcart-addtocart id="{{ customize.userStick.customHash}}" name="{{ customize.userStick.name }}" price="{{ customize.userStick.price }}"
                   quantity="1" quantity-max="30" data="customize.userStick"></ngcart-addtocart>
 
 <script type="text/ng-template" id="template/ngCart/addtocart.html">
@@ -75,7 +75,7 @@
   <div ng-show="attrs.id">
     <div>
       <button type="button" class="btn btn-primary review-button"
-              ng-click="ngCart.addItem(id, name, price, q, data);$state.go('customize.cart');"
+              ng-click="ngCart.addItem(id, name, price, q, data);"
               ng-transclude>
         Add to cart
         <img src="/assets/images/icon_arrow_fwd.svg" alt="">
