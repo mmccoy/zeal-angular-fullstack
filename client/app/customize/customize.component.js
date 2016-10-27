@@ -46,33 +46,49 @@ export class CustomizeComponent {
       isFirstOpen: true
     };
 
+    // this.patternSlider = {
+    //   value: this.userStick.pattern,
+    //   options: {
+    //     id: 'patternChoice',
+    //     showTicksValues: true,
+    //     stepsArray: [
+    //       {value: "Z28", legend: 'Toe'},
+    //       {value: "Z39"},
+    //       {value: "Z11"},
+    //       {value: "Z9C"},
+    //       {value: "ZM83"},
+    //       {value: "Z20", legend: 'Heel'}
+    //     ]
+    //   }
+    // };
     this.patternSlider = {
       value: this.userStick.pattern,
       options: {
         id: 'patternChoice',
         showTicksValues: true,
-        stepsArray: [
-          {value: "Z28", legend: 'Toe'},
-          {value: "Z39"},
-          {value: "Z11"},
-          {value: "Z9C"},
-          {value: "ZM83"},
-          {value: "Z20", legend: 'Heel'}
-        ]
+        stepsArray: this.userStick.patterns
       }
     };
 
+    // this.flexSlider = {
+    //   value: this.userStick.flex,
+    //   options: {
+    //     id: 'flexChoice',
+    //     showTicksValues: true,
+    //     stepsArray: [
+    //       {value: "77", legend: 'Flexible'},
+    //       {value: "87"},
+    //       {value: "102"},
+    //       {value: "112", legend: 'Stiff'}
+    //     ]
+    //   }
+    // };
     this.flexSlider = {
       value: this.userStick.flex,
       options: {
         id: 'flexChoice',
         showTicksValues: true,
-        stepsArray: [
-          {value: "77", legend: 'Flexible'},
-          {value: "87"},
-          {value: "102"},
-          {value: "112", legend: 'Stiff'}
-        ]
+        stepsArray: this.userStick.flexes
       }
     };
 
@@ -126,7 +142,11 @@ export class CustomizeComponent {
         this.userStick[prop] = propertyObj[prop];
       }
     }
+
+    this.patternSlider.options.stepsArray = this.userStick.patterns;
+    this.flexSlider.options.stepsArray = this.userStick.flexes;
     this.userStick.customHash = md5(this.userStick.toString()) + new Date().toString();
+    // console.log(this.userStick);
   };
 
   setOptionStage (stage) {

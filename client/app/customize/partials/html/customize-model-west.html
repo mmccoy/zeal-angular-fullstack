@@ -1,7 +1,7 @@
 <!-- desktop -->
 <ul class="stick-list hidden-xs">
   <li class="category-label">Primo Series <span>(Medium Kick-Point)</span></li>
-  <li ng-repeat="stick in customize.sticks | filter:{'series': 'Primo', 'category': 'senior'}"
+  <li ng-repeat="stick in customize.sticks | filter:{'series': 'Primo', 'category': customize.userStick.profile}"
       ng-click="customize.updateUserStick(stick)"
       ng-class="{'selected': customize.userStick.name == stick.name}">
     <span class="stick-model-label">{{stick.name}}</span>
@@ -11,7 +11,7 @@
 
 <ul class="stick-list hidden-xs">
   <li class="category-label">Nova Series <span>(Low Kick-Point)</span></li>
-  <li ng-repeat="stick in customize.sticks | filter:{'series': 'Nova', 'category': 'senior'}"
+  <li ng-repeat="stick in customize.sticks | filter:{'series': 'Nova', 'category': customize.userStick.profile}"
       ng-click="customize.updateUserStick(stick)"
       ng-class="{'selected': customize.userStick.name == stick.name}">
     <span class="stick-model-label">{{stick.name}}</span>
@@ -21,7 +21,7 @@
 
 <ul class="stick-list hidden-xs">
   <li class="category-label">Alpha Series <span>(High Kick-Point)</span></li>
-  <li ng-repeat="stick in customize.sticks | filter:{'series': 'Alpha', 'category': 'senior'}"
+  <li ng-repeat="stick in customize.sticks | filter:{'series': 'Alpha', 'category': customize.userStick.profile}"
       ng-click="customize.updateUserStick(stick)"
       ng-class="{'selected': customize.userStick.name == stick.name, 'disabled': stick.disabled}">
     <span ng-if="stick.disabled" class="coming-soon-banner">Coming soon!</span>
@@ -34,7 +34,7 @@
 <!-- mobile -->
 <ul class="mobile-stick-list visible-xs-block">
   <li class="category-label">Primo Series <span>(Medium Kick-Point)</span></li>
-  <li ng-repeat="stick in customize.sticks | filter:{'series': 'Primo', 'category': 'senior'}"
+  <li ng-repeat="stick in customize.sticks | filter:{'series': 'Primo', 'category': customize.userStick.profile}"
       ng-click="customize.updateUserStick(stick)"
       ng-class="{'selected': customize.userStick.name == stick.name}">
     <div class="stick-header">
@@ -68,7 +68,7 @@
     </div>
   </li>
   <li class="category-label">Nova Series <span>(Low Kick-Point)</span></li>
-  <li ng-repeat="stick in customize.sticks | filter:{'series': 'Nova', 'category': 'senior'}"
+  <li ng-repeat="stick in customize.sticks | filter:{'series': 'Nova', 'category': customize.userStick.profile}"
       ng-click="customize.updateUserStick(stick)"
       ng-class="{'selected': customize.userStick.name == stick.name}">
     <div class="stick-header">

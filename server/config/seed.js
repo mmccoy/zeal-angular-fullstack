@@ -111,7 +111,21 @@ Stick.find({}).remove()
             {"name": "", "hex": "#EB008B"},
             {"name": "", "hex": "#8B8D8D"}
           ]
-        }
+        },
+        "flexes": [
+          {value: "77", legend: "Flexible"},
+          {value: "87"},
+          {value: "102"},
+          {value: "112", legend: "Stiff"}
+        ],
+        "patterns": [
+          {value: "Z28", legend: "Toe"},
+          {value: "Z39"},
+          {value: "Z11"},
+          {value: "Z9C"},
+          {value: "ZM83"},
+          {value: "Z20", legend: "Heel"}
+        ]
       },
       {
         "id": "pk100-int",
@@ -119,7 +133,7 @@ Stick.find({}).remove()
         "name": "PK100",
         "weight": 400,
         "series": "Primo",
-        "price": 179.99,
+        "price": 169.99,
         "description": "Our Primo PK100 is a true-one piece stick made in small batches from high grade Toray carbon. Each layer of laminate is hand rolled to ensure strength and consistency. Our mono-compression molding process improve the sticks balance.\nThe PK100 flex profile accommodates a variety of shooting styles. Whether you’re taking slap shots from the point or quick wrist shots in close to the net, you’ll be able to maximize the transfer of energy in your shot—improving shot speed and accuracy.",
         "tagline": "One-liner needed.",
         "features": {
@@ -162,7 +176,18 @@ Stick.find({}).remove()
             {"name": "", "hex": "#EB008B"},
             {"name": "", "hex": "#8B8D8D"}
           ]
-        }
+        },
+        "flexes": [
+          {value: "60", legend: "Flexible"},
+          {value: "65"},
+          {value: "70", legend: "Stiff"}
+        ],
+        "patterns": [
+          {value: "Z28", legend: "Toe"},
+          {value: "Z39"},
+          {value: "Z11"},
+          {value: "Z9C", legend: "Heel"}
+        ]
       },
       {
         "id": "pk100-jr",
@@ -170,7 +195,7 @@ Stick.find({}).remove()
         "name": "PK100",
         "weight": 385,
         "series": "Primo",
-        "price": 179.99,
+        "price": 159.99,
         "description": "Our Primo PK100 is a true-one piece stick made in small batches from high grade Toray carbon. Each layer of laminate is hand rolled to ensure strength and consistency. Our mono-compression molding process improve the sticks balance.\nThe PK100 flex profile accommodates a variety of shooting styles. Whether you’re taking slap shots from the point or quick wrist shots in close to the net, you’ll be able to maximize the transfer of energy in your shot—improving shot speed and accuracy.",
         "tagline": "One-liner needed.",
         "features": {
@@ -213,7 +238,17 @@ Stick.find({}).remove()
             {"name": "", "hex": "#EB008B"},
             {"name": "", "hex": "#8B8D8D"}
           ]
-        }
+        },
+        "flexes": [
+          {value: "40", legend: "Flexible"},
+          {value: "45"},
+          {value: "50", legend: "Stiff"}
+        ],
+        "patterns": [
+          {value: "Z39", legend: "Toe"},
+          {value: "Z11"},
+          {value: "Z9C", legend: "Heel"}
+        ]
       },
       {
         "id": "pk1000-senior",
@@ -221,7 +256,7 @@ Stick.find({}).remove()
         "name": "PK1000",
         "weight": 430,
         "series": "Primo",
-        "price": 179.99,
+        "price": 189.99,
         "description": "Our Primo PK1000 is a true one-piece stick. With an improved two-plate autoclave and vacuum extraction molding process, we’ve decreased stick weight by 15% without sacrificing durability.\n\nThe PK1000 is made in small batches to ensure strength and consistency. With an improved laminate structure and light weight reinforcement layers, we have created a combination of perfect balance and playability. \n\nUsing the same “wide-load” technology as the PK100, the PK1000 will maximize the transfer of energy in every shot you take.",
         "tagline": "One-liner needed.",
         "features": {
@@ -258,7 +293,21 @@ Stick.find({}).remove()
             {"name": "White", "hex": "#ffffff"},
             {"name": "", "hex": "#BBBDBF"}
           ]
-        }
+        },
+        "flexes": [
+          {value: "77", legend: "Flexible"},
+          {value: "87"},
+          {value: "102"},
+          {value: "112", legend: "Stiff"}
+        ],
+        "patterns": [
+          {value: "Z28", legend: "Toe"},
+          {value: "Z39"},
+          {value: "Z11"},
+          {value: "Z9C"},
+          {value: "ZM83"},
+          {value: "Z20", legend: "Heel"}
+        ]
       },
       {
         "id": "pk1000-int",
@@ -303,7 +352,18 @@ Stick.find({}).remove()
             {"name": "White", "hex": "#ffffff"},
             {"name": "", "hex": "#BBBDBF"}
           ]
-        }
+        },
+        "flexes": [
+          {value: "60", legend: "Flexible"},
+          {value: "65"},
+          {value: "70", legend: "Stiff"}
+        ],
+        "patterns": [
+          {value: "Z28", legend: "Toe"},
+          {value: "Z39"},
+          {value: "Z11"},
+          {value: "Z9C", legend: "Heel"}
+        ]
       },
       {
         "id": "pk1000-jr",
@@ -348,7 +408,17 @@ Stick.find({}).remove()
             {"name": "White", "hex": "#ffffff"},
             {"name": "", "hex": "#BBBDBF"}
           ]
-        }
+        },
+        "flexes": [
+          {value: "40", legend: "Flexible"},
+          {value: "45"},
+          {value: "50", legend: "Stiff"}
+        ],
+        "patterns": [
+          {value: "Z39", legend: "Toe"},
+          {value: "Z11"},
+          {value: "Z9C", legend: "Heel"}
+        ]
       },
       {
         "id": "k1-senior",
@@ -388,7 +458,21 @@ Stick.find({}).remove()
             {"name": "", "hex": "#6AC8CF"},
             {"name": "", "hex": "#8E4E9D"}
           ]
-        }
+        },
+        "flexes": [
+          {value: "77", legend: "Flexible"},
+          {value: "87"},
+          {value: "102"},
+          {value: "112", legend: "Stiff"}
+        ],
+        "patterns": [
+          {value: "Z28", legend: "Toe"},
+          {value: "Z39"},
+          {value: "Z11"},
+          {value: "Z9C"},
+          {value: "ZM83"},
+          {value: "Z20", legend: "Heel"}
+        ]
       },
       {
         "id": "k1-int",
@@ -428,7 +512,18 @@ Stick.find({}).remove()
             {"name": "", "hex": "#6AC8CF"},
             {"name": "", "hex": "#8E4E9D"}
           ]
-        }
+        },
+        "flexes": [
+          {value: "60", legend: "Flexible"},
+          {value: "65"},
+          {value: "70", legend: "Stiff"}
+        ],
+        "patterns": [
+          {value: "Z28", legend: "Toe"},
+          {value: "Z39"},
+          {value: "Z11"},
+          {value: "Z9C", legend: "Heel"}
+        ]
       },
       {
         "id": "k1-jr",
@@ -468,7 +563,17 @@ Stick.find({}).remove()
             {"name": "", "hex": "#6AC8CF"},
             {"name": "", "hex": "#8E4E9D"}
           ]
-        }
+        },
+        "flexes": [
+          {value: "40", legend: "Flexible"},
+          {value: "45"},
+          {value: "50", legend: "Stiff"}
+        ],
+        "patterns": [
+          {value: "Z39", legend: "Toe"},
+          {value: "Z11"},
+          {value: "Z9C", legend: "Heel"}
+        ]
       },
       {
         "id": "rx1-senior",

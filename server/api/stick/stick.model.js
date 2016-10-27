@@ -28,7 +28,9 @@ var StickSchema = new mongoose.Schema({
     shaft: [{name: String, hex: String}],
     accent: [{name: String, hex: String}],
     logo: [{name: String, hex: String}]
-  }
+  },
+  "flexes": Array,
+  "patterns": [{value: String, legend: String}]
 });
 
 export default mongoose.model('Stick', StickSchema);

@@ -116,6 +116,13 @@
   text-transform: uppercase;
   @include diagonalBackground(-45deg, #d61648, $zealRed, 2px, 4px);
 
+  &:hover {
+    color: white;
+    text-decoration: none;
+
+    @include diagonalBackground(-45deg, #d61648, darken($zealRed, 8%), 2px, 4px);
+  }
+
   img {
     margin-left: 2rem;
   }
