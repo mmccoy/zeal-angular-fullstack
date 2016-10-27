@@ -69,7 +69,7 @@ Stick.find({}).remove()
         "weight": 420,
         "series": "Primo",
         "price": 179.99,
-        "description": "Our Primo PK100 is a true-one piece stick made in small batches from high grade Toray carbon. Each layer of laminate is hand rolled to ensure strength and consistency. Our mono-compression molding process improve the sticks balance.\nThe PK100 flex profile accommodates a variety of shooting styles. Whether you’re taking slap shots from the point or quick wrist shots in close to the net, you’ll be able to maximize the transfer of energy in your shot—improving shot speed and accuracy.",
+        "description": "Our Primo PK100 is a true-one piece stick made in small batches from high grade Toray carbon. Each layer of laminate is hand rolled to ensure strength and consistency. Our mono-compression molding process improves the sticks balance.\nThe PK100 flex profile accommodates a variety of shooting styles. Whether you’re taking slap shots from the point or quick wrist shots in close to the net, you’ll be able to maximize the transfer of energy in your shot—improving shot speed and accuracy.",
         "tagline": "One-liner needed.",
         "features": {
           "kickpoint": "Mid Kick",
@@ -134,7 +134,7 @@ Stick.find({}).remove()
         "weight": 400,
         "series": "Primo",
         "price": 169.99,
-        "description": "Our Primo PK100 is a true-one piece stick made in small batches from high grade Toray carbon. Each layer of laminate is hand rolled to ensure strength and consistency. Our mono-compression molding process improve the sticks balance.\nThe PK100 flex profile accommodates a variety of shooting styles. Whether you’re taking slap shots from the point or quick wrist shots in close to the net, you’ll be able to maximize the transfer of energy in your shot—improving shot speed and accuracy.",
+        "description": "Our Primo PK100 is a true-one piece stick made in small batches from high grade Toray carbon. Each layer of laminate is hand rolled to ensure strength and consistency. Our mono-compression molding process improves the sticks balance.\nThe PK100 flex profile accommodates a variety of shooting styles. Whether you’re taking slap shots from the point or quick wrist shots in close to the net, you’ll be able to maximize the transfer of energy in your shot—improving shot speed and accuracy.",
         "tagline": "One-liner needed.",
         "features": {
           "kickpoint": "Mid Kick",
@@ -196,7 +196,7 @@ Stick.find({}).remove()
         "weight": 390,
         "series": "Primo",
         "price": 159.99,
-        "description": "Our Primo PK100 is a true-one piece stick made in small batches from high grade Toray carbon. Each layer of laminate is hand rolled to ensure strength and consistency. Our mono-compression molding process improve the sticks balance.\nThe PK100 flex profile accommodates a variety of shooting styles. Whether you’re taking slap shots from the point or quick wrist shots in close to the net, you’ll be able to maximize the transfer of energy in your shot—improving shot speed and accuracy.",
+        "description": "Our Primo PK100 is a true-one piece stick made in small batches from high grade Toray carbon. Each layer of laminate is hand rolled to ensure strength and consistency. Our mono-compression molding process improves the sticks balance.\nThe PK100 flex profile accommodates a variety of shooting styles. Whether you’re taking slap shots from the point or quick wrist shots in close to the net, you’ll be able to maximize the transfer of energy in your shot—improving shot speed and accuracy.",
         "tagline": "One-liner needed.",
         "features": {
           "kickpoint": "Mid Kick",
@@ -583,7 +583,7 @@ Stick.find({}).remove()
         "weight": 440,
         "series": "Alpha",
         "price": 169.99,
-        "description": "The Alpha RX1 features a unique custom kick point flex profile that was designed for playmakers. The stick will flex where the player's bottom hand is placed.\n\nThe alpha 3-chamber blade core was designed to be more dampening which makes it easier to catch hard passes and improve puck feel.",
+        "description": "The Alpha RX1 features a unique custom kick point flex profile that was designed for playmakers. The stick will flex where the player's bottom hand is placed.\n\nThe alpha 3-chamber blade core was designed to be more dampening which makes it easier to catch hard passes and improves puck feel.",
         "tagline": "One-liner needed.",
         "features": {
           "kickpoint": "Dual Kick",
@@ -606,7 +606,7 @@ Stick.find({}).remove()
         "weight": 410,
         "series": "Alpha",
         "price": 169.99,
-        "description": "The Alpha RX1 features a unique custom kick point flex profile that was designed for playmakers. The stick will flex where the player's bottom hand is placed.\n\nThe alpha 3-chamber blade core was designed to be more dampening which makes it easier to catch hard passes and improve puck feel.",
+        "description": "The Alpha RX1 features a unique custom kick point flex profile that was designed for playmakers. The stick will flex where the player's bottom hand is placed.\n\nThe alpha 3-chamber blade core was designed to be more dampening which makes it easier to catch hard passes and improves puck feel.",
         "tagline": "One-liner needed.",
         "features": {
           "kickpoint": "Dual Kick",
@@ -629,7 +629,7 @@ Stick.find({}).remove()
         "weight": 390,
         "series": "Alpha",
         "price": 159.99,
-        "description": "The Alpha RX1 features a unique custom kick point flex profile that was designed for playmakers. The stick will flex where the player's bottom hand is placed.\n\nThe alpha 3-chamber blade core was designed to be more dampening which makes it easier to catch hard passes and improve puck feel.",
+        "description": "The Alpha RX1 features a unique custom kick point flex profile that was designed for playmakers. The stick will flex where the player's bottom hand is placed.\n\nThe alpha 3-chamber blade core was designed to be more dampening which makes it easier to catch hard passes and improves puck feel.",
         "tagline": "One-liner needed.",
         "features": {
           "kickpoint": "Dual Kick",
