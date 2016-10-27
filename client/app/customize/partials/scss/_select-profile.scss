@@ -18,7 +18,7 @@
       margin-top: 1rem;
 
       > li {
-        flex-basis: 25%;
+        flex: 1;
         padding: 0;
       }
 
@@ -31,18 +31,34 @@
 
   > li:not(.disabled) {
     @include diagonalBackground (-45deg, #d61648, #e8124a, 2px, 8px);
+
+    &:hover {
+      @include diagonalBackground (-45deg, darken(#d61648, 8%), darken(#e8124a, 8%), 2px, 8px);
+    }
   }
 
   > li.dark-1:not(.disabled) {
     @include diagonalBackground (-45deg, #c01441, #d01042, 2px, 8px);
+
+    &:hover {
+      @include diagonalBackground (-45deg, darken(#c01441, 8%), darken(#d01042, 8%), 2px, 8px);
+    }
   }
 
   > li.dark-2:not(.disabled) {
     @include diagonalBackground (-45deg, #ac123a, #b90e3b, 2px, 8px);
+
+    &:hover {
+      @include diagonalBackground (-45deg, darken(#ac123a, 8%), darken(#b90e3b, 8%), 2px, 8px);
+    }
   }
 
   > li.dark-3:not(.disabled) {
     @include diagonalBackground (-45deg, #961033, #a10c33, 2px, 8px);
+
+    &:hover {
+      @include diagonalBackground (-45deg, darken(#961033, 8%), darken(#a10c33, 8%), 2px, 8px);
+    }
   }
 }
 

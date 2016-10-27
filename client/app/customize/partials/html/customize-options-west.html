@@ -1,7 +1,7 @@
 <div class="content-wrap svg-canvas active-option-{{customize.optionStage}}">
   <h3>Select the options for your {{customize.userStick.name}}</h3>
   <div ng-if="customize.userStick.images" ng-init="svginclude = customize.userStick.images.root_path + customize.userStick.images.svg" class="options-stage-section options-stage-color">
-    <ng-include src="svginclude" style="width: 100%; height: 100vh;"></ng-include>
+    <div ng-include="svginclude" style="width: 100%; height: 100vh;"></div>
   </div>
   <div class="options-stage-section options-stage-orientation {{customize.userStick.orientation|lowercase}}">
     <h4 ng-if="!customize.userStick.orientation">Are you left or right handed?</h4>
@@ -75,4 +75,10 @@
     <div class="personalize-preview-text">&nbsp;{{customize.userStick.player.name}} {{customize.userStick.player.number}}&nbsp;</div>
     <ng-include src="persinclude|lowercase" style="width: 100%;"></ng-include>
   </div>
+</div>
+
+<div class="production-disclaimer" style="position: absolute; right: 4rem; max-width: 380px;">
+  <i class="material-icons">warning</i>
+  Please note: ZEAL sticks are made to order, fully customized to your exact specifications.  Therefore
+  production time ranges from 3 to 6 weeks.
 </div>

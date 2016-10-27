@@ -12,7 +12,7 @@ export class NavbarComponent {
       // },
       {
         title: 'Custom Sticks',
-        state: 'customize'
+        state: 'customize.player'
       }
     ],
     // links: [

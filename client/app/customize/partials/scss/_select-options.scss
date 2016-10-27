@@ -223,6 +223,7 @@ uib-accordion {
         right: 100px;
         background-color: #fff;
         border: 1px solid #ddd;
+        font-size: 1.1rem;
 
         td {
           width: 50%;
@@ -241,6 +242,10 @@ uib-accordion {
   &.active-option-flex {
     .options-stage-flex {
       opacity: 1;
+
+      > img {
+        margin-bottom: 100px;
+      }
     }
   }
 
@@ -309,6 +314,7 @@ svg {
 // Slider Overrides
 .rzslider .rz-pointer {
   background-color: $zealRed;
+  outline: none !important;
 }
 
 .rzslider .rz-bar {

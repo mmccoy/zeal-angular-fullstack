@@ -3,6 +3,7 @@
     align-items: flex-start !important;
     padding: 0 5rem;
     position: relative;
+    transition: all 0.5s cubic-bezier(.17,.67,.83,.67);
 
     h4 {
       font-size: 55px;
@@ -18,5 +19,17 @@
       $zealRed 2px,
       $zealRed 8px
     );
+    transition: all 0.5s cubic-bezier(.17,.67,.83,.67);
+
+    &:hover {
+      background: repeating-linear-gradient(
+        -45deg,
+        darken(#d61648, 5%),
+        darken(#d61648, 5%) 2px,
+        darken($zealRed, 3%) 2px,
+        darken($zealRed, 3%) 8px
+      );
+      transition: all 0.5s cubic-bezier(.17,.67,.83,.67);
+    }
   }
 }
