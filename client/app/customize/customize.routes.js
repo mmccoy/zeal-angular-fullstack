@@ -34,8 +34,8 @@ export default function($stateProvider, $urlRouterProvider) {
         }
       },
       data: {
-        stageLeftSpan: 6,
-        stageRightSpan: 5
+        westFlex: 1,
+        eastFlex: .7
       }
     })
 
@@ -50,8 +50,8 @@ export default function($stateProvider, $urlRouterProvider) {
         }
       },
       data: {
-        stageLeftSpan: 6,
-        stageRightSpan: 5
+        westFlex: 1,
+        eastFlex: .7
       }
     })
 
@@ -66,8 +66,8 @@ export default function($stateProvider, $urlRouterProvider) {
         }
       },
       data: {
-        stageLeftSpan: 6,
-        stageRightSpan: 5
+        westFlex: 1,
+        eastFlex: .7
       }
     })
 
@@ -82,8 +82,8 @@ export default function($stateProvider, $urlRouterProvider) {
         }
       },
       data: {
-        stageLeftSpan: 8,
-        stageRightSpan: 3
+        westFlex: 1,
+        eastFlex: .4
       }
     })
 
@@ -98,8 +98,8 @@ export default function($stateProvider, $urlRouterProvider) {
         }
       },
       data: {
-        stageLeftSpan: 8,
-        stageRightSpan: 3
+        westFlex: 1,
+        eastFlex: .4
       }
     })
 
@@ -114,8 +114,8 @@ export default function($stateProvider, $urlRouterProvider) {
         }
       },
       data: {
-        stageLeftSpan: 8,
-        stageRightSpan: 3
+        westFlex: 1,
+        eastFlex: .4
       }
     });
 }

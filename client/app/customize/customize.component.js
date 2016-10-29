@@ -18,6 +18,7 @@ export class CustomizeComponent {
 
     this.socket = socket;
     this.optionStage = 'color';
+    this.activeOption = 'color';
 
 
     // Default cart configurations
@@ -28,11 +29,11 @@ export class CustomizeComponent {
     }
 
     if ($state.is('customize.options') || $state.is('customize.review')) {
-      $scope.stageLeftSpan = 8;
-      $scope.stageRightSpan = 3;
+      $scope.westFlex = 1;
+      $scope.eastFlex = .6;
     } else {
-      $scope.stageLeftSpan = 6;
-      $scope.stageRightSpan = 5;
+      $scope.westFlex = 1;
+      $scope.eastFlex = .7;
     }
 
     // Stick defaults
@@ -46,21 +47,6 @@ export class CustomizeComponent {
       isFirstOpen: true
     };
 
-    // this.patternSlider = {
-    //   value: this.userStick.pattern,
-    //   options: {
-    //     id: 'patternChoice',
-    //     showTicksValues: true,
-    //     stepsArray: [
-    //       {value: "Z28", legend: 'Toe'},
-    //       {value: "Z39"},
-    //       {value: "Z11"},
-    //       {value: "Z9C"},
-    //       {value: "ZM83"},
-    //       {value: "Z20", legend: 'Heel'}
-    //     ]
-    //   }
-    // };
     this.patternSlider = {
       value: this.userStick.pattern,
       options: {
@@ -70,19 +56,6 @@ export class CustomizeComponent {
       }
     };
 
-    // this.flexSlider = {
-    //   value: this.userStick.flex,
-    //   options: {
-    //     id: 'flexChoice',
-    //     showTicksValues: true,
-    //     stepsArray: [
-    //       {value: "77", legend: 'Flexible'},
-    //       {value: "87"},
-    //       {value: "102"},
-    //       {value: "112", legend: 'Stiff'}
-    //     ]
-    //   }
-    // };
     this.flexSlider = {
       value: this.userStick.flex,
       options: {
@@ -118,8 +91,8 @@ export class CustomizeComponent {
 
     $scope.$on('$stateChangeSuccess', function(event, toState) {
       if (toState.data) {
-        $scope.stageLeftSpan = toState.data.stageLeftSpan;
-        $scope.stageRightSpan = toState.data.stageRightSpan;
+        $scope.westFlex = toState.data.westFlex;
+        $scope.eastFlex = toState.data.eastFlex;
       }
     });
 
@@ -151,6 +124,9 @@ export class CustomizeComponent {
 
   setOptionStage (stage) {
     this.optionStage = stage;
+    this.activeOption = stage;
+
+    console.log(this.optionStage);
   };
 }
 

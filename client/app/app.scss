@@ -3,6 +3,7 @@ $icon-font-path: '/assets/fonts/bootstrap/';
 @import '~bootstrap-social/bootstrap-social.scss';
 $fa-font-path: '/assets/fonts/font-awesome/';
 @import '~font-awesome/scss/font-awesome';
+@import 'customize/partials/scss/vars';
 
 // @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,900|Roboto:300,500,700,900);
 
@@ -33,7 +34,6 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 @import 'customize/partials/scss/select-profile';
 @import 'customize/partials/scss/select-review';
 @import 'customize/partials/scss/typography';
-@import 'customize/partials/scss/vars';
 @import 'main/main';
 @import 'orders/orders';
 @import '../components/footer/footer';
