@@ -21,6 +21,11 @@
   }
 }
 
+.options-svg-include {
+  width: 100%;
+  height: 100vh;
+}
+
 .checkout-button {
   @extend .review-button;
   position: relative;

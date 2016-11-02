@@ -93,6 +93,7 @@ export class CustomizeComponent {
       if (toState.data) {
         $scope.westFlex = toState.data.westFlex;
         $scope.eastFlex = toState.data.eastFlex;
+        $scope.navTitle = toState.data.navTitle;
       }
     });
 

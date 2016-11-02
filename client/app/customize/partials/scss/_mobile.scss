@@ -1,49 +1,73 @@
 @media only screen and (max-width : 700px) {
-
-  .main-ui-row > div {
-    height: auto;
-  }
-
-  .content-wrap {
-    padding: 25px 25px;
-  }
-
-  .mobile-header-nav {
-    height: auto !important;
+  .mobile-nav {
+    display: flex;
+    line-height: 50px;
     background-color: $zealRed;
-    padding-top: 40px;
-    padding-top: 3rem;
+    color: white;
 
-    .mobile-nav {
-      overflow: hidden;
-      display: flex;
-      height: 40px;
-      align-items: center;
-      color: white;
-      font-weight: 400;
+    li {
+      width: 100%;
+      text-align: center;
       text-transform: uppercase;
-
-      li {
-        flex-basis: 100%;
-        text-align: center;
-        min-width: 100%;
-      }
+      font-weight: 600;
     }
   }
 
-  .player-actions > li {
-    padding: 25px 25px;
+  .content-wrap {
+    padding: .75rem 2rem;
   }
 
-  .section-actions {
-    right: 20px;
-    bottom: 20px;
+  customize {
+    flex-direction: column;
+
+    .list-nav.gutter {
+      display: none;
+    }
+
+    aside.gutter,
+    ul.player-actions {
+      height: auto;
+    }
+
+    .player-actions {
+      > li {
+        padding: 4rem 2rem;
+
+        .section-actions {
+          right: 15px;
+          bottom: 15px;
+        }
+      }
+    }
+
+    .profile-actions {
+      > li {
+        h4 {
+          font-size: 35px;
+        }
+
+        .profile-meta {
+          ul > li:last-child {
+            flex: 0;
+          }
+        }
+      }
+    }
+
+    .west, .east {
+      overflow: initial !important;
+      position: initial;
+    }
   }
 
-  .list-nav.player-actions,
-  .list-nav.profile-actions {
-    li {
-      padding: 3rem;
+  // Typography
+  section {
+    .section-header {
+      font-size: 32px;
+    }
+    .section-copy {
+      font-size: 18px;
+      margin: 20px 0;
     }
   }
 
@@ -126,5 +150,4 @@
       }
     }
   }
-
 }

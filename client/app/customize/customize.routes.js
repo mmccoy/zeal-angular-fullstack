@@ -35,7 +35,8 @@ export default function($stateProvider, $urlRouterProvider) {
       },
       data: {
         westFlex: 1,
-        eastFlex: .7
+        eastFlex: .7,
+        navTitle: 'Player Info'
       }
     })
 
@@ -51,7 +52,8 @@ export default function($stateProvider, $urlRouterProvider) {
       },
       data: {
         westFlex: 1,
-        eastFlex: .7
+        eastFlex: .7,
+        navTitle: 'Player Info'
       }
     })
 
@@ -67,7 +69,8 @@ export default function($stateProvider, $urlRouterProvider) {
       },
       data: {
         westFlex: 1,
-        eastFlex: .7
+        eastFlex: .7,
+        navTitle: 'Pick a Stick'
       }
     })
 
@@ -83,7 +86,8 @@ export default function($stateProvider, $urlRouterProvider) {
       },
       data: {
         westFlex: 1,
-        eastFlex: .4
+        eastFlex: .4,
+        navTitle: 'Customize'
       }
     })
 
@@ -99,7 +103,8 @@ export default function($stateProvider, $urlRouterProvider) {
       },
       data: {
         westFlex: 1,
-        eastFlex: .4
+        eastFlex: .4,
+        navTitle: 'Review'
       }
     })
 
@@ -115,7 +120,8 @@ export default function($stateProvider, $urlRouterProvider) {
       },
       data: {
         westFlex: 1,
-        eastFlex: .4
+        eastFlex: .4,
+        navTitle: 'Checkout'
       }
     });
 }
