@@ -58,6 +58,15 @@
       overflow: initial !important;
       position: initial;
     }
+
+    .content-wrap.svg-canvas .options-stage-section {
+      height: auto;
+    }
+
+    .options-svg-include {
+      width: 100%;
+      height: auto;
+    }
   }
 
   // Typography
