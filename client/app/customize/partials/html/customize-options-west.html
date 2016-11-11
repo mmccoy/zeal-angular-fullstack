@@ -1,6 +1,9 @@
 <div class="content-wrap svg-canvas active-option-{{customize.optionStage}}">
   <h3>Select the options for your {{customize.userStick.name}}</h3>
-  <div ng-show="!customize.activeOption || customize.activeOption == 'color'" ng-if="customize.userStick.images" ng-init="svginclude = customize.userStick.images.root_path + customize.userStick.images.svg" class="options-stage-section options-stage-color">
+  <div ng-show="!customize.activeOption || customize.activeOption == 'color'" ng-if="customize.userStick.images" ng-init="svginclude = customize.userStick.images.root_path + customize.userStick.images.svg" class="options-stage-section options-stage-color hidden-xs">
+    <div ng-include="svginclude" class="options-svg-include"></div>
+  </div>
+  <div ng-show="!customize.activeOption || customize.activeOption == 'color'" ng-if="customize.userStick.images" ng-init="svginclude = customize.userStick.images.root_path + customize.userStick.images.key + 'scene_mobile.svg'" class="options-stage-section options-stage-color visible-xs">
     <div ng-include="svginclude" class="options-svg-include"></div>
   </div>
   <div ng-show="customize.activeOption == 'orientation'" class="options-stage-section options-stage-orientation {{customize.userStick.orientation|lowercase}}">
@@ -8,8 +11,28 @@
     <img ng-if="customize.userStick.orientation" ng-srcset="assets/images/orientation/right.png 1x" alt="{{customize.userStick.orientation}} handed" />
   </div>
   <div ng-show="customize.activeOption == 'pattern'" class="options-stage-section options-stage-pattern">
+    <div class="pattern-chart-mobile visible-xs" ng-switch="customize.userStick.pattern">
+      <div>
+        <h5>Utility</h5>
+        <p ng-switch-when="Z39">Accuracy, Toe Drags, Puck Control</p>
+        <p ng-switch-when="Z11">Wrist Shot, Puck Handling, Toe Drags</p>
+        <p ng-switch-when="Z9C">Passing, Backhand Shots</p>
+        <p ng-switch-when="ZM83">Rising Shots, Accurancy</p>
+        <p ng-switch-when="Z20">Slap Shots, Toe Drags, Poke Checks</p>
+        <p ng-switch-when="Z28">Snap Shots</p>
+      </div>
+      <div>
+        <h5>Compared</h5>
+        <p ng-switch-when="Z39">P92, E3, P87a</p>
+        <p ng-switch-when="Z11">P88, C40</p>
+        <p ng-switch-when="Z9C">PM9, E4</p>
+        <p ng-switch-when="ZM83">P91a, E6</p>
+        <p ng-switch-when="Z20">P02, E5</p>
+        <p ng-switch-when="Z28">P28, E28</p>
+      </div>
+    </div>
     <img ng-srcset="assets/images/patterns/{{customize.userStick.pattern|lowercase}}.png 1x, assets/images/patterns/{{customize.userStick.pattern|lowercase}}@2x.png 2x" alt="{{customize.userStick.pattern}} Blade Pattern" />
-    <table class="pattern-chart" ng-switch="customize.userStick.pattern">
+    <table class="pattern-chart hidden-xs" ng-switch="customize.userStick.pattern">
       <tr>
         <td colspan="2">
           <h5>Utility</h5>
