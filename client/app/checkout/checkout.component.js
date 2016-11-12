@@ -1,6 +1,9 @@
 'use strict';
 const angular = require('angular');
 const template = require('ngtemplate!html!./checkout.html');
+var braintree = require('braintree-web');
+
+import $ from "jquery";
 
 export class checkoutComponent {
   /*@ngInject*/
@@ -1339,6 +1342,7 @@ export class checkoutComponent {
           }, function (hostedFieldsErr, hostedFieldsInstance) {
             if (hostedFieldsErr) {
               // Handle error in Hosted Fields creation
+              console.log(hostedFieldsErr);
               return;
             }
 

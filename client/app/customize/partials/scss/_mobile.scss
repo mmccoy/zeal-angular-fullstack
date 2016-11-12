@@ -28,6 +28,17 @@
     ul.player-actions {
       height: auto;
     }
+    
+    aside.gutter.options-view {
+      position: fixed;
+      width: 100%;
+      z-index: 101;
+    }
+
+    svg.scene-svg-mobile {
+      position: relative;
+      top: 30px;
+    }
 
     .player-actions {
       > li {
@@ -59,6 +70,34 @@
       position: initial;
     }
 
+    section.west.options-view {
+      position: fixed;
+      width: 100%;
+      height: 250px;
+      z-index: 100;
+      margin-top: 50px;
+      box-shadow: 0 1px 3px #888;
+
+      .options-stage-section {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 250px;
+        flex-direction: column;
+      }
+    }
+
+    section.east.options-view {
+      margin-top: 300px;
+    }
+
+    .options-stage-section {
+      img {
+        position: absolute;
+        bottom: 0;
+        height: auto !important;
+      }
+    }
     .content-wrap.svg-canvas {
       .options-stage-section {
         height: auto;
@@ -84,24 +123,49 @@
 
     .options-stage-flex {
       > img {
-        max-height: 300px !important;
+        max-height: 250px !important;
         width: auto !important;
       }
     }
 
     .options-stage-pattern {
       display: block !important;
+
+      > img {
+        margin: auto !important;
+      }
     }
 
     .pattern-chart-mobile {
-      margin: 1rem;
+      margin: .25rem;
       background-color: #fff;
       border: 1px solid #ddd;
       box-shadow: 0 0 2px #ddd;
+      margin: auto;
+      position: absolute;
+      width: 100%;
+      font-size: 10px;
+      display: flex !important;
       
       div {
-        border-bottom: 1px solid #ddd;
         padding: 1rem;
+        flex: 1;
+
+        &:first-child {
+          border-right: 1px solid #ddd;
+        }
+      }
+
+      h5 {
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+        font-size: 12px;
+        margin-bottom: .25rem;
+      }
+      p {
+        margin: 0;
+        padding: 0;
       }
     }
 
@@ -127,12 +191,10 @@
       }
     }
 
-    /*.scene-svg {
-      width: 100%;
-      height: 100%;
-      height: $stageHeight;
-      max-height: $stageHeight;
-    }*/
+    .production-disclaimer {
+      width: auto !important;
+      margin: 2rem auto;
+    }
   }
 
   // Typography

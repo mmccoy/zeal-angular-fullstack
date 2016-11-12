@@ -5,6 +5,7 @@ const uiRouter = require('angular-ui-router');
 
 import routes from './customize.routes';
 import md5 from 'js-md5';
+import $ from "jquery";
 
 export class CustomizeComponent {
   sticks = [];
@@ -12,6 +13,10 @@ export class CustomizeComponent {
 
   /*@ngInject*/
   constructor($http, $scope, socket, $state, $rootScope, ngCart) {
+    if (!this.userStick.length && !$state.is('customize.player')) {
+      $state.go('customize.player');
+    };
+
     this.$http = $http;
     this.$state = $state;
     this.ngCart = ngCart;
@@ -20,7 +25,8 @@ export class CustomizeComponent {
     this.optionStage = 'color';
     this.activeOption = 'color';
 
-
+    $scope.viewClass = 'default';
+    
     // Default cart configurations
     ngCart.setShipping(14.99);
 
@@ -81,7 +87,7 @@ export class CustomizeComponent {
     };
 
     $rootScope.$on('ngCart:itemAdded', function(event, message) {
-      console.log('added item');
+      // console.log('added item');
       $state.go('customize.cart');
     });
 
@@ -90,15 +96,17 @@ export class CustomizeComponent {
     });
 
     $scope.$on('$stateChangeSuccess', function(event, toState) {
+      // console.log(toState);
       if (toState.data) {
         $scope.westFlex = toState.data.westFlex;
         $scope.eastFlex = toState.data.eastFlex;
         $scope.navTitle = toState.data.navTitle;
+        $scope.viewClass = toState.data.viewClass;
       }
     });
 
     $scope.$on("slideEnded", function(e) {
-      console.log(e);
+      // console.log(e);
     });
   };
 
@@ -126,8 +134,7 @@ export class CustomizeComponent {
   setOptionStage (stage) {
     this.optionStage = stage;
     this.activeOption = stage;
-
-    console.log(this.optionStage);
+    // console.log(this.optionStage);
   };
 }
 
