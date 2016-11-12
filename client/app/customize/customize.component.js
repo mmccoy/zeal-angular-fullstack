@@ -17,9 +17,11 @@ export class CustomizeComponent {
       $state.go('customize.player');
     };
 
+    $scope.ctrl = this;
     this.$http = $http;
     this.$state = $state;
     this.ngCart = ngCart;
+    this.$scope = $scope;
 
     this.socket = socket;
     this.optionStage = 'color';
@@ -29,10 +31,6 @@ export class CustomizeComponent {
     
     // Default cart configurations
     ngCart.setShipping(14.99);
-
-    if ($state.is('customize')) {
-      $state.go('customize.player');
-    }
 
     if ($state.is('customize.options') || $state.is('customize.review')) {
       $scope.westFlex = 1;
@@ -47,6 +45,7 @@ export class CustomizeComponent {
     this.userStick.pattern = 'Z28';
     this.userStick.flex = '77';
     this.userStick.finish = 'Grip';
+    this.userStick.name = 'PK100';
 
     this.accordionOptions = {
       oneAtATime: true,
@@ -103,6 +102,30 @@ export class CustomizeComponent {
         $scope.navTitle = toState.data.navTitle;
         $scope.viewClass = toState.data.viewClass;
       }
+      if(toState.name === 'customize.model') {
+        // Set default stick once user has selected a profile (senior, int, jr)
+        var defaultStickId;
+        switch($scope.ctrl.userStick.profile) {
+          case 'senior':
+            defaultStickId = 'pk100-senior'; 
+            break;
+          case 'intermediate':
+            defaultStickId = 'pk100-int';
+            break;
+          case 'junior':
+            defaultStickId = 'pk100-jr';
+            break;
+          default:
+            defaultStickId = 'pk100-senior'
+            break;
+        }
+        var defaultStick = $scope.ctrl.sticks.filter(function(stick) {
+          return stick.id === defaultStickId;
+        })[0];
+        $scope.ctrl.updateUserStick(defaultStick);
+        // console.log(defaultStick);
+        // $scope.ctrl.userStick;
+      };
     });
 
     $scope.$on("slideEnded", function(e) {
@@ -115,6 +138,7 @@ export class CustomizeComponent {
       .then(response => {
         this.sticks = response.data;
         this.socket.syncUpdates('stick', this.sticks);
+        // console.log(this.sticks);
       });
   };
 
@@ -134,6 +158,7 @@ export class CustomizeComponent {
   setOptionStage (stage) {
     this.optionStage = stage;
     this.activeOption = stage;
+    this.$scope.$broadcast('rzSliderForceRender');
     // console.log(this.optionStage);
   };
 }

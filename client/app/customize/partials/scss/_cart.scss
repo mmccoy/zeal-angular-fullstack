@@ -56,11 +56,10 @@
   width: 50%;
   float: right;
   margin-top: 2rem;
+  align-items: flex-start;
 
   i {
-    margin-right: 2rem;
+    min-width: 35px;
     color: red;
-    top: -15px;
-    position: relative;
   }
 }

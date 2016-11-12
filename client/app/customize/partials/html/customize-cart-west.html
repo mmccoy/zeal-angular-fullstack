@@ -11,7 +11,7 @@
     Your cart is empty
   </div>
 
-  <table class="cart-table table-striped" ng-show="ngCart.getTotalItems() > 0">
+  <table class="cart-table table-striped hidden-xs" ng-show="ngCart.getTotalItems() > 0">
     <tr>
       <th></th>
       <th>Cart Items</th>
@@ -47,9 +47,36 @@
       <td>{{ ngCart.totalCost() | currency }}</td>
     </tr>
   </table>
+
+  <div class="mobile-cart visible-xs">
+    <div class="stick-in-cart-card" ng-repeat="item in ngCart.getCart().items track by $index">
+      <div class="product-header">
+        <span class="material-icons icon-button" ng-click="ngCart.removeItemById(item.getId())">delete</span>
+        <div class="product-name">{{ item.getName() }}</div>
+        <div class="product-price">{{ item.getPrice() | currency}}</div>
+      </div>
+      
+      <!--<div class="product-total">{{ item.getTotal() | currency}}</div>-->
+    </div>
+    <div class="mobile-cart-totals">
+      <div ng-if="ngCart.getTaxRate()" class="product-tax">
+        <span class="mobile-cart-label"><strong>Tax:</strong> ({{ ngCart.getTaxRate() }}%)</span>
+        <span class="mobile-cart-value">{{ ngCart.getTax() | currency }}</span>
+      </div>
+      <div class="product-shipping">
+        <span class="mobile-cart-label"><strong>Shipping:</strong></span>
+        <span class="mobile-cart-value">{{ ngCart.getShipping() | currency }}</span>
+      </div>
+      <div class="product-subtotal">
+        <span class="mobile-cart-label"><strong>Total:</strong></span>
+        <span class="mobile-cart-value">{{ ngCart.totalCost() | currency }}</span>
+      </div>
+    </div>
+  </div>
   <div class="production-disclaimer">
     <i class="material-icons">warning</i>
-    Please note: ZEAL sticks are made to order, fully customized to your exact specifications.  Therefore
-    production time ranges from 3 to 6 weeks.
+    <span>
+      Please note: ZEAL sticks are made to order, fully customized to your exact specifications. Therefore production time ranges from 3 to 6 weeks.
+    </span>
   </div>
 </script>

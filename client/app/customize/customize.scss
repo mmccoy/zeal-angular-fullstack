@@ -101,6 +101,12 @@ section.east {
   }
 }
 
+.profile-actions {
+  > li {
+    min-height: 175px;
+  }
+}
+
 .west {
   overflow-x: auto;
   @include diagonalBackground(-45deg, #f8f8f8, #f5f5f5, 2px, 6px);

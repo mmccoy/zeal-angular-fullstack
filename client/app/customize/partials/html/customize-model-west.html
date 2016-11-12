@@ -1,7 +1,7 @@
 <!-- desktop -->
 <ul class="stick-list hidden-xs">
   <li class="category-label">Primo Series <span>(Medium Kick-Point)</span></li>
-  <li ng-repeat="stick in customize.sticks | filter:{'series': 'Primo', 'category': customize.userStick.profile}"
+  <li ng-repeat="stick in customize.sticks | filter:{'series': 'Primo', 'category': customize.userStick.profile} | orderBy: 'name'"
       ng-click="customize.updateUserStick(stick)"
       ng-class="{'selected': customize.userStick.name == stick.name}">
     <span class="stick-model-label">{{stick.name}}</span>
@@ -34,7 +34,7 @@
 <!-- mobile -->
 <ul class="mobile-stick-list visible-xs-block">
   <li class="category-label">Primo Series <span>(Medium Kick-Point)</span></li>
-  <li ng-repeat="stick in customize.sticks | filter:{'series': 'Primo', 'category': customize.userStick.profile}"
+  <li ng-repeat="stick in customize.sticks | filter:{'series': 'Primo', 'category': customize.userStick.profile} | orderBy: 'name'"
       ng-click="customize.updateUserStick(stick)"
       ng-class="{'selected': customize.userStick.name == stick.name}">
     <div class="stick-header">

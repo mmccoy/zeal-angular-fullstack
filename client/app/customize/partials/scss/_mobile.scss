@@ -1,4 +1,9 @@
 @media only screen and (max-width : 700px) {
+  
+  [ui-view] {
+    height: auto !important;
+  }
+
   .mobile-nav {
     display: flex;
     line-height: 50px;
@@ -198,9 +203,9 @@
       margin: 2rem auto;
     }
 
-    button.review-button {
+    /*button.review-button {
       position: static;
-    }
+    }*/
   }
 
   // Typography
@@ -292,5 +297,74 @@
         }
       }
     }
+  }
+
+  .mobile-cart {
+    .stick-in-cart-card {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 3px;
+      box-shadow: 0 1px 3px #888;
+      margin-bottom: 1rem;
+
+      > div {
+        flex: 1;
+        align-items: center;
+      }
+
+      .product-header {
+        min-width: 100%;
+        display: flex;
+
+        > span {
+          margin-right: 1rem;
+        }
+
+        > div {
+          flex: 1;
+        }
+      }
+
+      .product-name {
+        font-weight: 700;
+        font-size: 1.2rem;
+
+        &:before {
+          content: 'Custom ';
+          text-transform: uppercase;
+        }
+      }
+
+      .product-price {
+        text-align: right;
+      }
+    }
+
+    .mobile-cart-totals {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+
+      > div {
+        display: flex;
+        
+        .mobile-cart-label {
+          flex: 1;
+          margin-right: 1rem;
+        }
+
+        .mobile-cart-value {
+          min-width: 70px;
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  button.checkout-button {
+    width: 100%;
+    text-align: center;
   }
 }

@@ -29,6 +29,11 @@
     }
   }
 
+  .coming-soon {
+    position: absolute;
+    right: 20px;
+  }
+
   > li:not(.disabled) {
     @include diagonalBackground (-45deg, #d61648, #e8124a, 2px, 8px);
 
@@ -60,9 +65,4 @@
       @include diagonalBackground (-45deg, darken(#961033, 8%), darken(#a10c33, 8%), 2px, 8px);
     }
   }
-}
-
-
-.profile-actions li {
-
 }

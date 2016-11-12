@@ -11,14 +11,17 @@
   text-transform: uppercase;
   @include diagonalBackground(-45deg, #d61648, $zealRed, 2px, 4px);
   border-radius: 0;
-  position: fixed;
+  /*position: fixed;*/
   bottom: 0px;
 
-  img {
+  > span {
+    flex: 1;
+  }
+  /*img {
     position: absolute;
     right: 15px;
     top: 14px;
-  }
+  }*/
 }
 
 .options-svg-include {
@@ -37,13 +40,8 @@
 .color-list {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
-  // justify-content: space-between;
+  margin-bottom: 1rem;
 
-  // li > label:first-child {
-  //   margin-left: 0;
-  // }
-  //
   li {
     margin: 0.5rem;
   }

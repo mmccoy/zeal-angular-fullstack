@@ -13,7 +13,7 @@
     "angular-ui-bootstrap": "^2.1.4",
     "angular-ui-router": "~0.3.1",
     "angular-validation-match": "^1.9.0",
-    "angularjs-slider": "^5.5.1",
+    "angularjs-slider": "~5.8.7",
     "babel-polyfill": "^6.7.2",
     "babel-runtime": "^6.6.1",
     "bluebird": "^3.3.3",
