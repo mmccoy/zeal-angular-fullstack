@@ -133,6 +133,8 @@
 
       > img {
         margin: auto !important;
+        transform-origin: bottom !important;
+        transform: scale(.8) !important;
       }
     }
 
@@ -194,6 +196,10 @@
     .production-disclaimer {
       width: auto !important;
       margin: 2rem auto;
+    }
+
+    button.review-button {
+      position: static;
     }
   }
 
