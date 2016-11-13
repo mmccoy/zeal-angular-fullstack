@@ -9,7 +9,6 @@ import mongoose from 'mongoose';
 mongoose.Promise = require('bluebird');
 import config from './config/environment';
 import http from 'http';
-var wwwhisper = require('connect-wwwhisper');
 
 // Connect to MongoDB
 mongoose.connect(config.mongo.uri, config.mongo.options);
@@ -25,7 +24,6 @@ if(config.seedDB) {
 
 // Setup server
 var app = express();
-app.use(wwwhisper(false));
 var server = http.createServer(app);
 var socketio = require('socket.io')(server, {
   serveClient: config.env !== 'production',
