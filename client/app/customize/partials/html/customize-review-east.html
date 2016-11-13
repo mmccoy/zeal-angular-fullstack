@@ -12,7 +12,7 @@
     <td>{{customize.userStick.name || 'PK1000'}}</td>
   </tr>
   <tr>
-    <td>Color <i class="material-icons" ui-sref="customize.options">edit</i></td>
+    <td>Color <i class="material-icons" ui-sref="customize.options({stage: 'color'})">edit</i></td>
     <td>
       <div class="colors-review" ng-if="customize.userStick.customColor">
         <div class="color-review">
@@ -32,23 +32,23 @@
     </td>
   </tr>
   <tr>
-    <td>Orientation <i class="material-icons" ui-sref="customize.options">edit</i></td>
+    <td>Orientation <i class="material-icons" ui-sref="customize.options({stage: 'orientation'})">edit</i></td>
     <td>{{customize.userStick.orientation || 'Right Handed'}}</td>
   </tr>
   <tr>
-    <td>Blade Shape <i class="material-icons" ui-sref="customize.options">edit</i></td>
+    <td>Blade Shape <i class="material-icons" ui-sref="customize.options({stage: 'pattern'})">edit</i></td>
     <td>{{customize.userStick.pattern || 'Z90'}}</td>
   </tr>
   <tr>
-    <td>Flex <i class="material-icons" ui-sref="customize.options">edit</i></td>
+    <td>Flex <i class="material-icons" ui-sref="customize.options({stage: 'flex'})">edit</i></td>
     <td>{{customize.userStick.flex || '78'}}</td>
   </tr>
   <tr>
-    <td>Coating <i class="material-icons" ui-sref="customize.options">edit</i></td>
+    <td>Coating <i class="material-icons" ui-sref="customize.options({stage: 'finish'})">edit</i></td>
     <td>{{customize.userStick.finish || 'Matte'}}</td>
   </tr>
   <tr>
-    <td>Personalize <i class="material-icons" ui-sref="customize.options">edit</i></td>
+    <td>Personalize <i class="material-icons" ui-sref="customize.options({stage: 'personalize'})">edit</i></td>
     <td>
       <div class="player-name-review" ng-if="customize.userStick.player">
         <h6>Player Name</h6>

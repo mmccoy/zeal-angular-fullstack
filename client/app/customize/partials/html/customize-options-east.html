@@ -1,6 +1,6 @@
 <uib-accordion close-others="customize.accordionOptions.oneAtATime" class="options-accordian">
   <!-- Color Options -->
-  <div uib-accordion-group class="panel-default" is-open="customize.accordionOptions.isFirstOpen" ng-click="customize.setOptionStage('color')">
+  <div uib-accordion-group class="panel-default" is-open="isColorOpen" ng-click="customize.setOptionStage('color')">
     <uib-accordion-heading>
         Color
         <i class="material-icons panel-open-indicator">keyboard_arrow_down</i>
@@ -8,15 +8,15 @@
     <div class="btn-group">
       <header>Shaft</header>
       <ul class="color-list">
-        <li ng-repeat="(name, value) in customize.userStick.colors.shaft" ng-click="changeColorSegment('shaft', value.hex);">
-          <label class="btn btn-primary" ng-model="customize.userStick.customColor.shaft"
+        <li ng-repeat="(name, value) in customize.userStick.colors.shaft">
+          <label class="btn btn-primary" ng-model="customize.userStick.customColor.shaft" ng-click="customize.checkColorContrast(value.hex)"
                  uib-btn-radio="'{{value.hex}}'" style="background-color: {{value.hex}}" ng-class="{'weave': name === 'weave'}">
           </label>
         </li>
       </ul>
       <header>Accent</header>
       <ul class="color-list">
-        <li ng-repeat="(name, value) in customize.userStick.colors.accent" ng-click="changeColorSegment('accent', value.hex);">
+        <li ng-repeat="(name, value) in customize.userStick.colors.accent">
           <label class="btn btn-primary" ng-model="customize.userStick.customColor.accent"
                  uib-btn-radio="'{{value.hex}}'" style="background-color: {{value.hex}}" ng-class="{'weave': name === 'weave'}">
           </label>
@@ -24,7 +24,7 @@
       </ul>
       <header>Logo</header>
       <ul class="color-list">
-        <li ng-repeat="(name, value) in customize.userStick.colors.logo" ng-click="changeColorSegment('logo', value.hex);">
+        <li ng-repeat="(name, value) in customize.userStick.colors.logo">
           <label class="btn btn-primary" ng-model="customize.userStick.customColor.logo"
                  uib-btn-radio="'{{value.hex}}'" style="background-color: {{value.hex}}" ng-class="{'weave': name === 'weave'}">
           </label>
@@ -34,7 +34,7 @@
   </div>
 
   <!-- Orientation Options -->
-  <div uib-accordion-group class="panel-default" ng-click="customize.setOptionStage('orientation')">
+  <div uib-accordion-group class="panel-default" is-open="isOrientationOpen" ng-click="customize.setOptionStage('orientation')">
     <uib-accordion-heading>
       Orientation
       <i class="material-icons panel-open-indicator">keyboard_arrow_down</i>
@@ -46,7 +46,7 @@
   </div>
 
   <!-- Blade Options -->
-  <div uib-accordion-group class="panel-default" ng-click="customize.setOptionStage('pattern')">
+  <div uib-accordion-group class="panel-default" is-open="isPatternOpen" ng-click="customize.setOptionStage('pattern')">
     <uib-accordion-heading>
       Blade Pattern
       <i class="material-icons panel-open-indicator">keyboard_arrow_down</i>
@@ -56,7 +56,7 @@
   </div>
 
   <!-- Flex Options -->
-  <div uib-accordion-group class="panel-default" ng-click="customize.setOptionStage('flex')">
+  <div uib-accordion-group class="panel-default" is-open="isFlexOpen" ng-click="customize.setOptionStage('flex')">
     <uib-accordion-heading>
       Flex
       <i class="material-icons panel-open-indicator">keyboard_arrow_down</i>
@@ -66,7 +66,7 @@
   </div>
 
   <!-- Coating Options -->
-  <div uib-accordion-group class="panel-default" ng-click="customize.setOptionStage('finish')">
+  <div uib-accordion-group class="panel-default" is-open="isFinishOpen" ng-click="customize.setOptionStage('finish')">
     <uib-accordion-heading>
       Coating
       <i class="material-icons panel-open-indicator">keyboard_arrow_down</i>
@@ -76,7 +76,7 @@
   </div>
 
   <!-- Personalize Options -->
-  <div uib-accordion-group class="panel-default personalize-input" ng-click="customize.setOptionStage('personalize')">
+  <div uib-accordion-group class="panel-default personalize-input" is-open="isPersonalizeOpen" ng-click="customize.setOptionStage('personalize')">
     <uib-accordion-heading>
         Personalize
         <i class="material-icons panel-open-indicator">keyboard_arrow_down</i>
@@ -86,7 +86,7 @@
       <label for="player-name" ng-class="{'invisible': !customize.userStick.player.name}">Player name</label>
     </div>
     <div class="personalize-input-number">
-      <input type="text" value="player-number" ng-model="customize.userStick.player.number" placeholder="Player number" maxlength="10">
+      <input type="tel" value="player-number" ng-model="customize.userStick.player.number" placeholder="Player number" maxlength="10">
       <label for="player-number" ng-class="{'invisible': !customize.userStick.player.number}">Player Number</label>
     </div>
   </div>

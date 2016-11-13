@@ -97,7 +97,7 @@
   <div ng-show="customize.activeOption == 'personalize'" ng-init="persinclude = customize.userStick.images.root_path + customize.userStick.images.personalize" class="options-stage-section options-stage-personalize">
     <div class="personalize-widget">
       <ng-include src="persinclude|lowercase" style="width: 100%;"></ng-include>
-      <div class="personalize-preview-text">&nbsp;{{customize.userStick.player.name}} {{customize.userStick.player.number}}&nbsp;</div>
+      <div class="personalize-preview-text" style="color: {{shaftTextColor}}">&nbsp;{{customize.userStick.player.name}} {{customize.userStick.player.number}}&nbsp;</div>
     </div>
   </div>
 </div>

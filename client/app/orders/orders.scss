@@ -23,6 +23,26 @@
   font-weight: 700;
 }
 
+.social-icons {
+  display: flex;
+  justify-content: center;
+
+  > div {
+    width: 48px;
+    height: 48px;
+    margin: 1rem 1.8rem;
+
+    a {
+      &:hover {
+        > svg {
+          cursor: pointer;
+          fill: $zealRed;
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (max-width : 700px) {
   .order-confirmation {
     max-width: 100%;

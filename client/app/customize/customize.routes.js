@@ -78,7 +78,7 @@ export default function($stateProvider, $urlRouterProvider) {
     })
 
     .state('customize.options', {
-      url: '/options',
+      url: '/options/:stage',
       views: {
         'stage-left': {
           templateUrl: optionsWest
