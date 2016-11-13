@@ -105,6 +105,8 @@ export class CustomizeComponent {
     $scope.$on('$stateChangeSuccess', function(
       event, toState, toParams, fromState, fromParams) {
       // console.log(toState);
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
+      
       if (toState.data) {
         $scope.westFlex = toState.data.westFlex;
         $scope.eastFlex = toState.data.eastFlex;

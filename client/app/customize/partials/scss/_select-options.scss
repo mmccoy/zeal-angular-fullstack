@@ -140,7 +140,8 @@ uib-accordion {
     padding: 2rem 1.5rem 3.5rem;
   }
 
-  input[type="text"] {
+  input[type="text"],
+  input[type="tel"] {
     border: 0;
     border-bottom: 1px solid #ddd;
     text-transform: uppercase;
