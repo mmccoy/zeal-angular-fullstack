@@ -219,6 +219,11 @@ export class CustomizeComponent {
     this.$scope.isPersonalizeOpen = false;
     console.log('Options state reset');
   }
+
+  toggleMobileStickList(event) {
+    document.body.scrollTop = event.currentTarget.offsetTop;
+    event.currentTarget.classList.toggle('selected');
+  }
 }
 
 
