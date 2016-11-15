@@ -21,6 +21,7 @@ import connectMongo from 'connect-mongo';
 import mongoose from 'mongoose';
 
 var MongoStore = connectMongo(session);
+var enforce = require('express-sslify');
 
 export default function(app) {
   var env = app.get('env');
@@ -31,6 +32,7 @@ export default function(app) {
 
   if(env === 'production') {
     app.use(favicon(path.join(config.root, 'client', 'favicon.ico')));
+    app.use(enforce.HTTPS({ trustProtoHeader: true }));
   }
 
   app.set('appPath', path.join(config.root, 'client'));

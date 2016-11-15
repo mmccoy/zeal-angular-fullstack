@@ -32,6 +32,7 @@
     "express": "^4.13.3",
     "express-jwt": "^3.0.0",
     "express-session": "^1.11.3",
+    "express-sslify": "^1.1.0",
     "fast-json-patch": "^1.0.0",
     "font-awesome": ">=4.1.0",
     "forms-angular": "^0.7.1",
