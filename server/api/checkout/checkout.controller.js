@@ -20,16 +20,16 @@ var environment, gateway;
 // require('dotenv').load();
 
 // Devision sandbox
-var BT_ENVIRONMENT='Sandbox'
-var BT_MERCHANT_ID='8xckn8z7n2nbjnx3'
-var BT_PUBLIC_KEY='c33zskmxg3x2w73m'
-var BT_PRIVATE_KEY='b7e5fb979d22f37fde49b872846696c5'
+// var BT_ENVIRONMENT='Sandbox'
+// var BT_MERCHANT_ID='8xckn8z7n2nbjnx3'
+// var BT_PUBLIC_KEY='c33zskmxg3x2w73m'
+// var BT_PRIVATE_KEY='b7e5fb979d22f37fde49b872846696c5'
 
 // Zeal Production
-// var BT_ENVIRONMENT='Production'
-// var BT_MERCHANT_ID='7hhdq8qffbmmdrjc'
-// var BT_PUBLIC_KEY='8zj5dpbwf82hp9jq'
-// var BT_PRIVATE_KEY='b9321cf408ddda7d5cf559343ade2687'
+var BT_ENVIRONMENT='Production'
+var BT_MERCHANT_ID='7hhdq8qffbmmdrjc'
+var BT_PUBLIC_KEY='8zj5dpbwf82hp9jq'
+var BT_PRIVATE_KEY='b9321cf408ddda7d5cf559343ade2687'
 
 environment = BT_ENVIRONMENT.charAt(0).toUpperCase() + BT_ENVIRONMENT.slice(1);
 
@@ -222,13 +222,56 @@ export function create(req, res) {
 
   var nonce = req.body.payload.nonce;
   var amount = req.body.totalCost;
-  var formdata = req.body.formData;
+  var formData = req.body.formData;
   var cartData = req.body.cartData;
   var transactionErrors;
+  
+  var customerData = {};
+  formData.forEach(function (entry) {
+    customerData[entry.name] = entry.value;
+  });
 
   gateway.transaction.sale({
     amount: amount,
     paymentMethodNonce: nonce,
+    customer: {
+      firstName: customerData.firstName,
+      lastName: customerData.lastName,
+      phone: customerData.phone,
+      email: customerData.email
+    },
+    billing: {
+      firstName: customerData.firstName,
+      lastName: customerData.lastName,
+      streetAddress: customerData.addressA,
+      extendedAddress: customerData.addressB,
+      locality: customerData.city,
+      region: customerData.state,
+      postalCode: customerData.zipcode
+    },
+    shipping: {
+      firstName: customerData.firstName,
+      lastName: customerData.lastName,
+      streetAddress: customerData.addressA,
+      extendedAddress: customerData.addressB,
+      locality: customerData.city,
+      region: customerData.state,
+      postalCode: customerData.zipcode
+    },
+    descriptor: {
+      name: "zealhockeyus*cstomstik",
+      phone: "401-861-9325",
+      url: "zealhockeycom"
+    },
+    customFields: {
+      stick_model: cartData.items[0]._data.series + ' ' + cartData.items[0]._data.name + ' (' + cartData.items[0]._data.profile.toUpperCase() + ')',
+      stick_colors: 'Shaft: ' + cartData.items[0]._data.customColor.shaft + ', Logo: ' + cartData.items[0]._data.customColor.logo + ', Accents: ' + cartData.items[0]._data.customColor.accent,
+      stick_orientation: cartData.items[0]._data.orientation + ' handed', 
+      stick_flex: cartData.items[0]._data.flex, 
+      stick_pattern: cartData.items[0]._data.pattern,
+      stick_coating: cartData.items[0]._data.finish,
+      stick_personalize: 'Player Name: ' + cartData.items[0]._data.player.name.toUpperCase() + ', Player Number: ' + cartData.items[0]._data.player.number
+    },
     options: {
       submitForSettlement: true
     }
