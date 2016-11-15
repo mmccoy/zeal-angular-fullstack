@@ -3,7 +3,7 @@
   <div ng-show="!customize.activeOption || customize.activeOption == 'color'" ng-if="customize.userStick.images" ng-init="svginclude = customize.userStick.images.root_path + customize.userStick.images.svg" class="options-stage-section options-stage-color hidden-xs">
     <div ng-include="svginclude" class="options-svg-include"></div>
   </div>
-  <div ng-show="!customize.activeOption || customize.activeOption == 'color'" ng-if="customize.userStick.images" ng-init="svginclude = customize.userStick.images.root_path + customize.userStick.images.key + 'scene_mobile.svg'" class="options-stage-section options-stage-color visible-xs">
+  <div ng-show="!customize.activeOption || customize.activeOption == 'color'" ng-if="customize.userStick.images" ng-init="svginclude = customize.userStick.images.root_path + customize.userStick.images.key + 'scene_mobile.svg'" class="options-stage-section options-stage-color mobile-scene-container visible-xs">
     <div ng-include="svginclude" class="options-svg-include"></div>
   </div>
   <div ng-show="customize.activeOption == 'orientation'" class="options-stage-section options-stage-orientation {{customize.userStick.orientation|lowercase}}">

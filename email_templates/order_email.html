@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>New Stick Order</title>
+    <style>
+      body {
+        font-family: 'Open Sans', sans-serif;
+      }
+      
+      table {
+        width: 100%;
+        background-color: #f2f2f2;
+      }
+  
+      tr {
+        line-height:  24px;
+      }
+  
+      td {
+        padding: 24px;
+        vertical-align: top;
+      }
+      
+      td:nth-child(odd) {
+        font-weight: bold;
+      }
+  
+      tr:nth-child(odd) {
+        background-color: #f6f6f6;
+      }
+  
+      h4 {
+        color: rgba(0,0,0,.25);
+      }
+      .preview-swatch {
+        width:  25px;
+        height:  25px;
+        display:  block;
+      }
+  
+      .swatch {
+        margin: 10px 0;
+      }
+      
+      .swatch:first-child {
+        margin-left: 0;
+      }
+      
+      p {
+        margin: 0;
+        padding: 0;
+        line-height: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>A new custom stick was just ordered! Get to work!</h2>
+    <h3>Order #: {{orderNumber}}</h3>
+
+    <div class="order-details">
+      <h4>Stick Details</h4>
+
+      <table>
+        <tr>
+          <td>Profile</td>
+          <td>{{profile}}</td>
+        </tr>
+        <tr>
+          <td>Model</td>
+          <td>{{model}}</td>
+        </tr>
+        <tr>
+          <td>Orientation</td>
+          <td>{{orientation}}</td>
+        </tr>
+        <tr>
+          <td>Flex</td>
+          <td>{{flex}}</td>
+        </tr>
+        <tr>
+          <td>Blade</td>
+          <td>{{blade}}</td>
+        </tr>
+        <tr>
+          <td>Coating</td>
+          <td>{{coating}}</td>
+        </tr>
+        <tr>
+          <td>Colors</td>
+          <td class="color-list">
+            <div class="swatch">
+              <p><strong>Shaft</strong></p>
+              <p>Hex: {{colorShaft}}</p>
+              <div class="preview-swatch" style="background-color: {{colorShaft}}"></div>
+            </div>
+            <div class="swatch">
+              <p><strong>Accent</strong></p>
+              <p>Hex: {{colorAccent}}</p>
+              <div class="preview-swatch" style="background-color: {{colorAccent}}"></div>
+            </div>
+            <div class="swatch">
+              <p><strong>Logo</strong></p>
+              <p>{{colorLogo}}</p>
+              <div class="preview-swatch" style="background-color: {{colorLogo}}"></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Personalization</td>
+          <td>
+            <p>Player name: {{playerName}}</p>
+            <p>Player number:  {{playerNumber}}</p>
+          </td>
+        </tr>
+      </table>
+      
+      <h4>Customer Details</h4>
+      <table>
+        <tr>
+          <td>Name</td>
+          <td>{{name}}</td>
+        </tr>
+        <tr>
+          <td>Phone</td>
+          <td>{{phone}}</td>
+        </tr>
+        <tr>
+          <td>Email Address</td>
+          <td>{{email}}</td>
+        </tr>
+        <tr>
+          <td>Address</td>
+          <td>
+            <p>{{addressA}}</p>
+            <p>{{addressB}}</p>
+            <p>{{city}}, {{state}}  {{zipcode}}</p>
+            <p>{{country}}</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
