@@ -276,19 +276,20 @@ export function create(req, res) {
       submitForSettlement: true
     }
   }, function (err, result) {
-    if (result.success || result.transaction) {
+    console.log('err:', err);
+    if (result.success && result.transaction && !result.errors) {
       createOrder(req.body, result.transaction);
-      var responseObj = {
-        transaction: result.transaction,
-        items: cartData.items
-      }
+      // res.status = 200;
+      var responseObj = { transaction: result.transaction, items: cartData.items };
       res.setHeader('Content-Type', 'application/json');
-      res.send(responseObj);
+      res.status(200).send(responseObj);
     } else {
-      transactionErrors = result.errors.deepErrors();
-      console.log(formatErrors(transactionErrors))
-      // req.flash('error', {msg: formatErrors(transactionErrors)});
-      // res.redirect('checkouts/new');
+      console.log(result);
+      // res.status = 500;
+      console.log('result: ', result);
+      var responseObj = {}
+      responseObj.errorMsg = result.message;
+      res.status(500).send(responseObj);
     }
   });
 }

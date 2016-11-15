@@ -11,6 +11,16 @@ $goodGreen: #64d18a;
   padding: 2rem;
 }
 
+.error {
+  padding: .5rem;
+  border: 1px solid #ddd;
+  margin: 1rem auto;
+  background-color: #db4437;
+  color: white;
+  border-radius: 3px;
+  box-shadow: 0 0 3px #888;
+}
+
 .checkout-form-container {
 
   input {

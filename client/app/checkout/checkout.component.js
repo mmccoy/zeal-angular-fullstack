@@ -1288,8 +1288,9 @@ export class checkoutComponent {
 
         })
         .error(function (error, status){
+          // Zipcode not found
           var fetchError = { message: error, status: status};
-          console.log(fetchError);
+          // console.log(fetchError);
         });
     });
 
@@ -1331,15 +1332,15 @@ export class checkoutComponent {
             fields: {
               number: {
                 selector: '#card-number',
-                placeholder: '4111 1111 1111 1111'
+                placeholder: ''
               },
               cvv: {
                 selector: '#cvv',
-                placeholder: '123'
+                placeholder: ''
               },
               expirationDate: {
                 selector: '#expiration-date',
-                placeholder: '10/2019'
+                placeholder: ''
               }
             }
           }, function (hostedFieldsErr, hostedFieldsInstance) {
@@ -1373,11 +1374,16 @@ export class checkoutComponent {
                 }
                 _this.$http(req).then(function(response){
                   // Successful order
+                  // console.log('Successful transaction respsonse: ', response);
                   _this.ngCart.empty();
                   _this.redirectToOrder({orderId: response.data.transaction.id, stick: response.data.items[0]._data});
-                }, function(response){
+                }, function(response){                  
                   // Error
-                  console.log(response);
+                  // console.log('Error transaction respsonse: ', response);
+                  var error = {msg: 'Error: ' + response.data.errorMsg}
+                  _this.errors = [];
+                  _this.errors.push(error);
+                  submit.prop("disabled", false);
                 });
               });
             });
