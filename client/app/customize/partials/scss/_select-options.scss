@@ -149,12 +149,18 @@ uib-accordion {
 
   .personalize-input .panel-body {
     display: flex;
+    justify-content: space-between;
+
+    uib-accordion-heading {
+      display: none !important;
+    }
 
     .personalize-input-name,
     .personalize-input-number {
       display: flex;
       flex-direction: column;
-      margin: 10px;
+      flex: 1;
+      max-width: 40%;
 
       label {
         font-weight: 500;

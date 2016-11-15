@@ -8,6 +8,9 @@ export default function($stateProvider) {
       template: '<orders></orders>',
       params: {
         stick: {}
+      },
+      data: {
+        viewClass: 'order-view'
       }
     });
 }

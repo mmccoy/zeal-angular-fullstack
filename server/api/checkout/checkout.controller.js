@@ -123,7 +123,7 @@ function createOrder(data, transaction) {
 
   // Customer order confirmation email
   client.sendEmailWithTemplate({
-    "From": "custom-orders@zealhockey.com",
+    "From": "orders@zealhockey.com",
     "To": customerData.email,
     "TemplateId": 1008382,
     "TemplateModel": {
@@ -141,8 +141,8 @@ function createOrder(data, transaction) {
 
   // Send Zeal order info so they can make the stick.
   client.sendEmailWithTemplate({
-    "From": "custom-orders@zealhockey.com",
-    "To": "mmccoy@gmail.com, zealhockey@gmail.com",
+    "From": "orders@zealhockey.com",
+    "To": "marc@zealhockey.com, zealhockeyorders@gmail.com, pernilla@zealhockey.com, mmccoy@gmail.com",
     "TemplateId": 1008542,
     "TemplateModel": {
       "orderNumber": transaction.id,

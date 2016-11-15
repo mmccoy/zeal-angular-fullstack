@@ -40,10 +40,10 @@
       z-index: 101;
     }
 
-    svg.scene-svg-mobile {
+    /*svg.scene-svg-mobile {
       position: relative;
       top: 30px;
-    }
+    }*/
 
     .player-actions {
       > li {
@@ -177,10 +177,10 @@
     }
 
     .personalize-widget {
-      width: 100% !important;
+      /*width: 100% !important;
       position: relative !important;
       margin: 7rem auto auto !important;
-      height: 100% !important;
+      height: 100% !important;*/
 
       > * {
         width: 100%;
@@ -195,6 +195,13 @@
         position: absolute;
         top: 0px !important;
         left: 0 !important;
+      }
+
+      .personalize-input .panel-body {
+        .personalize-input-name,
+        .personalize-input-number {
+          margin: auto !important;
+        }
       }
     }
 

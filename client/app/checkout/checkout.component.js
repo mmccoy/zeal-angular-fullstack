@@ -2,6 +2,7 @@
 const angular = require('angular');
 const template = require('ngtemplate!html!./checkout.html');
 var braintree = require('braintree-web');
+const mask = require('./mask.js');
 
 import $ from "jquery";
 
@@ -21,6 +22,8 @@ export class checkoutComponent {
     this.country = $('#country');
     this.checkoutButton = $('#checkoutBtn');
     this.nonceInput = $('#payment-method-nonce');
+    $('#phone').mask('(000)000-0000');
+    $('#zipcode').mask('00000-0000');
 
     this.countries = [
       {
