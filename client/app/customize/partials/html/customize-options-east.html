@@ -10,7 +10,7 @@
       <ul class="color-list">
         <li ng-repeat="(name, value) in customize.userStick.colors.shaft">
           <label class="btn btn-primary" ng-model="customize.userStick.customColor.shaft" ng-click="customize.checkColorContrast(value.hex)"
-                 uib-btn-radio="'{{value.hex}}'" style="background-color: {{value.hex}}" ng-class="{'weave': name === 'weave'}">
+                 uib-btn-radio="'{{value.hex}}'" style="background-color: {{value.hex}}" ng-class="{'weave': value.name === 'weave'}">
           </label>
         </li>
       </ul>
