@@ -31,7 +31,7 @@
         <p ng-switch-when="Z28">P28, E28</p>
       </div>
     </div>
-    <img ng-srcset="/assets/images/patterns/{{customize.userStick.pattern|lowercase}}.png 1x, assets/images/patterns/{{customize.userStick.pattern|lowercase}}@2x.png 2x" alt="{{customize.userStick.pattern}} Blade Pattern" />
+    <img ng-srcset="/assets/images/patterns/{{customize.userStick.pattern|lowercase}}.png 1x, /assets/images/patterns/{{customize.userStick.pattern|lowercase}}@2x.png 2x" alt="{{customize.userStick.pattern}} Blade Pattern" />
     <table class="pattern-chart hidden-xs" ng-switch="customize.userStick.pattern">
       <tr>
         <td colspan="2">
@@ -87,11 +87,11 @@
     </table>
   </div>
   <div ng-show="customize.activeOption == 'flex'" class="options-stage-section options-stage-flex">
-    <img ng-srcset="/assets/images/flex/{{customize.userStick.orientation|lowercase}}/{{customize.userStick.flex}}.png 1x, assets/images/flex/{{customize.userStick.orientation|lowercase}}/{{customize.userStick.flex}}@2x.png 2x" alt="{{customize.userStick.flex}} Flex" />
+    <img ng-srcset="/assets/images/flex/{{customize.userStick.orientation|lowercase}}/{{customize.userStick.flex}}.png 1x, /assets/images/flex/{{customize.userStick.orientation|lowercase}}/{{customize.userStick.flex}}@2x.png 2x" alt="{{customize.userStick.flex}} Flex" />
   </div>
   <div ng-show="customize.activeOption == 'finish'" class="options-stage-section options-stage-finish">
     <h4 ng-if="!customize.userStick.finish">Choose a shaft coating</h4>
-    <img ng-if="customize.userStick.finish" class="zoom" data-magnify-src="/assets/images/coating/{{customize.userStick.finish}}@2x.png" ng-srcset="/assets/images/coating/{{customize.userStick.finish}}.png 1x, assets/images/coating/{{customize.userStick.finish}}@2x.png 2x" alt="{{customize.userStick.finish}} Coating" />
+    <img ng-if="customize.userStick.finish" class="zoom" data-magnify-src="/assets/images/coating/{{customize.userStick.finish}}@2x.png" ng-srcset="/assets/images/coating/{{customize.userStick.finish}}.png 1x, /assets/images/coating/{{customize.userStick.finish}}@2x.png 2x" alt="{{customize.userStick.finish}} Coating" />
   </div>
   <!-- <script>$('.zoom').magnify();</script> -->
   <div ng-show="customize.activeOption == 'personalize'" ng-init="persinclude = customize.userStick.images.root_path + customize.userStick.images.personalize" class="options-stage-section options-stage-personalize">
