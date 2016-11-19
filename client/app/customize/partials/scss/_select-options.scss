@@ -58,9 +58,14 @@
     border: 1px solid #222;
   }
 
-  label.weave {
-    @include weave(#444);
-    background-color: #ddd !important;
+  label.btn.weave {
+    @include weave(#ddd, #000);
+    /*background-color: #ddd !important;*/
+  }
+
+  label.btn.weave.active {
+    background-image: url(/assets/images/weave_new.svg),
+                      url(/assets/images/icon_check.svg)
   }
 
   label.btn.active {

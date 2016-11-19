@@ -85,6 +85,7 @@ Stick.find({}).remove()
         },
         "colors": {
           "shaft": [
+            {"name": "weave", "hex": "url(#weave)"},
             {"name": "White", "hex": "#ffffff"},
             {"name": "", "hex": "#8B8D8D"},
             {"name": "", "hex": "#1F355E"},
@@ -150,7 +151,8 @@ Stick.find({}).remove()
         },
         "colors": {
           "shaft": [
-            {"name": "White", "hex": "#ffffff"},
+            {"name": "weave", "hex": "url(#weave)"},
+            {"name": "white", "hex": "#ffffff"},
             {"name": "", "hex": "#8B8D8D"},
             {"name": "", "hex": "#1F355E"},
             {"name": "", "hex": "#7A232D"},
@@ -212,6 +214,7 @@ Stick.find({}).remove()
         },
         "colors": {
           "shaft": [
+            {"name": "weave", "hex": "url(#weave)"},
             {"name": "White", "hex": "#ffffff"},
             {"name": "", "hex": "#8B8D8D"},
             {"name": "", "hex": "#1F355E"},
@@ -273,6 +276,7 @@ Stick.find({}).remove()
         },
         "colors": {
           "shaft": [
+            {"name": "weave", "hex": "url(#weave)"},
             {"name": "White", "hex": "#ffffff"},
             {"name": "", "hex": "#262F68"},
             {"name": "", "hex": "#EC1C24"},
@@ -332,6 +336,7 @@ Stick.find({}).remove()
         },
         "colors": {
           "shaft": [
+            {"name": "weave", "hex": "url(#weave)"},
             {"name": "White", "hex": "#ffffff"},
             {"name": "", "hex": "#262F68"},
             {"name": "", "hex": "#EC1C24"},
@@ -388,6 +393,7 @@ Stick.find({}).remove()
         },
         "colors": {
           "shaft": [
+            {"name": "weave", "hex": "url(#weave)"},
             {"name": "White", "hex": "#ffffff"},
             {"name": "", "hex": "#262F68"},
             {"name": "", "hex": "#EC1C24"},

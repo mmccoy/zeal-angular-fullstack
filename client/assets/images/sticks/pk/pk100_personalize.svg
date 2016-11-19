@@ -3,7 +3,19 @@
     <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
     <title>Pk 100</title>
     <desc>Created with Sketch.</desc>
-    <defs></defs>
+    <defs>
+        <pattern id="weave_alt" width="15" height="15" patternUnits="userSpaceOnUse">
+            <rect width='50' height='50' fill='#2E2E2E'/>
+            <circle cx='3' cy='4.3' r='5.8' fill='#5A5A5A'/>
+            <circle cx='3' cy='3' r='5.8' fill='#878787'/>
+            <circle cx='10.5' cy='12.5' r='5.8' fill='#5A5A5A'/>
+            <circle cx='10.5' cy='11.3' r='5.8' fill='#878787'/>
+        </pattern>
+        <pattern id="weave" width="55" height="60" patternUnits="userSpaceOnUse">
+            <rect width='60' height='60' fill='#2e2e2e'/>
+            <rect width='42.42' height='42.42' transform='translate(30 0) rotate(45)' fill='black'/>
+        </pattern>
+    </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Pk-100">
             <g id="Page-1" transform="translate(-1.000000, -1.000000)">
