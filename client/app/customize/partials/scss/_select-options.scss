@@ -40,10 +40,10 @@
 .color-list {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
 
   li {
-    margin: 0.5rem;
+    margin: 0.25rem;
   }
 
   li:first-child {
@@ -59,13 +59,22 @@
   }
 
   label.btn.weave {
-    @include weave(#ddd, #000);
+    /*@include weave(#ddd, #000);*/
     /*background-color: #ddd !important;*/
+    background-color: #eee;
+    background: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), 
+              linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px
   }
 
   label.btn.weave.active {
-    background-image: url(/assets/images/weave_new.svg),
-                      url(/assets/images/icon_check.svg)
+    background-color: #eee;
+    background: url(/assets/images/icon_check.svg) center,
+                linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), 
+                linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
+    background-size:30px 30px;
+    background-position:0 0, 15px 15px
   }
 
   label.btn.active {
