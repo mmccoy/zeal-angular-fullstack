@@ -217,7 +217,7 @@ export class CustomizeComponent {
     } else {
       this.$scope.shaftTextColor = '#000'; 
     }
-  }
+  };
 
   resetOptionsState() {
     this.$scope.isColorOpen = false; 
@@ -227,12 +227,12 @@ export class CustomizeComponent {
     this.$scope.isFinishOpen = false;
     this.$scope.isPersonalizeOpen = false;
     console.log('Options state reset');
-  }
+  };
 
   toggleMobileStickList(event) {
     document.body.scrollTop = event.currentTarget.offsetTop;
     event.currentTarget.classList.toggle('selected');
-  }
+  };
 }
 
 
