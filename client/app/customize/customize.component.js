@@ -131,9 +131,11 @@ export class CustomizeComponent {
             defaultStickId = 'pk100-senior'
             break;
         }
+
         var defaultStick = $scope.ctrl.sticks.filter(function(stick) {
           return stick.id === defaultStickId;
         });
+
         $scope.ctrl.updateUserStick(defaultStick[0]);
       }
 
@@ -181,6 +183,13 @@ export class CustomizeComponent {
       });
   };
 
+  stickOptionsComplete() {
+    return (this.userStick.customColor &&
+            this.userStick.customColor.shaft &&
+            this.userStick.customColor.accent &&
+            this.userStick.customColor.logo);
+  };
+
   updateUserStick(propertyObj) {
     for (var prop in propertyObj) {
       if ({}.hasOwnProperty.call(propertyObj, prop)) {
@@ -202,7 +211,7 @@ export class CustomizeComponent {
   };
 
   checkColorContrast(color) {
-    console.log(tinycolor(color).getBrightness());
+    // console.log(tinycolor(color).getBrightness());
     if (tinycolor(color).getBrightness() < 155) {
       this.$scope.shaftTextColor = '#fff';
     } else {

@@ -23,7 +23,6 @@ export class checkoutComponent {
     this.checkoutButton = $('#checkoutBtn');
     this.nonceInput = $('#payment-method-nonce');
     $('#phone').mask('(000) 000-0000');
-    $('#zipcode').mask('00000-0000');
 
     this.countries = [
       {

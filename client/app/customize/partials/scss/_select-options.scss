@@ -14,6 +14,10 @@
   /*position: fixed;*/
   bottom: 0px;
 
+  &.disabled {
+    pointer-events: none;
+  }
+
   > span {
     flex: 1;
   }
@@ -320,6 +324,10 @@ uib-accordion {
       }
     }
   }
+
+  btn.disabled {
+    pointer-events: none;
+  }
 }
 
 .scene-svg {
@@ -332,26 +340,6 @@ svg path,
 svg polygon {
   transition: fill .4s ease;
 }
-
-// .svg-tall {
-//   position: relative;
-//   transform: scale(1.6) rotate(-55deg);
-//   -webkit-filter: drop-shadow( 0 -1px 2px #888 );
-//           filter: drop-shadow( 0 -1px 2px #888 ); /* Same syntax as box-shadow */
-// }
-
-// .svg-first-small {
-//   transform: rotate(-55deg) scale(0.7) scaleX(-1) translate(10%, -120%);
-//   -webkit-filter: drop-shadow( 0 -1px 2px #888 );
-//           filter: drop-shadow( 0 -1px 2px #888 ); /* Same syntax as box-shadow */
-// }
-
-// .svg-second-small {
-//   transform: rotate(125deg) scale(0.7) translate(-10%, -70%);
-//   -webkit-filter: drop-shadow( 0 -1px 2px #888 );
-//           filter: drop-shadow( 0 -1px 2px #888 ); /* Same syntax as box-shadow */
-// }
-
 
 svg {
   -webkit-filter: drop-shadow( 0 -1px 2px #888 );
