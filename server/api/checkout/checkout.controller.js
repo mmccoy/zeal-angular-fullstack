@@ -19,7 +19,7 @@ import postmark from 'postmark';
 var environment, gateway;
 // require('dotenv').load();
 
-// Devision sandbox
+// Devision sandbox (Testing)
 // var BT_ENVIRONMENT='Sandbox'
 // var BT_MERCHANT_ID='8xckn8z7n2nbjnx3'
 // var BT_PUBLIC_KEY='c33zskmxg3x2w73m'
@@ -143,14 +143,17 @@ function createOrder(data, transaction) {
   client.sendEmailWithTemplate({
     "From": "orders@zealhockey.com",
     "To": "marc@zealhockey.com, zealhockeyorders@gmail.com, pernilla@zealhockey.com, mmccoy@gmail.com",
-    "TemplateId": 1008542,
+    // "To": "mmccoy@gmail.com", // For testing
+    "TemplateId": 1008542, // Prod Template
+    // "TemplateId": 1209141, // Test template
     "TemplateModel": {
       "orderNumber": transaction.id,
       "stick": data.cartData.items[0]._data,
       "profile": stick.category,
       "model": stick.series + ' ' + stick.name,
       "orientation": stick.orientation,
-      "colorShaft": stick.customColor.shaft,
+      "colorShaftHex": stick.customColor.shaft.hex,
+      "colorShaftName": stick.customColor.shaft.name,
       "colorAccent": stick.customColor.accent,
       "colorLogo": stick.customColor.logo,
       "flex": stick.flex,
@@ -265,7 +268,7 @@ export function create(req, res) {
     },
     customFields: {
       stick_model: cartData.items[0]._data.series + ' ' + cartData.items[0]._data.name + ' (' + cartData.items[0]._data.profile.toUpperCase() + ')',
-      stick_colors: 'Shaft: ' + cartData.items[0]._data.customColor.shaft + ', Logo: ' + cartData.items[0]._data.customColor.logo + ', Accents: ' + cartData.items[0]._data.customColor.accent,
+      stick_colors: 'Shaft: ' + cartData.items[0]._data.customColor.shaft.name + ', Logo: ' + cartData.items[0]._data.customColor.logo + ', Accents: ' + cartData.items[0]._data.customColor.accent,
       stick_orientation: cartData.items[0]._data.orientation + ' handed', 
       stick_flex: cartData.items[0]._data.flex, 
       stick_pattern: cartData.items[0]._data.pattern,

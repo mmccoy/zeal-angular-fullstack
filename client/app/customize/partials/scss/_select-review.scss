@@ -52,6 +52,14 @@ table.stick-review {
     box-shadow: 0 1px 2px #888
   }
 
+  .swatch.weave {
+    background-color: #eee;
+    background: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), 
+              linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+  }
+
   h6 {
     text-transform: uppercase;
     margin: 0 0 .5rem;

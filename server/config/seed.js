@@ -4,60 +4,7 @@
  */
 
 'use strict';
-import Thing from '../api/thing/thing.model';
-import User from '../api/user/user.model';
 import Stick from '../api/stick/stick.model';
-
-Thing.find({}).remove()
-  .then(() => {
-    Thing.create({
-      name: 'Development Tools',
-      info: 'Integration with popular tools such as Webpack, Gulp, Babel, TypeScript, Karma, '
-            + 'Mocha, ESLint, Node Inspector, Livereload, Protractor, Pug, '
-            + 'Stylus, Sass, and Less.'
-    }, {
-      name: 'Server and Client integration',
-      info: 'Built with a powerful and fun stack: MongoDB, Express, '
-            + 'AngularJS, and Node.'
-    }, {
-      name: 'Smart Build System',
-      info: 'Build system ignores `spec` files, allowing you to keep '
-            + 'tests alongside code. Automatic injection of scripts and '
-            + 'styles into your index.html'
-    }, {
-      name: 'Modular Structure',
-      info: 'Best practice client and server structures allow for more '
-            + 'code reusability and maximum scalability'
-    }, {
-      name: 'Optimized Build',
-      info: 'Build process packs up your templates as a single JavaScript '
-            + 'payload, minifies your scripts/css/images, and rewrites asset '
-            + 'names for caching.'
-    }, {
-      name: 'Deployment Ready',
-      info: 'Easily deploy your app to Heroku or Openshift with the heroku '
-            + 'and openshift subgenerators'
-    });
-  });
-
-User.find({}).remove()
-  .then(() => {
-    User.create({
-      provider: 'local',
-      name: 'Test User',
-      email: 'test@example.com',
-      password: 'test'
-    }, {
-      provider: 'local',
-      role: 'admin',
-      name: 'Admin',
-      email: 'admin@example.com',
-      password: 'admin'
-    })
-    .then(() => {
-      console.log('finished populating users');
-    });
-  });
 
 Stick.find({}).remove()
   .then(() => {
@@ -85,15 +32,62 @@ Stick.find({}).remove()
         },
         "colors": {
           "shaft": [
-            {"name": "weave", "hex": "url(#weave)"},
-            {"name": "White", "hex": "#ffffff"},
-            {"name": "", "hex": "#8B8D8D"},
-            {"name": "", "hex": "#1F355E"},
-            {"name": "", "hex": "#7A232D"},
-            {"name": "", "hex": "#EC1C24"},
-            {"name": "", "hex": "#E7FF00"},
-            {"name": "", "hex": "#EE5225"},
-            {"name": "", "hex": "#3EF702"}
+            {
+              "name": "Weave", 
+              "hex": "url(#weave)"
+            },
+            {
+              "name": "Jade",
+              "hex": "#9EF6C5"
+            },
+            {
+              "name": "Blue Magic",
+              "hex": "#155EBC"
+            },
+            {
+              "name": "Nautilus",
+              "hex": "#122954"
+            },
+            {
+              "name": "Celtic",
+              "hex": "#1D9128"
+            },
+            {
+              "name": "Shock Red",
+              "hex": "#D41708"
+            },
+            {
+              "name": "Brick",
+              "hex": "#A92B15"
+            },
+            {
+              "name": "Flash Red",
+              "hex": "#F9234E"
+            },
+            {
+              "name": "Acid Green",
+              "hex": "#50FF0A"
+            },
+            {
+              "name": "Volt",
+              "hex": "#D6FF00"
+            },
+            {
+              "name": "Brimstone",
+              "hex": "#FDFF00"
+            },
+            {
+              "name": "Laker",
+              "hex": "#7B009C"
+            },
+            {
+              "name": "Denim",
+              "hex": "#2AD8FD"
+            },
+            {
+              "name": "Stealth",
+              "hex": "#D8D4D4"
+            }
           ],
           "accent": [
             {"name": "White", "hex": "#ffffff"},
@@ -151,15 +145,62 @@ Stick.find({}).remove()
         },
         "colors": {
           "shaft": [
-            {"name": "weave", "hex": "url(#weave)"},
-            {"name": "white", "hex": "#ffffff"},
-            {"name": "", "hex": "#8B8D8D"},
-            {"name": "", "hex": "#1F355E"},
-            {"name": "", "hex": "#7A232D"},
-            {"name": "", "hex": "#EC1C24"},
-            {"name": "", "hex": "#E7FF00"},
-            {"name": "", "hex": "#EE5225"},
-            {"name": "", "hex": "#3EF702"}
+            {
+              "name": "Weave", 
+              "hex": "url(#weave)"
+            },
+            {
+              "name": "Jade",
+              "hex": "#9EF6C5"
+            },
+            {
+              "name": "Blue Magic",
+              "hex": "#155EBC"
+            },
+            {
+              "name": "Nautilus",
+              "hex": "#122954"
+            },
+            {
+              "name": "Celtic",
+              "hex": "#1D9128"
+            },
+            {
+              "name": "Shock Red",
+              "hex": "#D41708"
+            },
+            {
+              "name": "Brick",
+              "hex": "#A92B15"
+            },
+            {
+              "name": "Flash Red",
+              "hex": "#F9234E"
+            },
+            {
+              "name": "Acid Green",
+              "hex": "#50FF0A"
+            },
+            {
+              "name": "Volt",
+              "hex": "#D6FF00"
+            },
+            {
+              "name": "Brimstone",
+              "hex": "#FDFF00"
+            },
+            {
+              "name": "Laker",
+              "hex": "#7B009C"
+            },
+            {
+              "name": "Denim",
+              "hex": "#2AD8FD"
+            },
+            {
+              "name": "Stealth",
+              "hex": "#D8D4D4"
+            }
           ],
           "accent": [
             {"name": "White", "hex": "#ffffff"},
@@ -214,15 +255,62 @@ Stick.find({}).remove()
         },
         "colors": {
           "shaft": [
-            {"name": "weave", "hex": "url(#weave)"},
-            {"name": "White", "hex": "#ffffff"},
-            {"name": "", "hex": "#8B8D8D"},
-            {"name": "", "hex": "#1F355E"},
-            {"name": "", "hex": "#7A232D"},
-            {"name": "", "hex": "#EC1C24"},
-            {"name": "", "hex": "#E7FF00"},
-            {"name": "", "hex": "#EE5225"},
-            {"name": "", "hex": "#3EF702"}
+            {
+              "name": "Weave", 
+              "hex": "url(#weave)"
+            },
+            {
+              "name": "Jade",
+              "hex": "#9EF6C5"
+            },
+            {
+              "name": "Blue Magic",
+              "hex": "#155EBC"
+            },
+            {
+              "name": "Nautilus",
+              "hex": "#122954"
+            },
+            {
+              "name": "Celtic",
+              "hex": "#1D9128"
+            },
+            {
+              "name": "Shock Red",
+              "hex": "#D41708"
+            },
+            {
+              "name": "Brick",
+              "hex": "#A92B15"
+            },
+            {
+              "name": "Flash Red",
+              "hex": "#F9234E"
+            },
+            {
+              "name": "Acid Green",
+              "hex": "#50FF0A"
+            },
+            {
+              "name": "Volt",
+              "hex": "#D6FF00"
+            },
+            {
+              "name": "Brimstone",
+              "hex": "#FDFF00"
+            },
+            {
+              "name": "Laker",
+              "hex": "#7B009C"
+            },
+            {
+              "name": "Denim",
+              "hex": "#2AD8FD"
+            },
+            {
+              "name": "Stealth",
+              "hex": "#D8D4D4"
+            }
           ],
           "accent": [
             {"name": "White", "hex": "#ffffff"},
@@ -276,13 +364,62 @@ Stick.find({}).remove()
         },
         "colors": {
           "shaft": [
-            {"name": "weave", "hex": "url(#weave)"},
-            {"name": "White", "hex": "#ffffff"},
-            {"name": "", "hex": "#262F68"},
-            {"name": "", "hex": "#EC1C24"},
-            {"name": "", "hex": "#E7FF00"},
-            {"name": "", "hex": "#EE5225"},
-            {"name": "", "hex": "#3EF702"}
+            {
+              "name": "Weave", 
+              "hex": "url(#weave)"
+            },
+            {
+              "name": "Jade",
+              "hex": "#9EF6C5"
+            },
+            {
+              "name": "Blue Magic",
+              "hex": "#155EBC"
+            },
+            {
+              "name": "Nautilus",
+              "hex": "#122954"
+            },
+            {
+              "name": "Celtic",
+              "hex": "#1D9128"
+            },
+            {
+              "name": "Shock Red",
+              "hex": "#D41708"
+            },
+            {
+              "name": "Brick",
+              "hex": "#A92B15"
+            },
+            {
+              "name": "Flash Red",
+              "hex": "#F9234E"
+            },
+            {
+              "name": "Acid Green",
+              "hex": "#50FF0A"
+            },
+            {
+              "name": "Volt",
+              "hex": "#D6FF00"
+            },
+            {
+              "name": "Brimstone",
+              "hex": "#FDFF00"
+            },
+            {
+              "name": "Laker",
+              "hex": "#7B009C"
+            },
+            {
+              "name": "Denim",
+              "hex": "#2AD8FD"
+            },
+            {
+              "name": "Stealth",
+              "hex": "#D8D4D4"
+            }
           ],
           "accent": [
             {"name": "", "hex": "#E4AD24"},
@@ -336,13 +473,62 @@ Stick.find({}).remove()
         },
         "colors": {
           "shaft": [
-            {"name": "weave", "hex": "url(#weave)"},
-            {"name": "White", "hex": "#ffffff"},
-            {"name": "", "hex": "#262F68"},
-            {"name": "", "hex": "#EC1C24"},
-            {"name": "", "hex": "#E7FF00"},
-            {"name": "", "hex": "#EE5225"},
-            {"name": "", "hex": "#3EF702"}
+            {
+              "name": "Weave", 
+              "hex": "url(#weave)"
+            },
+            {
+              "name": "Jade",
+              "hex": "#9EF6C5"
+            },
+            {
+              "name": "Blue Magic",
+              "hex": "#155EBC"
+            },
+            {
+              "name": "Nautilus",
+              "hex": "#122954"
+            },
+            {
+              "name": "Celtic",
+              "hex": "#1D9128"
+            },
+            {
+              "name": "Shock Red",
+              "hex": "#D41708"
+            },
+            {
+              "name": "Brick",
+              "hex": "#A92B15"
+            },
+            {
+              "name": "Flash Red",
+              "hex": "#F9234E"
+            },
+            {
+              "name": "Acid Green",
+              "hex": "#50FF0A"
+            },
+            {
+              "name": "Volt",
+              "hex": "#D6FF00"
+            },
+            {
+              "name": "Brimstone",
+              "hex": "#FDFF00"
+            },
+            {
+              "name": "Laker",
+              "hex": "#7B009C"
+            },
+            {
+              "name": "Denim",
+              "hex": "#2AD8FD"
+            },
+            {
+              "name": "Stealth",
+              "hex": "#D8D4D4"
+            }
           ],
           "accent": [
             {"name": "", "hex": "#E4AD24"},
@@ -393,13 +579,62 @@ Stick.find({}).remove()
         },
         "colors": {
           "shaft": [
-            {"name": "weave", "hex": "url(#weave)"},
-            {"name": "White", "hex": "#ffffff"},
-            {"name": "", "hex": "#262F68"},
-            {"name": "", "hex": "#EC1C24"},
-            {"name": "", "hex": "#E7FF00"},
-            {"name": "", "hex": "#EE5225"},
-            {"name": "", "hex": "#3EF702"}
+            {
+              "name": "Weave", 
+              "hex": "url(#weave)"
+            },
+            {
+              "name": "Jade",
+              "hex": "#9EF6C5"
+            },
+            {
+              "name": "Blue Magic",
+              "hex": "#155EBC"
+            },
+            {
+              "name": "Nautilus",
+              "hex": "#122954"
+            },
+            {
+              "name": "Celtic",
+              "hex": "#1D9128"
+            },
+            {
+              "name": "Shock Red",
+              "hex": "#D41708"
+            },
+            {
+              "name": "Brick",
+              "hex": "#A92B15"
+            },
+            {
+              "name": "Flash Red",
+              "hex": "#F9234E"
+            },
+            {
+              "name": "Acid Green",
+              "hex": "#50FF0A"
+            },
+            {
+              "name": "Volt",
+              "hex": "#D6FF00"
+            },
+            {
+              "name": "Brimstone",
+              "hex": "#FDFF00"
+            },
+            {
+              "name": "Laker",
+              "hex": "#7B009C"
+            },
+            {
+              "name": "Denim",
+              "hex": "#2AD8FD"
+            },
+            {
+              "name": "Stealth",
+              "hex": "#D8D4D4"
+            }
           ],
           "accent": [
             {"name": "", "hex": "#E4AD24"},
@@ -449,8 +684,62 @@ Stick.find({}).remove()
         },
         "colors": {
           "shaft": [
-            {"name": "", "hex": "#262F68"},
-            {"name": "", "hex": "#000000"}
+            {
+              "name": "Weave", 
+              "hex": "url(#weave)"
+            },
+            {
+              "name": "Jade",
+              "hex": "#9EF6C5"
+            },
+            {
+              "name": "Blue Magic",
+              "hex": "#155EBC"
+            },
+            {
+              "name": "Nautilus",
+              "hex": "#122954"
+            },
+            {
+              "name": "Celtic",
+              "hex": "#1D9128"
+            },
+            {
+              "name": "Shock Red",
+              "hex": "#D41708"
+            },
+            {
+              "name": "Brick",
+              "hex": "#A92B15"
+            },
+            {
+              "name": "Flash Red",
+              "hex": "#F9234E"
+            },
+            {
+              "name": "Acid Green",
+              "hex": "#50FF0A"
+            },
+            {
+              "name": "Volt",
+              "hex": "#D6FF00"
+            },
+            {
+              "name": "Brimstone",
+              "hex": "#FDFF00"
+            },
+            {
+              "name": "Laker",
+              "hex": "#7B009C"
+            },
+            {
+              "name": "Denim",
+              "hex": "#2AD8FD"
+            },
+            {
+              "name": "Stealth",
+              "hex": "#D8D4D4"
+            }
           ],
           "accent": [
             {"name": "White", "hex": "#ffffff"},
@@ -503,8 +792,62 @@ Stick.find({}).remove()
         },
         "colors": {
           "shaft": [
-            {"name": "", "hex": "#262F68"},
-            {"name": "", "hex": "#000000"}
+            {
+              "name": "Weave", 
+              "hex": "url(#weave)"
+            },
+            {
+              "name": "Jade",
+              "hex": "#9EF6C5"
+            },
+            {
+              "name": "Blue Magic",
+              "hex": "#155EBC"
+            },
+            {
+              "name": "Nautilus",
+              "hex": "#122954"
+            },
+            {
+              "name": "Celtic",
+              "hex": "#1D9128"
+            },
+            {
+              "name": "Shock Red",
+              "hex": "#D41708"
+            },
+            {
+              "name": "Brick",
+              "hex": "#A92B15"
+            },
+            {
+              "name": "Flash Red",
+              "hex": "#F9234E"
+            },
+            {
+              "name": "Acid Green",
+              "hex": "#50FF0A"
+            },
+            {
+              "name": "Volt",
+              "hex": "#D6FF00"
+            },
+            {
+              "name": "Brimstone",
+              "hex": "#FDFF00"
+            },
+            {
+              "name": "Laker",
+              "hex": "#7B009C"
+            },
+            {
+              "name": "Denim",
+              "hex": "#2AD8FD"
+            },
+            {
+              "name": "Stealth",
+              "hex": "#D8D4D4"
+            }
           ],
           "accent": [
             {"name": "White", "hex": "#ffffff"},
@@ -554,8 +897,62 @@ Stick.find({}).remove()
         },
         "colors": {
           "shaft": [
-            {"name": "", "hex": "#262F68"},
-            {"name": "", "hex": "#000000"}
+            {
+              "name": "Weave", 
+              "hex": "url(#weave)"
+            },
+            {
+              "name": "Jade",
+              "hex": "#9EF6C5"
+            },
+            {
+              "name": "Blue Magic",
+              "hex": "#155EBC"
+            },
+            {
+              "name": "Nautilus",
+              "hex": "#122954"
+            },
+            {
+              "name": "Celtic",
+              "hex": "#1D9128"
+            },
+            {
+              "name": "Shock Red",
+              "hex": "#D41708"
+            },
+            {
+              "name": "Brick",
+              "hex": "#A92B15"
+            },
+            {
+              "name": "Flash Red",
+              "hex": "#F9234E"
+            },
+            {
+              "name": "Acid Green",
+              "hex": "#50FF0A"
+            },
+            {
+              "name": "Volt",
+              "hex": "#D6FF00"
+            },
+            {
+              "name": "Brimstone",
+              "hex": "#FDFF00"
+            },
+            {
+              "name": "Laker",
+              "hex": "#7B009C"
+            },
+            {
+              "name": "Denim",
+              "hex": "#2AD8FD"
+            },
+            {
+              "name": "Stealth",
+              "hex": "#D8D4D4"
+            }
           ],
           "accent": [
             {"name": "White", "hex": "#ffffff"},

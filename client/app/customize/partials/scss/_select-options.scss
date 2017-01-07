@@ -50,9 +50,9 @@
     margin: 0.25rem;
   }
 
-  li:first-child {
-    margin-left: 0;
-  }
+  // li:first-child {
+  //   margin-left: 0;
+  // }
 
   li > label {
     width: 30px;
@@ -69,7 +69,7 @@
     background: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), 
               linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
     background-size: 30px 30px;
-    background-position: 0 0, 15px 15px
+    background-position: 0 0, 15px 15px;
   }
 
   label.btn.weave.active {
@@ -78,7 +78,7 @@
                 linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), 
                 linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
     background-size:30px 30px;
-    background-position:0 0, 15px 15px
+    background-position:0 0, 15px 15px;
   }
 
   label.btn.active {

@@ -19,7 +19,7 @@
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Pk-100">
             <g id="Page-1" transform="translate(-1.000000, -1.000000)">
-                <polygon class="svg-shaft-segment" fill="#F5F4ED" style="fill: {{customize.userStick.customColor.shaft}}" points="0 53.0619 884.314 53.0619 884.314 1.4239 0 1.4239"></polygon>
+                <polygon class="svg-shaft-segment" fill="#F5F4ED" style="fill: {{customize.userStick.customColor.shaft.hex}}" points="0 53.0619 884.314 53.0619 884.314 1.4239 0 1.4239"></polygon>
                 <g class="svg-accent-segment" style="fill: {{customize.userStick.customColor.accent}}"  transform="translate(130.000000, 0.577900)" fill="#202455">
                     <path d="M26.528,0.4366 L46.588,23.1726 C49.001,25.9076 48.979,30.3646 46.54,33.0756 L28.797,52.7926 L754.314,52.9996 L754.314,0.7876 L26.528,0.4366 Z" id="Fill-4"></path>
                     <path d="M45.5933,24.0505 L24.7583,0.4355 L14.8273,0.4305 L34.9753,23.2665 C37.3583,25.9675 37.3373,30.3685 34.9273,33.0465 L17.1453,52.8075 L27.0103,52.7945 L45.5533,32.1885 C47.5293,29.9925 47.5483,26.2655 45.5933,24.0505 L45.5933,24.0505 Z" id="Fill-2"></path>

@@ -17,7 +17,7 @@
       <div class="colors-review" ng-if="customize.userStick.customColor">
         <div class="color-review">
           <h6>Shaft</h6>
-          <span class="swatch" style="background-color: {{customize.userStick.customColor.shaft}}"></span>
+          <span class="swatch" style="background-color: {{customize.userStick.customColor.shaft.hex}}" ng-class="{'weave': customize.userStick.customColor.shaft.name === 'Weave'}"></span>
         </div>
         <div class="color-review">
           <h6>Accents</h6>

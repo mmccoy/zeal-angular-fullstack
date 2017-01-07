@@ -9,8 +9,9 @@
       <header>Shaft</header>
       <ul class="color-list">
         <li ng-repeat="(name, value) in customize.userStick.colors.shaft">
-          <label class="btn btn-primary" ng-model="customize.userStick.customColor.shaft" ng-click="customize.checkColorContrast(value.hex)"
-                 uib-btn-radio="'{{value.hex}}'" style="background-color: {{value.hex}}" ng-class="{'weave': value.name === 'weave'}">
+          <label class="btn btn-primary" style="background-color: {{value.hex}}" 
+                 ng-click="customize.checkColorContrast(value.hex); customize.updateUserStick({customColor: {shaft: value}} )"
+                 ng-class="{'weave': value.name === 'Weave', 'active': value.hex == customize.userStick.customColor.shaft.hex}">
           </label>
         </li>
       </ul>
@@ -18,7 +19,7 @@
       <ul class="color-list">
         <li ng-repeat="(name, value) in customize.userStick.colors.accent">
           <label class="btn btn-primary" ng-model="customize.userStick.customColor.accent"
-                 uib-btn-radio="'{{value.hex}}'" style="background-color: {{value.hex}}" ng-class="{'weave': name === 'weave'}">
+                 uib-btn-radio="'{{value.hex}}'" style="background-color: {{value.hex}}" ng-class="{'weave': name === 'Weave'}">
           </label>
         </li>
       </ul>
@@ -26,7 +27,7 @@
       <ul class="color-list">
         <li ng-repeat="(name, value) in customize.userStick.colors.logo">
           <label class="btn btn-primary" ng-model="customize.userStick.customColor.logo"
-                 uib-btn-radio="'{{value.hex}}'" style="background-color: {{value.hex}}" ng-class="{'weave': name === 'weave'}">
+                 uib-btn-radio="'{{value.hex}}'" style="background-color: {{value.hex}}" ng-class="{'weave': name === 'Weave'}">
           </label>
         </li>
       </ul>

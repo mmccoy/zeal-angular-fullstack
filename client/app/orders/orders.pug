@@ -1,10 +1,12 @@
 .container.order-confirmation
   h2
     | Thank you for your order!<br>
-    //- | (\#{{ordersCtrl.order.orderId}})
+  //- p
+  //-   | {{ordersCtrl.order.stick.customColor}}
   p
     | You will receive an email confirmation with your order number and details.
-  img.checkout-svg(ng-src="{{ordersCtrl.order.stick.images.root_path + ordersCtrl.order.stick.images.key}}checkout.svg")
+  div.checkout-svg(ng-include="ordersCtrl.order.stick.images.root_path + ordersCtrl.order.stick.images.key +'checkout.svg'" 
+                   class="order-svg-include")
   div.order-info
     p
       | We are really excited to start production of your custom stick.
