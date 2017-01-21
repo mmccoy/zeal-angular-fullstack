@@ -32,79 +32,67 @@ Stick.find({}).remove()
         },
         "colors": {
           "shaft": [
-            {
-              "name": "Weave", 
-              "hex": "url(#weave)"
-            },
-            {
-              "name": "Jade",
-              "hex": "#9EF6C5"
-            },
-            {
-              "name": "Blue Magic",
-              "hex": "#155EBC"
-            },
-            {
-              "name": "Nautilus",
-              "hex": "#122954"
-            },
-            {
-              "name": "Celtic",
-              "hex": "#1D9128"
-            },
-            {
-              "name": "Shock Red",
-              "hex": "#D41708"
-            },
-            {
-              "name": "Brick",
-              "hex": "#A92B15"
-            },
-            {
-              "name": "Flash Red",
-              "hex": "#F9234E"
-            },
-            {
-              "name": "Acid Green",
-              "hex": "#50FF0A"
-            },
-            {
-              "name": "Volt",
-              "hex": "#D6FF00"
-            },
-            {
-              "name": "Brimstone",
-              "hex": "#FDFF00"
-            },
-            {
-              "name": "Laker",
-              "hex": "#7B009C"
-            },
-            {
-              "name": "Denim",
-              "hex": "#2AD8FD"
-            },
-            {
-              "name": "Stealth",
-              "hex": "#D8D4D4"
-            }
+            {"name": "Weave", "hex": "url(#weave)"},
+            {"name": "Acid Green", "hex": "#50FF0A"},
+            {"name": "Blue Magic", "hex": "#155EBC"},
+            {"name": "Brick", "hex": "#A92B15"},
+            {"name": "Brimstone", "hex": "#FDFF00"},
+            {"name": "Bronco", "hex": "#FB4F14"},
+            {"name": "Celtic", "hex": "#1D9128"},
+            {"name": "Denim", "hex": "#2AD8FD"},
+            {"name": "Flash Red", "hex": "#F9234E"},
+            {"name": "Gold", "hex": "#D2B887"},
+            {"name": "Jade", "hex": "#9EF6C5"},
+            {"name": "Laker", "hex": "#7B009C"},
+            {"name": "Nautilus", "hex": "#122954"},
+            {"name": "Black Carbon", "hex": "#000000"},
+            {"name": "Shock Red", "hex": "#D41708"},
+            {"name": "Silver", "hex": "#D6D6D6"},
+            {"name": "Stealth", "hex": "#D8D4D4"},
+            {"name": "Volt", "hex": "#CEFF00"},
+            {"name": "White", "hex": "#ffffff"}
           ],
           "accent": [
-            {"name": "White", "hex": "#ffffff"},
-            {"name": "Black", "hex": "#000000"},
-            {"name": "", "hex": "#25A9E0"},
-            {"name": "", "hex": "#F05A28"},
-            {"name": "", "hex": "#F9EC31"},
-            {"name": "", "hex": "#652D90"},
-            {"name": "", "hex": "#3EF702"}
+            {"name": "Weave", "hex": "url(#weave)"},
+            {"name": "Acid Green", "hex": "#50FF0A"},
+            {"name": "Blue Magic", "hex": "#155EBC"},
+            {"name": "Brick", "hex": "#A92B15"},
+            {"name": "Brimstone", "hex": "#FDFF00"},
+            {"name": "Bronco", "hex": "#FB4F14"},
+            {"name": "Celtic", "hex": "#1D9128"},
+            {"name": "Denim", "hex": "#2AD8FD"},
+            {"name": "Flash Red", "hex": "#F9234E"},
+            {"name": "Gold", "hex": "#D2B887"},
+            {"name": "Jade", "hex": "#9EF6C5"},
+            {"name": "Laker", "hex": "#7B009C"},
+            {"name": "Nautilus", "hex": "#122954"},
+            {"name": "Black Carbon", "hex": "#000000"},
+            {"name": "Shock Red", "hex": "#D41708"},
+            {"name": "Silver", "hex": "#D6D6D6"},
+            {"name": "Stealth", "hex": "#D8D4D4"},
+            {"name": "Volt", "hex": "#CEFF00"},
+            {"name": "White", "hex": "#ffffff"}
           ],
           "logo": [
-            {"name": "White", "hex": "#ffffff"},
-            {"name": "Black", "hex": "#000000"},
-            {"name": "", "hex": "#3EF702"},
-            {"name": "", "hex": "#E4AD24"},
-            {"name": "", "hex": "#EB008B"},
-            {"name": "", "hex": "#8B8D8D"}
+            {"name": "Weave", "hex": "url(#weave)"},
+            {"name": "Acid Green", "hex": "#50FF0A"},
+            {"name": "Blue Magic", "hex": "#155EBC"},
+            {"name": "Brick", "hex": "#A92B15"},
+            {"name": "Brimstone", "hex": "#FDFF00"},
+            {"name": "Bronco", "hex": "#FB4F14"},
+            {"name": "Celtic", "hex": "#1D9128"},
+            {"name": "Denim", "hex": "#2AD8FD"},
+            {"name": "Flash Red", "hex": "#F9234E"},
+            {"name": "Gold", "hex": "#D2B887"},
+            {"name": "Jade", "hex": "#9EF6C5"},
+            {"name": "Laker", "hex": "#7B009C"},
+            {"name": "Nautilus", "hex": "#122954"},
+            {"name": "Black Carbon", "hex": "#000000"},
+            {"name": "Shock Red", "hex": "#D41708"},
+            {"name": "Silver", "hex": "#D6D6D6"},
+            {"name": "Stealth", "hex": "#D8D4D4"},
+            {"name": "Volt", "hex": "#CEFF00"},
+            {"name": "White", "hex": "#ffffff"}
           ]
         },
         "flexes": [
@@ -145,79 +133,67 @@ Stick.find({}).remove()
         },
         "colors": {
           "shaft": [
-            {
-              "name": "Weave", 
-              "hex": "url(#weave)"
-            },
-            {
-              "name": "Jade",
-              "hex": "#9EF6C5"
-            },
-            {
-              "name": "Blue Magic",
-              "hex": "#155EBC"
-            },
-            {
-              "name": "Nautilus",
-              "hex": "#122954"
-            },
-            {
-              "name": "Celtic",
-              "hex": "#1D9128"
-            },
-            {
-              "name": "Shock Red",
-              "hex": "#D41708"
-            },
-            {
-              "name": "Brick",
-              "hex": "#A92B15"
-            },
-            {
-              "name": "Flash Red",
-              "hex": "#F9234E"
-            },
-            {
-              "name": "Acid Green",
-              "hex": "#50FF0A"
-            },
-            {
-              "name": "Volt",
-              "hex": "#D6FF00"
-            },
-            {
-              "name": "Brimstone",
-              "hex": "#FDFF00"
-            },
-            {
-              "name": "Laker",
-              "hex": "#7B009C"
-            },
-            {
-              "name": "Denim",
-              "hex": "#2AD8FD"
-            },
-            {
-              "name": "Stealth",
-              "hex": "#D8D4D4"
-            }
+            {"name": "Weave", "hex": "url(#weave)"},
+            {"name": "Acid Green", "hex": "#50FF0A"},
+            {"name": "Blue Magic", "hex": "#155EBC"},
+            {"name": "Brick", "hex": "#A92B15"},
+            {"name": "Brimstone", "hex": "#FDFF00"},
+            {"name": "Bronco", "hex": "#FB4F14"},
+            {"name": "Celtic", "hex": "#1D9128"},
+            {"name": "Denim", "hex": "#2AD8FD"},
+            {"name": "Flash Red", "hex": "#F9234E"},
+            {"name": "Gold", "hex": "#D2B887"},
+            {"name": "Jade", "hex": "#9EF6C5"},
+            {"name": "Laker", "hex": "#7B009C"},
+            {"name": "Nautilus", "hex": "#122954"},
+            {"name": "Black Carbon", "hex": "#000000"},
+            {"name": "Shock Red", "hex": "#D41708"},
+            {"name": "Silver", "hex": "#D6D6D6"},
+            {"name": "Stealth", "hex": "#D8D4D4"},
+            {"name": "Volt", "hex": "#CEFF00"},
+            {"name": "White", "hex": "#ffffff"}
           ],
           "accent": [
-            {"name": "White", "hex": "#ffffff"},
-            {"name": "Black", "hex": "#000000"},
-            {"name": "", "hex": "#25A9E0"},
-            {"name": "", "hex": "#F05A28"},
-            {"name": "", "hex": "#F9EC31"},
-            {"name": "", "hex": "#652D90"},
-            {"name": "", "hex": "#3EF702"}
+            {"name": "Weave", "hex": "url(#weave)"},
+            {"name": "Acid Green", "hex": "#50FF0A"},
+            {"name": "Blue Magic", "hex": "#155EBC"},
+            {"name": "Brick", "hex": "#A92B15"},
+            {"name": "Brimstone", "hex": "#FDFF00"},
+            {"name": "Bronco", "hex": "#FB4F14"},
+            {"name": "Celtic", "hex": "#1D9128"},
+            {"name": "Denim", "hex": "#2AD8FD"},
+            {"name": "Flash Red", "hex": "#F9234E"},
+            {"name": "Gold", "hex": "#D2B887"},
+            {"name": "Jade", "hex": "#9EF6C5"},
+            {"name": "Laker", "hex": "#7B009C"},
+            {"name": "Nautilus", "hex": "#122954"},
+            {"name": "Black Carbon", "hex": "#000000"},
+            {"name": "Shock Red", "hex": "#D41708"},
+            {"name": "Silver", "hex": "#D6D6D6"},
+            {"name": "Stealth", "hex": "#D8D4D4"},
+            {"name": "Volt", "hex": "#CEFF00"},
+            {"name": "White", "hex": "#ffffff"}
           ],
           "logo": [
-            {"name": "White", "hex": "#ffffff"},
-            {"name": "Black", "hex": "#000000"},
-            {"name": "", "hex": "#3EF702"},
-            {"name": "", "hex": "#E4AD24"},
-            {"name": "", "hex": "#EB008B"},
-            {"name": "", "hex": "#8B8D8D"}
+            {"name": "Weave", "hex": "url(#weave)"},
+            {"name": "Acid Green", "hex": "#50FF0A"},
+            {"name": "Blue Magic", "hex": "#155EBC"},
+            {"name": "Brick", "hex": "#A92B15"},
+            {"name": "Brimstone", "hex": "#FDFF00"},
+            {"name": "Bronco", "hex": "#FB4F14"},
+            {"name": "Celtic", "hex": "#1D9128"},
+            {"name": "Denim", "hex": "#2AD8FD"},
+            {"name": "Flash Red", "hex": "#F9234E"},
+            {"name": "Gold", "hex": "#D2B887"},
+            {"name": "Jade", "hex": "#9EF6C5"},
+            {"name": "Laker", "hex": "#7B009C"},
+            {"name": "Nautilus", "hex": "#122954"},
+            {"name": "Black Carbon", "hex": "#000000"},
+            {"name": "Shock Red", "hex": "#D41708"},
+            {"name": "Silver", "hex": "#D6D6D6"},
+            {"name": "Stealth", "hex": "#D8D4D4"},
+            {"name": "Volt", "hex": "#CEFF00"},
+            {"name": "White", "hex": "#ffffff"}
           ]
         },
         "flexes": [
@@ -255,79 +231,67 @@ Stick.find({}).remove()
         },
         "colors": {
           "shaft": [
-            {
-              "name": "Weave", 
-              "hex": "url(#weave)"
-            },
-            {
-              "name": "Jade",
-              "hex": "#9EF6C5"
-            },
-            {
-              "name": "Blue Magic",
-              "hex": "#155EBC"
-            },
-            {
-              "name": "Nautilus",
-              "hex": "#122954"
-            },
-            {
-              "name": "Celtic",
-              "hex": "#1D9128"
-            },
-            {
-              "name": "Shock Red",
-              "hex": "#D41708"
-            },
-            {
-              "name": "Brick",
-              "hex": "#A92B15"
-            },
-            {
-              "name": "Flash Red",
-              "hex": "#F9234E"
-            },
-            {
-              "name": "Acid Green",
-              "hex": "#50FF0A"
-            },
-            {
-              "name": "Volt",
-              "hex": "#D6FF00"
-            },
-            {
-              "name": "Brimstone",
-              "hex": "#FDFF00"
-            },
-            {
-              "name": "Laker",
-              "hex": "#7B009C"
-            },
-            {
-              "name": "Denim",
-              "hex": "#2AD8FD"
-            },
-            {
-              "name": "Stealth",
-              "hex": "#D8D4D4"
-            }
+            {"name": "Weave", "hex": "url(#weave)"},
+            {"name": "Acid Green", "hex": "#50FF0A"},
+            {"name": "Blue Magic", "hex": "#155EBC"},
+            {"name": "Brick", "hex": "#A92B15"},
+            {"name": "Brimstone", "hex": "#FDFF00"},
+            {"name": "Bronco", "hex": "#FB4F14"},
+            {"name": "Celtic", "hex": "#1D9128"},
+            {"name": "Denim", "hex": "#2AD8FD"},
+            {"name": "Flash Red", "hex": "#F9234E"},
+            {"name": "Gold", "hex": "#D2B887"},
+            {"name": "Jade", "hex": "#9EF6C5"},
+            {"name": "Laker", "hex": "#7B009C"},
+            {"name": "Nautilus", "hex": "#122954"},
+            {"name": "Black Carbon", "hex": "#000000"},
+            {"name": "Shock Red", "hex": "#D41708"},
+            {"name": "Silver", "hex": "#D6D6D6"},
+            {"name": "Stealth", "hex": "#D8D4D4"},
+            {"name": "Volt", "hex": "#CEFF00"},
+            {"name": "White", "hex": "#ffffff"}
           ],
           "accent": [
-            {"name": "White", "hex": "#ffffff"},
-            {"name": "Black", "hex": "#000000"},
-            {"name": "", "hex": "#25A9E0"},
-            {"name": "", "hex": "#F05A28"},
-            {"name": "", "hex": "#F9EC31"},
-            {"name": "", "hex": "#652D90"},
-            {"name": "", "hex": "#3EF702"}
+            {"name": "Weave", "hex": "url(#weave)"},
+            {"name": "Acid Green", "hex": "#50FF0A"},
+            {"name": "Blue Magic", "hex": "#155EBC"},
+            {"name": "Brick", "hex": "#A92B15"},
+            {"name": "Brimstone", "hex": "#FDFF00"},
+            {"name": "Bronco", "hex": "#FB4F14"},
+            {"name": "Celtic", "hex": "#1D9128"},
+            {"name": "Denim", "hex": "#2AD8FD"},
+            {"name": "Flash Red", "hex": "#F9234E"},
+            {"name": "Gold", "hex": "#D2B887"},
+            {"name": "Jade", "hex": "#9EF6C5"},
+            {"name": "Laker", "hex": "#7B009C"},
+            {"name": "Nautilus", "hex": "#122954"},
+            {"name": "Black Carbon", "hex": "#000000"},
+            {"name": "Shock Red", "hex": "#D41708"},
+            {"name": "Silver", "hex": "#D6D6D6"},
+            {"name": "Stealth", "hex": "#D8D4D4"},
+            {"name": "Volt", "hex": "#CEFF00"},
+            {"name": "White", "hex": "#ffffff"}
           ],
           "logo": [
-            {"name": "White", "hex": "#ffffff"},
-            {"name": "Black", "hex": "#000000"},
-            {"name": "", "hex": "#3EF702"},
-            {"name": "", "hex": "#E4AD24"},
-            {"name": "", "hex": "#EB008B"},
-            {"name": "", "hex": "#8B8D8D"}
+            {"name": "Weave", "hex": "url(#weave)"},
+            {"name": "Acid Green", "hex": "#50FF0A"},
+            {"name": "Blue Magic", "hex": "#155EBC"},
+            {"name": "Brick", "hex": "#A92B15"},
+            {"name": "Brimstone", "hex": "#FDFF00"},
+            {"name": "Bronco", "hex": "#FB4F14"},
+            {"name": "Celtic", "hex": "#1D9128"},
+            {"name": "Denim", "hex": "#2AD8FD"},
+            {"name": "Flash Red", "hex": "#F9234E"},
+            {"name": "Gold", "hex": "#D2B887"},
+            {"name": "Jade", "hex": "#9EF6C5"},
+            {"name": "Laker", "hex": "#7B009C"},
+            {"name": "Nautilus", "hex": "#122954"},
+            {"name": "Black Carbon", "hex": "#000000"},
+            {"name": "Shock Red", "hex": "#D41708"},
+            {"name": "Silver", "hex": "#D6D6D6"},
+            {"name": "Stealth", "hex": "#D8D4D4"},
+            {"name": "Volt", "hex": "#CEFF00"},
+            {"name": "White", "hex": "#ffffff"}
           ]
         },
         "flexes": [
@@ -364,75 +328,67 @@ Stick.find({}).remove()
         },
         "colors": {
           "shaft": [
-            {
-              "name": "Weave", 
-              "hex": "url(#weave)"
-            },
-            {
-              "name": "Jade",
-              "hex": "#9EF6C5"
-            },
-            {
-              "name": "Blue Magic",
-              "hex": "#155EBC"
-            },
-            {
-              "name": "Nautilus",
-              "hex": "#122954"
-            },
-            {
-              "name": "Celtic",
-              "hex": "#1D9128"
-            },
-            {
-              "name": "Shock Red",
-              "hex": "#D41708"
-            },
-            {
-              "name": "Brick",
-              "hex": "#A92B15"
-            },
-            {
-              "name": "Flash Red",
-              "hex": "#F9234E"
-            },
-            {
-              "name": "Acid Green",
-              "hex": "#50FF0A"
-            },
-            {
-              "name": "Volt",
-              "hex": "#D6FF00"
-            },
-            {
-              "name": "Brimstone",
-              "hex": "#FDFF00"
-            },
-            {
-              "name": "Laker",
-              "hex": "#7B009C"
-            },
-            {
-              "name": "Denim",
-              "hex": "#2AD8FD"
-            },
-            {
-              "name": "Stealth",
-              "hex": "#D8D4D4"
-            }
+            {"name": "Weave", "hex": "url(#weave)"},
+            {"name": "Acid Green", "hex": "#50FF0A"},
+            {"name": "Blue Magic", "hex": "#155EBC"},
+            {"name": "Brick", "hex": "#A92B15"},
+            {"name": "Brimstone", "hex": "#FDFF00"},
+            {"name": "Bronco", "hex": "#FB4F14"},
+            {"name": "Celtic", "hex": "#1D9128"},
+            {"name": "Denim", "hex": "#2AD8FD"},
+            {"name": "Flash Red", "hex": "#F9234E"},
+            {"name": "Gold", "hex": "#D2B887"},
+            {"name": "Jade", "hex": "#9EF6C5"},
+            {"name": "Laker", "hex": "#7B009C"},
+            {"name": "Nautilus", "hex": "#122954"},
+            {"name": "Black Carbon", "hex": "#000000"},
+            {"name": "Shock Red", "hex": "#D41708"},
+            {"name": "Silver", "hex": "#D6D6D6"},
+            {"name": "Stealth", "hex": "#D8D4D4"},
+            {"name": "Volt", "hex": "#CEFF00"},
+            {"name": "White", "hex": "#ffffff"}
           ],
           "accent": [
-            {"name": "", "hex": "#E4AD24"},
-            {"name": "", "hex": "#BBBDBF"},
-            {"name": "", "hex": "#25A9E0"},
-            {"name": "", "hex": "#00FF00"},
-            {"name": "", "hex": "#ED334D"},
-            {"name": "", "hex": "#652D90"},
-            {"name": "", "hex": "#ffffff"}
+            {"name": "Weave", "hex": "url(#weave)"},
+            {"name": "Acid Green", "hex": "#50FF0A"},
+            {"name": "Blue Magic", "hex": "#155EBC"},
+            {"name": "Brick", "hex": "#A92B15"},
+            {"name": "Brimstone", "hex": "#FDFF00"},
+            {"name": "Bronco", "hex": "#FB4F14"},
+            {"name": "Celtic", "hex": "#1D9128"},
+            {"name": "Denim", "hex": "#2AD8FD"},
+            {"name": "Flash Red", "hex": "#F9234E"},
+            {"name": "Gold", "hex": "#D2B887"},
+            {"name": "Jade", "hex": "#9EF6C5"},
+            {"name": "Laker", "hex": "#7B009C"},
+            {"name": "Nautilus", "hex": "#122954"},
+            {"name": "Black Carbon", "hex": "#000000"},
+            {"name": "Shock Red", "hex": "#D41708"},
+            {"name": "Silver", "hex": "#D6D6D6"},
+            {"name": "Stealth", "hex": "#D8D4D4"},
+            {"name": "Volt", "hex": "#CEFF00"},
+            {"name": "White", "hex": "#ffffff"}
           ],
           "logo": [
-            {"name": "White", "hex": "#ffffff"},
-            {"name": "", "hex": "#BBBDBF"}
+            {"name": "Weave", "hex": "url(#weave)"},
+            {"name": "Acid Green", "hex": "#50FF0A"},
+            {"name": "Blue Magic", "hex": "#155EBC"},
+            {"name": "Brick", "hex": "#A92B15"},
+            {"name": "Brimstone", "hex": "#FDFF00"},
+            {"name": "Bronco", "hex": "#FB4F14"},
+            {"name": "Celtic", "hex": "#1D9128"},
+            {"name": "Denim", "hex": "#2AD8FD"},
+            {"name": "Flash Red", "hex": "#F9234E"},
+            {"name": "Gold", "hex": "#D2B887"},
+            {"name": "Jade", "hex": "#9EF6C5"},
+            {"name": "Laker", "hex": "#7B009C"},
+            {"name": "Nautilus", "hex": "#122954"},
+            {"name": "Black Carbon", "hex": "#000000"},
+            {"name": "Shock Red", "hex": "#D41708"},
+            {"name": "Silver", "hex": "#D6D6D6"},
+            {"name": "Stealth", "hex": "#D8D4D4"},
+            {"name": "Volt", "hex": "#CEFF00"},
+            {"name": "White", "hex": "#ffffff"}
           ]
         },
         "flexes": [
@@ -473,75 +429,67 @@ Stick.find({}).remove()
         },
         "colors": {
           "shaft": [
-            {
-              "name": "Weave", 
-              "hex": "url(#weave)"
-            },
-            {
-              "name": "Jade",
-              "hex": "#9EF6C5"
-            },
-            {
-              "name": "Blue Magic",
-              "hex": "#155EBC"
-            },
-            {
-              "name": "Nautilus",
-              "hex": "#122954"
-            },
-            {
-              "name": "Celtic",
-              "hex": "#1D9128"
-            },
-            {
-              "name": "Shock Red",
-              "hex": "#D41708"
-            },
-            {
-              "name": "Brick",
-              "hex": "#A92B15"
-            },
-            {
-              "name": "Flash Red",
-              "hex": "#F9234E"
-            },
-            {
-              "name": "Acid Green",
-              "hex": "#50FF0A"
-            },
-            {
-              "name": "Volt",
-              "hex": "#D6FF00"
-            },
-            {
-              "name": "Brimstone",
-              "hex": "#FDFF00"
-            },
-            {
-              "name": "Laker",
-              "hex": "#7B009C"
-            },
-            {
-              "name": "Denim",
-              "hex": "#2AD8FD"
-            },
-            {
-              "name": "Stealth",
-              "hex": "#D8D4D4"
-            }
+            {"name": "Weave", "hex": "url(#weave)"},
+            {"name": "Acid Green", "hex": "#50FF0A"},
+            {"name": "Blue Magic", "hex": "#155EBC"},
+            {"name": "Brick", "hex": "#A92B15"},
+            {"name": "Brimstone", "hex": "#FDFF00"},
+            {"name": "Bronco", "hex": "#FB4F14"},
+            {"name": "Celtic", "hex": "#1D9128"},
+            {"name": "Denim", "hex": "#2AD8FD"},
+            {"name": "Flash Red", "hex": "#F9234E"},
+            {"name": "Gold", "hex": "#D2B887"},
+            {"name": "Jade", "hex": "#9EF6C5"},
+            {"name": "Laker", "hex": "#7B009C"},
+            {"name": "Nautilus", "hex": "#122954"},
+            {"name": "Black Carbon", "hex": "#000000"},
+            {"name": "Shock Red", "hex": "#D41708"},
+            {"name": "Silver", "hex": "#D6D6D6"},
+            {"name": "Stealth", "hex": "#D8D4D4"},
+            {"name": "Volt", "hex": "#CEFF00"},
+            {"name": "White", "hex": "#ffffff"}
           ],
           "accent": [
-            {"name": "", "hex": "#E4AD24"},
-            {"name": "", "hex": "#BBBDBF"},
-            {"name": "", "hex": "#25A9E0"},
-            {"name": "", "hex": "#00FF00"},
-            {"name": "", "hex": "#ED334D"},
-            {"name": "", "hex": "#652D90"},
-            {"name": "", "hex": "#ffffff"}
+            {"name": "Weave", "hex": "url(#weave)"},
+            {"name": "Acid Green", "hex": "#50FF0A"},
+            {"name": "Blue Magic", "hex": "#155EBC"},
+            {"name": "Brick", "hex": "#A92B15"},
+            {"name": "Brimstone", "hex": "#FDFF00"},
+            {"name": "Bronco", "hex": "#FB4F14"},
+            {"name": "Celtic", "hex": "#1D9128"},
+            {"name": "Denim", "hex": "#2AD8FD"},
+            {"name": "Flash Red", "hex": "#F9234E"},
+            {"name": "Gold", "hex": "#D2B887"},
+            {"name": "Jade", "hex": "#9EF6C5"},
+            {"name": "Laker", "hex": "#7B009C"},
+            {"name": "Nautilus", "hex": "#122954"},
+            {"name": "Black Carbon", "hex": "#000000"},
+            {"name": "Shock Red", "hex": "#D41708"},
+            {"name": "Silver", "hex": "#D6D6D6"},
+            {"name": "Stealth", "hex": "#D8D4D4"},
+            {"name": "Volt", "hex": "#CEFF00"},
+            {"name": "White", "hex": "#ffffff"}
           ],
           "logo": [
-            {"name": "White", "hex": "#ffffff"},
-            {"name": "", "hex": "#BBBDBF"}
+            {"name": "Weave", "hex": "url(#weave)"},
+            {"name": "Acid Green", "hex": "#50FF0A"},
+            {"name": "Blue Magic", "hex": "#155EBC"},
+            {"name": "Brick", "hex": "#A92B15"},
+            {"name": "Brimstone", "hex": "#FDFF00"},
+            {"name": "Bronco", "hex": "#FB4F14"},
+            {"name": "Celtic", "hex": "#1D9128"},
+            {"name": "Denim", "hex": "#2AD8FD"},
+            {"name": "Flash Red", "hex": "#F9234E"},
+            {"name": "Gold", "hex": "#D2B887"},
+            {"name": "Jade", "hex": "#9EF6C5"},
+            {"name": "Laker", "hex": "#7B009C"},
+            {"name": "Nautilus", "hex": "#122954"},
+            {"name": "Black Carbon", "hex": "#000000"},
+            {"name": "Shock Red", "hex": "#D41708"},
+            {"name": "Silver", "hex": "#D6D6D6"},
+            {"name": "Stealth", "hex": "#D8D4D4"},
+            {"name": "Volt", "hex": "#CEFF00"},
+            {"name": "White", "hex": "#ffffff"}
           ]
         },
         "flexes": [
@@ -579,75 +527,67 @@ Stick.find({}).remove()
         },
         "colors": {
           "shaft": [
-            {
-              "name": "Weave", 
-              "hex": "url(#weave)"
-            },
-            {
-              "name": "Jade",
-              "hex": "#9EF6C5"
-            },
-            {
-              "name": "Blue Magic",
-              "hex": "#155EBC"
-            },
-            {
-              "name": "Nautilus",
-              "hex": "#122954"
-            },
-            {
-              "name": "Celtic",
-              "hex": "#1D9128"
-            },
-            {
-              "name": "Shock Red",
-              "hex": "#D41708"
-            },
-            {
-              "name": "Brick",
-              "hex": "#A92B15"
-            },
-            {
-              "name": "Flash Red",
-              "hex": "#F9234E"
-            },
-            {
-              "name": "Acid Green",
-              "hex": "#50FF0A"
-            },
-            {
-              "name": "Volt",
-              "hex": "#D6FF00"
-            },
-            {
-              "name": "Brimstone",
-              "hex": "#FDFF00"
-            },
-            {
-              "name": "Laker",
-              "hex": "#7B009C"
-            },
-            {
-              "name": "Denim",
-              "hex": "#2AD8FD"
-            },
-            {
-              "name": "Stealth",
-              "hex": "#D8D4D4"
-            }
+            {"name": "Weave", "hex": "url(#weave)"},
+            {"name": "Acid Green", "hex": "#50FF0A"},
+            {"name": "Blue Magic", "hex": "#155EBC"},
+            {"name": "Brick", "hex": "#A92B15"},
+            {"name": "Brimstone", "hex": "#FDFF00"},
+            {"name": "Bronco", "hex": "#FB4F14"},
+            {"name": "Celtic", "hex": "#1D9128"},
+            {"name": "Denim", "hex": "#2AD8FD"},
+            {"name": "Flash Red", "hex": "#F9234E"},
+            {"name": "Gold", "hex": "#D2B887"},
+            {"name": "Jade", "hex": "#9EF6C5"},
+            {"name": "Laker", "hex": "#7B009C"},
+            {"name": "Nautilus", "hex": "#122954"},
+            {"name": "Black Carbon", "hex": "#000000"},
+            {"name": "Shock Red", "hex": "#D41708"},
+            {"name": "Silver", "hex": "#D6D6D6"},
+            {"name": "Stealth", "hex": "#D8D4D4"},
+            {"name": "Volt", "hex": "#CEFF00"},
+            {"name": "White", "hex": "#ffffff"}
           ],
           "accent": [
-            {"name": "", "hex": "#E4AD24"},
-            {"name": "", "hex": "#BBBDBF"},
-            {"name": "", "hex": "#25A9E0"},
-            {"name": "", "hex": "#00FF00"},
-            {"name": "", "hex": "#ED334D"},
-            {"name": "", "hex": "#652D90"},
-            {"name": "", "hex": "#ffffff"}
+            {"name": "Weave", "hex": "url(#weave)"},
+            {"name": "Acid Green", "hex": "#50FF0A"},
+            {"name": "Blue Magic", "hex": "#155EBC"},
+            {"name": "Brick", "hex": "#A92B15"},
+            {"name": "Brimstone", "hex": "#FDFF00"},
+            {"name": "Bronco", "hex": "#FB4F14"},
+            {"name": "Celtic", "hex": "#1D9128"},
+            {"name": "Denim", "hex": "#2AD8FD"},
+            {"name": "Flash Red", "hex": "#F9234E"},
+            {"name": "Gold", "hex": "#D2B887"},
+            {"name": "Jade", "hex": "#9EF6C5"},
+            {"name": "Laker", "hex": "#7B009C"},
+            {"name": "Nautilus", "hex": "#122954"},
+            {"name": "Black Carbon", "hex": "#000000"},
+            {"name": "Shock Red", "hex": "#D41708"},
+            {"name": "Silver", "hex": "#D6D6D6"},
+            {"name": "Stealth", "hex": "#D8D4D4"},
+            {"name": "Volt", "hex": "#CEFF00"},
+            {"name": "White", "hex": "#ffffff"}
           ],
           "logo": [
-            {"name": "White", "hex": "#ffffff"},
-            {"name": "", "hex": "#BBBDBF"}
+            {"name": "Weave", "hex": "url(#weave)"},
+            {"name": "Acid Green", "hex": "#50FF0A"},
+            {"name": "Blue Magic", "hex": "#155EBC"},
+            {"name": "Brick", "hex": "#A92B15"},
+            {"name": "Brimstone", "hex": "#FDFF00"},
+            {"name": "Bronco", "hex": "#FB4F14"},
+            {"name": "Celtic", "hex": "#1D9128"},
+            {"name": "Denim", "hex": "#2AD8FD"},
+            {"name": "Flash Red", "hex": "#F9234E"},
+            {"name": "Gold", "hex": "#D2B887"},
+            {"name": "Jade", "hex": "#9EF6C5"},
+            {"name": "Laker", "hex": "#7B009C"},
+            {"name": "Nautilus", "hex": "#122954"},
+            {"name": "Black Carbon", "hex": "#000000"},
+            {"name": "Shock Red", "hex": "#D41708"},
+            {"name": "Silver", "hex": "#D6D6D6"},
+            {"name": "Stealth", "hex": "#D8D4D4"},
+            {"name": "Volt", "hex": "#CEFF00"},
+            {"name": "White", "hex": "#ffffff"}
           ]
         },
         "flexes": [
@@ -684,74 +624,67 @@ Stick.find({}).remove()
         },
         "colors": {
           "shaft": [
-            {
-              "name": "Weave", 
-              "hex": "url(#weave)"
-            },
-            {
-              "name": "Jade",
-              "hex": "#9EF6C5"
-            },
-            {
-              "name": "Blue Magic",
-              "hex": "#155EBC"
-            },
-            {
-              "name": "Nautilus",
-              "hex": "#122954"
-            },
-            {
-              "name": "Celtic",
-              "hex": "#1D9128"
-            },
-            {
-              "name": "Shock Red",
-              "hex": "#D41708"
-            },
-            {
-              "name": "Brick",
-              "hex": "#A92B15"
-            },
-            {
-              "name": "Flash Red",
-              "hex": "#F9234E"
-            },
-            {
-              "name": "Acid Green",
-              "hex": "#50FF0A"
-            },
-            {
-              "name": "Volt",
-              "hex": "#D6FF00"
-            },
-            {
-              "name": "Brimstone",
-              "hex": "#FDFF00"
-            },
-            {
-              "name": "Laker",
-              "hex": "#7B009C"
-            },
-            {
-              "name": "Denim",
-              "hex": "#2AD8FD"
-            },
-            {
-              "name": "Stealth",
-              "hex": "#D8D4D4"
-            }
+            {"name": "Weave", "hex": "url(#weave)"},
+            {"name": "Acid Green", "hex": "#50FF0A"},
+            {"name": "Blue Magic", "hex": "#155EBC"},
+            {"name": "Brick", "hex": "#A92B15"},
+            {"name": "Brimstone", "hex": "#FDFF00"},
+            {"name": "Bronco", "hex": "#FB4F14"},
+            {"name": "Celtic", "hex": "#1D9128"},
+            {"name": "Denim", "hex": "#2AD8FD"},
+            {"name": "Flash Red", "hex": "#F9234E"},
+            {"name": "Gold", "hex": "#D2B887"},
+            {"name": "Jade", "hex": "#9EF6C5"},
+            {"name": "Laker", "hex": "#7B009C"},
+            {"name": "Nautilus", "hex": "#122954"},
+            {"name": "Black Carbon", "hex": "#000000"},
+            {"name": "Shock Red", "hex": "#D41708"},
+            {"name": "Silver", "hex": "#D6D6D6"},
+            {"name": "Stealth", "hex": "#D8D4D4"},
+            {"name": "Volt", "hex": "#CEFF00"},
+            {"name": "White", "hex": "#ffffff"}
           ],
           "accent": [
-            {"name": "White", "hex": "#ffffff"},
-            {"name": "", "hex": "#ED334D"},
-            {"name": "", "hex": "#3EF702"},
-            {"name": "", "hex": "#E7FF00"}
+            {"name": "Weave", "hex": "url(#weave)"},
+            {"name": "Acid Green", "hex": "#50FF0A"},
+            {"name": "Blue Magic", "hex": "#155EBC"},
+            {"name": "Brick", "hex": "#A92B15"},
+            {"name": "Brimstone", "hex": "#FDFF00"},
+            {"name": "Bronco", "hex": "#FB4F14"},
+            {"name": "Celtic", "hex": "#1D9128"},
+            {"name": "Denim", "hex": "#2AD8FD"},
+            {"name": "Flash Red", "hex": "#F9234E"},
+            {"name": "Gold", "hex": "#D2B887"},
+            {"name": "Jade", "hex": "#9EF6C5"},
+            {"name": "Laker", "hex": "#7B009C"},
+            {"name": "Nautilus", "hex": "#122954"},
+            {"name": "Black Carbon", "hex": "#000000"},
+            {"name": "Shock Red", "hex": "#D41708"},
+            {"name": "Silver", "hex": "#D6D6D6"},
+            {"name": "Stealth", "hex": "#D8D4D4"},
+            {"name": "Volt", "hex": "#CEFF00"},
+            {"name": "White", "hex": "#ffffff"}
           ],
           "logo": [
-            {"name": "White", "hex": "#ffffff"},
-            {"name": "", "hex": "#EE5225"},
-            {"name": "", "hex": "#6AC8CF"},
-            {"name": "", "hex": "#8E4E9D"}
+            {"name": "Weave", "hex": "url(#weave)"},
+            {"name": "Acid Green", "hex": "#50FF0A"},
+            {"name": "Blue Magic", "hex": "#155EBC"},
+            {"name": "Brick", "hex": "#A92B15"},
+            {"name": "Brimstone", "hex": "#FDFF00"},
+            {"name": "Bronco", "hex": "#FB4F14"},
+            {"name": "Celtic", "hex": "#1D9128"},
+            {"name": "Denim", "hex": "#2AD8FD"},
+            {"name": "Flash Red", "hex": "#F9234E"},
+            {"name": "Gold", "hex": "#D2B887"},
+            {"name": "Jade", "hex": "#9EF6C5"},
+            {"name": "Laker", "hex": "#7B009C"},
+            {"name": "Nautilus", "hex": "#122954"},
+            {"name": "Black Carbon", "hex": "#000000"},
+            {"name": "Shock Red", "hex": "#D41708"},
+            {"name": "Silver", "hex": "#D6D6D6"},
+            {"name": "Stealth", "hex": "#D8D4D4"},
+            {"name": "Volt", "hex": "#CEFF00"},
+            {"name": "White", "hex": "#ffffff"}
           ]
         },
         "flexes": [
@@ -792,74 +725,67 @@ Stick.find({}).remove()
         },
         "colors": {
           "shaft": [
-            {
-              "name": "Weave", 
-              "hex": "url(#weave)"
-            },
-            {
-              "name": "Jade",
-              "hex": "#9EF6C5"
-            },
-            {
-              "name": "Blue Magic",
-              "hex": "#155EBC"
-            },
-            {
-              "name": "Nautilus",
-              "hex": "#122954"
-            },
-            {
-              "name": "Celtic",
-              "hex": "#1D9128"
-            },
-            {
-              "name": "Shock Red",
-              "hex": "#D41708"
-            },
-            {
-              "name": "Brick",
-              "hex": "#A92B15"
-            },
-            {
-              "name": "Flash Red",
-              "hex": "#F9234E"
-            },
-            {
-              "name": "Acid Green",
-              "hex": "#50FF0A"
-            },
-            {
-              "name": "Volt",
-              "hex": "#D6FF00"
-            },
-            {
-              "name": "Brimstone",
-              "hex": "#FDFF00"
-            },
-            {
-              "name": "Laker",
-              "hex": "#7B009C"
-            },
-            {
-              "name": "Denim",
-              "hex": "#2AD8FD"
-            },
-            {
-              "name": "Stealth",
-              "hex": "#D8D4D4"
-            }
+            {"name": "Weave", "hex": "url(#weave)"},
+            {"name": "Acid Green", "hex": "#50FF0A"},
+            {"name": "Blue Magic", "hex": "#155EBC"},
+            {"name": "Brick", "hex": "#A92B15"},
+            {"name": "Brimstone", "hex": "#FDFF00"},
+            {"name": "Bronco", "hex": "#FB4F14"},
+            {"name": "Celtic", "hex": "#1D9128"},
+            {"name": "Denim", "hex": "#2AD8FD"},
+            {"name": "Flash Red", "hex": "#F9234E"},
+            {"name": "Gold", "hex": "#D2B887"},
+            {"name": "Jade", "hex": "#9EF6C5"},
+            {"name": "Laker", "hex": "#7B009C"},
+            {"name": "Nautilus", "hex": "#122954"},
+            {"name": "Black Carbon", "hex": "#000000"},
+            {"name": "Shock Red", "hex": "#D41708"},
+            {"name": "Silver", "hex": "#D6D6D6"},
+            {"name": "Stealth", "hex": "#D8D4D4"},
+            {"name": "Volt", "hex": "#CEFF00"},
+            {"name": "White", "hex": "#ffffff"}
           ],
           "accent": [
-            {"name": "White", "hex": "#ffffff"},
-            {"name": "", "hex": "#ED334D"},
-            {"name": "", "hex": "#3EF702"},
-            {"name": "", "hex": "#E7FF00"}
+            {"name": "Weave", "hex": "url(#weave)"},
+            {"name": "Acid Green", "hex": "#50FF0A"},
+            {"name": "Blue Magic", "hex": "#155EBC"},
+            {"name": "Brick", "hex": "#A92B15"},
+            {"name": "Brimstone", "hex": "#FDFF00"},
+            {"name": "Bronco", "hex": "#FB4F14"},
+            {"name": "Celtic", "hex": "#1D9128"},
+            {"name": "Denim", "hex": "#2AD8FD"},
+            {"name": "Flash Red", "hex": "#F9234E"},
+            {"name": "Gold", "hex": "#D2B887"},
+            {"name": "Jade", "hex": "#9EF6C5"},
+            {"name": "Laker", "hex": "#7B009C"},
+            {"name": "Nautilus", "hex": "#122954"},
+            {"name": "Black Carbon", "hex": "#000000"},
+            {"name": "Shock Red", "hex": "#D41708"},
+            {"name": "Silver", "hex": "#D6D6D6"},
+            {"name": "Stealth", "hex": "#D8D4D4"},
+            {"name": "Volt", "hex": "#CEFF00"},
+            {"name": "White", "hex": "#ffffff"}
           ],
           "logo": [
-            {"name": "White", "hex": "#ffffff"},
-            {"name": "", "hex": "#EE5225"},
-            {"name": "", "hex": "#6AC8CF"},
-            {"name": "", "hex": "#8E4E9D"}
+            {"name": "Weave", "hex": "url(#weave)"},
+            {"name": "Acid Green", "hex": "#50FF0A"},
+            {"name": "Blue Magic", "hex": "#155EBC"},
+            {"name": "Brick", "hex": "#A92B15"},
+            {"name": "Brimstone", "hex": "#FDFF00"},
+            {"name": "Bronco", "hex": "#FB4F14"},
+            {"name": "Celtic", "hex": "#1D9128"},
+            {"name": "Denim", "hex": "#2AD8FD"},
+            {"name": "Flash Red", "hex": "#F9234E"},
+            {"name": "Gold", "hex": "#D2B887"},
+            {"name": "Jade", "hex": "#9EF6C5"},
+            {"name": "Laker", "hex": "#7B009C"},
+            {"name": "Nautilus", "hex": "#122954"},
+            {"name": "Black Carbon", "hex": "#000000"},
+            {"name": "Shock Red", "hex": "#D41708"},
+            {"name": "Silver", "hex": "#D6D6D6"},
+            {"name": "Stealth", "hex": "#D8D4D4"},
+            {"name": "Volt", "hex": "#CEFF00"},
+            {"name": "White", "hex": "#ffffff"}
           ]
         },
         "flexes": [
@@ -897,74 +823,67 @@ Stick.find({}).remove()
         },
         "colors": {
           "shaft": [
-            {
-              "name": "Weave", 
-              "hex": "url(#weave)"
-            },
-            {
-              "name": "Jade",
-              "hex": "#9EF6C5"
-            },
-            {
-              "name": "Blue Magic",
-              "hex": "#155EBC"
-            },
-            {
-              "name": "Nautilus",
-              "hex": "#122954"
-            },
-            {
-              "name": "Celtic",
-              "hex": "#1D9128"
-            },
-            {
-              "name": "Shock Red",
-              "hex": "#D41708"
-            },
-            {
-              "name": "Brick",
-              "hex": "#A92B15"
-            },
-            {
-              "name": "Flash Red",
-              "hex": "#F9234E"
-            },
-            {
-              "name": "Acid Green",
-              "hex": "#50FF0A"
-            },
-            {
-              "name": "Volt",
-              "hex": "#D6FF00"
-            },
-            {
-              "name": "Brimstone",
-              "hex": "#FDFF00"
-            },
-            {
-              "name": "Laker",
-              "hex": "#7B009C"
-            },
-            {
-              "name": "Denim",
-              "hex": "#2AD8FD"
-            },
-            {
-              "name": "Stealth",
-              "hex": "#D8D4D4"
-            }
+            {"name": "Weave", "hex": "url(#weave)"},
+            {"name": "Acid Green", "hex": "#50FF0A"},
+            {"name": "Blue Magic", "hex": "#155EBC"},
+            {"name": "Brick", "hex": "#A92B15"},
+            {"name": "Brimstone", "hex": "#FDFF00"},
+            {"name": "Bronco", "hex": "#FB4F14"},
+            {"name": "Celtic", "hex": "#1D9128"},
+            {"name": "Denim", "hex": "#2AD8FD"},
+            {"name": "Flash Red", "hex": "#F9234E"},
+            {"name": "Gold", "hex": "#D2B887"},
+            {"name": "Jade", "hex": "#9EF6C5"},
+            {"name": "Laker", "hex": "#7B009C"},
+            {"name": "Nautilus", "hex": "#122954"},
+            {"name": "Black Carbon", "hex": "#000000"},
+            {"name": "Shock Red", "hex": "#D41708"},
+            {"name": "Silver", "hex": "#D6D6D6"},
+            {"name": "Stealth", "hex": "#D8D4D4"},
+            {"name": "Volt", "hex": "#CEFF00"},
+            {"name": "White", "hex": "#ffffff"}
           ],
           "accent": [
-            {"name": "White", "hex": "#ffffff"},
-            {"name": "", "hex": "#ED334D"},
-            {"name": "", "hex": "#3EF702"},
-            {"name": "", "hex": "#E7FF00"}
+            {"name": "Weave", "hex": "url(#weave)"},
+            {"name": "Acid Green", "hex": "#50FF0A"},
+            {"name": "Blue Magic", "hex": "#155EBC"},
+            {"name": "Brick", "hex": "#A92B15"},
+            {"name": "Brimstone", "hex": "#FDFF00"},
+            {"name": "Bronco", "hex": "#FB4F14"},
+            {"name": "Celtic", "hex": "#1D9128"},
+            {"name": "Denim", "hex": "#2AD8FD"},
+            {"name": "Flash Red", "hex": "#F9234E"},
+            {"name": "Gold", "hex": "#D2B887"},
+            {"name": "Jade", "hex": "#9EF6C5"},
+            {"name": "Laker", "hex": "#7B009C"},
+            {"name": "Nautilus", "hex": "#122954"},
+            {"name": "Black Carbon", "hex": "#000000"},
+            {"name": "Shock Red", "hex": "#D41708"},
+            {"name": "Silver", "hex": "#D6D6D6"},
+            {"name": "Stealth", "hex": "#D8D4D4"},
+            {"name": "Volt", "hex": "#CEFF00"},
+            {"name": "White", "hex": "#ffffff"}
           ],
           "logo": [
-            {"name": "White", "hex": "#ffffff"},
-            {"name": "", "hex": "#EE5225"},
-            {"name": "", "hex": "#6AC8CF"},
-            {"name": "", "hex": "#8E4E9D"}
+            {"name": "Weave", "hex": "url(#weave)"},
+            {"name": "Acid Green", "hex": "#50FF0A"},
+            {"name": "Blue Magic", "hex": "#155EBC"},
+            {"name": "Brick", "hex": "#A92B15"},
+            {"name": "Brimstone", "hex": "#FDFF00"},
+            {"name": "Bronco", "hex": "#FB4F14"},
+            {"name": "Celtic", "hex": "#1D9128"},
+            {"name": "Denim", "hex": "#2AD8FD"},
+            {"name": "Flash Red", "hex": "#F9234E"},
+            {"name": "Gold", "hex": "#D2B887"},
+            {"name": "Jade", "hex": "#9EF6C5"},
+            {"name": "Laker", "hex": "#7B009C"},
+            {"name": "Nautilus", "hex": "#122954"},
+            {"name": "Black Carbon", "hex": "#000000"},
+            {"name": "Shock Red", "hex": "#D41708"},
+            {"name": "Silver", "hex": "#D6D6D6"},
+            {"name": "Stealth", "hex": "#D8D4D4"},
+            {"name": "Volt", "hex": "#CEFF00"},
+            {"name": "White", "hex": "#ffffff"}
           ]
         },
         "flexes": [
