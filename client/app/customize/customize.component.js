@@ -54,6 +54,7 @@ export class CustomizeComponent {
     this.userStick.flex = '77';
     this.userStick.finish = 'Grip';
     this.userStick.name = 'PK100';
+    this.userStick.customColor = {};
 
     this.accordionOptions = {
       oneAtATime: true,
@@ -202,6 +203,11 @@ export class CustomizeComponent {
     this.userStick.customHash = md5(this.userStick.toString()) + new Date().toString();
     // console.log(this.userStick);
   };
+
+  updateUserStickColor(segment, color) {
+    this.userStick.customColor[segment] = color;
+    // console.log(color);
+  }
 
   setOptionStage (stage) {
     this.optionStage = stage;

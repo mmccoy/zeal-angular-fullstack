@@ -10,7 +10,7 @@
       <ul class="color-list">
         <li ng-repeat="(name, value) in customize.userStick.colors.shaft">
           <label class="btn btn-primary" style="background-color: {{value.hex}}" 
-                 ng-click="customize.checkColorContrast(value.hex); customize.updateUserStick({customColor: {shaft: value}} )"
+                 ng-click="customize.checkColorContrast(value.hex); customize.updateUserStickColor('shaft', value)"
                  ng-class="{'weave': value.name === 'Weave', 'active': value.hex == customize.userStick.customColor.shaft.hex}">
           </label>
         </li>
@@ -18,16 +18,18 @@
       <header>Accent</header>
       <ul class="color-list">
         <li ng-repeat="(name, value) in customize.userStick.colors.accent">
-          <label class="btn btn-primary" ng-model="customize.userStick.customColor.accent"
-                 uib-btn-radio="'{{value.hex}}'" style="background-color: {{value.hex}}" ng-class="{'weave': name === 'Weave'}">
+          <label class="btn btn-primary" style="background-color: {{value.hex}}"
+                 ng-click="customize.updateUserStickColor('accent', value)"
+                 ng-class="{'active': value.hex == customize.userStick.customColor.accent.hex}">
           </label>
         </li>
       </ul>
       <header>Logo</header>
       <ul class="color-list">
         <li ng-repeat="(name, value) in customize.userStick.colors.logo">
-          <label class="btn btn-primary" ng-model="customize.userStick.customColor.logo"
-                 uib-btn-radio="'{{value.hex}}'" style="background-color: {{value.hex}}" ng-class="{'weave': name === 'Weave'}">
+          <label class="btn btn-primary" style="background-color: {{value.hex}}"
+                 ng-click="customize.updateUserStickColor('logo', value)"
+                 ng-class="{'active': value.hex == customize.userStick.customColor.logo.hex}">
           </label>
         </li>
       </ul>

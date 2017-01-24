@@ -20,12 +20,12 @@
         <g id="Pk-100">
             <g id="Page-1" transform="translate(-1.000000, -1.000000)">
                 <polygon class="svg-shaft-segment" fill="#F5F4ED" style="fill: {{customize.userStick.customColor.shaft.hex}}" points="0 53.0619 884.314 53.0619 884.314 1.4239 0 1.4239"></polygon>
-                <g class="svg-accent-segment" style="fill: {{customize.userStick.customColor.accent}}"  transform="translate(130.000000, 0.577900)" fill="#202455">
+                <g class="svg-accent-segment" style="fill: {{customize.userStick.customColor.accent.hex}}"  transform="translate(130.000000, 0.577900)" fill="#202455">
                     <path d="M26.528,0.4366 L46.588,23.1726 C49.001,25.9076 48.979,30.3646 46.54,33.0756 L28.797,52.7926 L754.314,52.9996 L754.314,0.7876 L26.528,0.4366 Z" id="Fill-4"></path>
                     <path d="M45.5933,24.0505 L24.7583,0.4355 L14.8273,0.4305 L34.9753,23.2665 C37.3583,25.9675 37.3373,30.3685 34.9273,33.0465 L17.1453,52.8075 L27.0103,52.7945 L45.5533,32.1885 C47.5293,29.9925 47.5483,26.2655 45.5933,24.0505 L45.5933,24.0505 Z" id="Fill-2"></path>
                     <path d="M33.9933,24.1329 L13.0793,0.4289 L0.6983,0.4219 L20.3963,21.8659 C23.6363,25.3939 23.6363,31.1659 20.3963,34.6939 L3.7403,52.8259 L15.3803,52.8099 L33.9533,32.1699 C35.9053,30.0019 35.9233,26.3209 33.9933,24.1329" id="Fill-6"></path>
                 </g>
-                <g class="svg-logo-segment" transform="translate(0.000000, 16.577900)" style="fill: {{customize.userStick.customColor.logo}}">
+                <g class="svg-logo-segment" transform="translate(0.000000, 16.577900)" style="fill: {{customize.userStick.customColor.logo.hex}}">
                     <polygon id="Fill-31" points="18.5978 0.7574 13.8568 0.7574 6.0728 9.3904 6.0728 11.9074 14.1648 21.6814 19.5338 21.6814 9.6718 10.5174"></polygon>
                     <polygon id="Fill-33" points="0 21.682 3.878 21.682 3.878 0.758 0 0.758"></polygon>
                     <polygon id="Fill-35" points="26.8507 3.9617 29.0457 3.9617 29.0457 21.6817 32.9227 21.6817 32.9227 0.3187 26.8507 2.3667"></polygon>
