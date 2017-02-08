@@ -1434,6 +1434,8 @@ export class checkoutComponent {
                   var error = {msg: 'Error: ' + response.data.errorMsg}
                   _this.errors = [];
                   _this.errors.push(error);
+                  console.log(response);
+                  console.log(_this.errors);
                   submit.prop("disabled", false);
                 });
               });

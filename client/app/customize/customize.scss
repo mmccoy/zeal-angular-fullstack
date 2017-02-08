@@ -50,6 +50,13 @@ section.east {
   padding: 0;
   display: flex;
   text-transform: uppercase;
+
+  &.gutter {
+    li:not(.gutter-checkout):hover {
+      background-color: #444444;
+      cursor: inherit;
+    }
+  }
 }
 
 .gutter,

@@ -1,20 +1,19 @@
 //- Flexbox layout (v2)
 aside(class="gutter {{viewClass}}")
   ul.list-nav.gutter
-    li.gutter-player(ng-class="{'active': customize.$state.includes('customize.player') || customize.$state.includes('customize.profile')}",
-                     ui-sref="customize.player")
+    li.gutter-player(ng-class="{'active': customize.$state.includes('customize.player') || customize.$state.includes('customize.profile')}")
       img(src="/assets/images/icon_player.svg", alt="Player Icon")
       span
         | Player Info
-    li.gutter-stick(ui-sref="customize.model", ui-sref-active="active")
+    li.gutter-stick(ng-class="{'active': customize.$state.includes('customize.model')}")
       img(src="/assets/images/icon_stick.svg", alt="Stick Icon")
       span
         | Pick a Stick
-    li.gutter-model(ui-sref="customize.options", ui-sref-active="active")
+    li.gutter-model(ng-class="{'active': customize.$state.includes('customize.options')}")
       img(src="/assets/images/icon_customize.svg", alt="Customize Icon")
       span
         | Customize
-    li.gutter-review(ui-sref="customize.review", ui-sref-active="active")
+    li.gutter-review(ng-class="{'active': customize.$state.includes('customize.review')}")
       img(src="/assets/images/icon_review.svg", alt="Review Icon")
       span
         | Review
