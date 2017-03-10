@@ -9,6 +9,7 @@ var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 var fs = require('fs');
 var path = require('path');
 var ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
+var nodeExternals = require('webpack-node-externals');
 
 module.exports = function makeWebpackConfig(options) {
     /**
@@ -131,15 +132,17 @@ module.exports = function makeWebpackConfig(options) {
 
     // Initialize module
     config.module = {
-        noParse: [/braintree-web/],
+        // noParse: [/braintree-web/],
         preLoaders: [],
-        loaders: [{
+        loaders: [
+        {
             // JS LOADER
             // Reference: https://github.com/babel/babel-loader
             // Transpile .js files using babel-loader
             // Compiles ES6 and ES7 into ES5 code
             test: /\.js$/,
             loader: 'babel',
+            exclude: /node_modules/,
             include: [
                 path.resolve(__dirname, 'client/'),
                 path.resolve(__dirname, 'node_modules/lodash-es/')
@@ -170,7 +173,7 @@ module.exports = function makeWebpackConfig(options) {
             // Reference: https://github.com/willyelm/pug-html-loader
             // Allow loading Pug throw js
             test: /\.(jade|pug)$/,
-            loaders: ['pug-html']
+            loaders: ['raw-loader', 'pug-html-loader']
         }, {
 
             // CSS LOADER
@@ -354,7 +357,8 @@ module.exports = function makeWebpackConfig(options) {
             cached: false,
             colors: true,
             chunk: false
-        }
+        },
+        externals: [nodeExternals()]
     };
 
     config.node = {
@@ -362,7 +366,8 @@ module.exports = function makeWebpackConfig(options) {
         process: true,
         crypto: 'empty',
         clearImmediate: false,
-        setImmediate: false
+        setImmediate: false,
+        externals: [nodeExternals()]
     };
 
     return config;

@@ -13,7 +13,7 @@ import rzModule from 'angularjs-slider';
 import 'angularjs-slider/dist/rzslider.min.css';
 // import ngMessages from 'angular-messages';
 // import ngValidationMatch from 'angular-validation-match';
-import '../bower_components/ngCart/dist/ngCart.min.js';
+import '../../bower_components/ngCart/dist/ngCart.min.js';
 
 import {
   routeConfig
