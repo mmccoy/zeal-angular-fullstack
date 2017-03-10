@@ -15,7 +15,7 @@ Stick.find({}).remove()
         "name": "PK100",
         "weight": 420,
         "series": "Primo",
-        "price": 179.99,
+        "price": 259.00,
         "description": "Our Primo PK100 is a true-one piece stick made in small batches from high grade Toray carbon. Each layer of laminate is hand rolled to ensure strength and consistency. Our mono-compression molding process improves the sticks balance.\nThe PK100 flex profile accommodates a variety of shooting styles. Whether you’re taking slap shots from the point or quick wrist shots in close to the net, you’ll be able to maximize the transfer of energy in your shot—improving shot speed and accuracy.",
         "tagline": "One-liner needed.",
         "features": {
@@ -96,7 +96,7 @@ Stick.find({}).remove()
         "name": "PK100",
         "weight": 400,
         "series": "Primo",
-        "price": 169.99,
+        "price": 249.00,
         "description": "Our Primo PK100 is a true-one piece stick made in small batches from high grade Toray carbon. Each layer of laminate is hand rolled to ensure strength and consistency. Our mono-compression molding process improves the sticks balance.\nThe PK100 flex profile accommodates a variety of shooting styles. Whether you’re taking slap shots from the point or quick wrist shots in close to the net, you’ll be able to maximize the transfer of energy in your shot—improving shot speed and accuracy.",
         "tagline": "One-liner needed.",
         "features": {
@@ -174,7 +174,7 @@ Stick.find({}).remove()
         "name": "PK100",
         "weight": 390,
         "series": "Primo",
-        "price": 159.99,
+        "price": 189.00,
         "description": "Our Primo PK100 is a true-one piece stick made in small batches from high grade Toray carbon. Each layer of laminate is hand rolled to ensure strength and consistency. Our mono-compression molding process improves the sticks balance.\nThe PK100 flex profile accommodates a variety of shooting styles. Whether you’re taking slap shots from the point or quick wrist shots in close to the net, you’ll be able to maximize the transfer of energy in your shot—improving shot speed and accuracy.",
         "tagline": "One-liner needed.",
         "features": {
@@ -251,7 +251,7 @@ Stick.find({}).remove()
         "name": "PK1000",
         "weight": 420,
         "series": "Primo",
-        "price": 189.99,
+        "price": 269.00,
         "description": "Our Primo PK1000 is a true one-piece stick. With an improved two-plate autoclave and vacuum extraction molding process, we’ve decreased stick weight by 15% without sacrificing durability.\n\nThe PK1000 is made in small batches to ensure strength and consistency. With an improved laminate structure and light weight reinforcement layers, we have created a combination of perfect balance and playability. \n\nUsing the same “wide-load” technology as the PK100, the PK1000 will maximize the transfer of energy in every shot you take.",
         "tagline": "One-liner needed.",
         "features": {
@@ -328,7 +328,7 @@ Stick.find({}).remove()
         "name": "PK1000",
         "weight": 390,
         "series": "Primo",
-        "price": 179.99,
+        "price": 259.00,
         "description": "Our Primo PK1000 is a true one-piece stick. With an improved two-plate autoclave and vacuum extraction molding process, we’ve decreased stick weight by 15% without sacrificing durability.\n\nThe PK1000 is made in small batches to ensure strength and consistency. With an improved laminate structure and light weight reinforcement layers, we have created a combination of perfect balance and playability. \n\nUsing the same “wide-load” technology as the PK100, the PK1000 will maximize the transfer of energy in every shot you take.",
         "tagline": "One-liner needed.",
         "features": {
@@ -402,7 +402,7 @@ Stick.find({}).remove()
         "name": "PK1000",
         "weight": 380,
         "series": "Primo",
-        "price": 159.99,
+        "price": 199.99,
         "description": "Our Primo PK1000 is a true one-piece stick. With an improved two-plate autoclave and vacuum extraction molding process, we’ve decreased stick weight by 15% without sacrificing durability.\n\nThe PK1000 is made in small batches to ensure strength and consistency. With an improved laminate structure and light weight reinforcement layers, we have created a combination of perfect balance and playability. \n\nUsing the same “wide-load” technology as the PK100, the PK1000 will maximize the transfer of energy in every shot you take.",
         "tagline": "One-liner needed.",
         "features": {
@@ -475,7 +475,7 @@ Stick.find({}).remove()
         "name": "K1",
         "weight": 420,
         "series": "Nova",
-        "price": 189.99,
+        "price": 269.00,
         "description": "The Nova K1 is a true one-piece construction that features a high modulus Uni-directional carbon layover. Each layer of carbon is hand-rolled in small bathes to endure the highest quality.\n\nOur unique carbon fiber structure and toughened epoxy are molded and cured to create consistent balance, shaft strength, feel, and response.\n\nThe Low-Kick shaft flex profile creates a quick release for faster shots and improved accuracy.",
         "tagline": "One-liner needed.",
         "features": {
@@ -552,7 +552,7 @@ Stick.find({}).remove()
         "name": "K1",
         "weight": 385,
         "series": "Nova",
-        "price": 189.99,
+        "price": 259.00,
         "description": "The Nova K1 is a true one-piece construction that features a high modulus Uni-directional carbon layover. Each layer of carbon is hand-rolled in small bathes to endure the highest quality.\n\nOur unique carbon fiber structure and toughened epoxy are molded and cured to create consistent balance, shaft strength, feel, and response.\n\nThe Low-Kick shaft flex profile creates a quick release for faster shots and improved accuracy.",
         "tagline": "One-liner needed.",
         "features": {
@@ -626,7 +626,7 @@ Stick.find({}).remove()
         "name": "K1",
         "weight": 365,
         "series": "Nova",
-        "price": 169.99,
+        "price": 199.00,
         "description": "The Nova K1 is a true one-piece construction that features a high modulus Uni-directional carbon layover. Each layer of carbon is hand-rolled in small bathes to endure the highest quality.\n\nOur unique carbon fiber structure and toughened epoxy are molded and cured to create consistent balance, shaft strength, feel, and response.\n\nThe Low-Kick shaft flex profile creates a quick release for faster shots and improved accuracy.",
         "tagline": "One-liner needed.",
         "features": {

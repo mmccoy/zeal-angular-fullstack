@@ -8,7 +8,8 @@
   </div>
   <div ng-show="customize.activeOption == 'orientation'" class="options-stage-section options-stage-orientation {{customize.userStick.orientation|lowercase}}">
     <h4 ng-if="!customize.userStick.orientation">Are you left or right handed?</h4>
-    <img ng-if="customize.userStick.orientation" ng-srcset="/assets/images/orientation/right.png 1x" alt="{{customize.userStick.orientation}} handed" />
+    <img ng-if="customize.userStick.orientation && customize.userStick.orientation == 'Right'" ng-srcset="/assets/images/orientation/skater_icon_right.svg 1x" alt="{{customize.userStick.orientation}} handed" />
+    <img ng-if="customize.userStick.orientation && customize.userStick.orientation == 'Left'" ng-srcset="/assets/images/orientation/skater_icon_left.svg 1x" alt="{{customize.userStick.orientation}} handed" />
   </div>
   <div ng-show="customize.activeOption == 'pattern'" class="options-stage-section options-stage-pattern">
     <div class="pattern-chart-mobile visible-xs" ng-switch="customize.userStick.pattern">

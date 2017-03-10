@@ -20,16 +20,16 @@ var environment, gateway;
 // require('dotenv').load();
 
 // Devision sandbox (Testing)
-var BT_ENVIRONMENT='Sandbox'
-var BT_MERCHANT_ID='8xckn8z7n2nbjnx3'
-var BT_PUBLIC_KEY='c33zskmxg3x2w73m'
-var BT_PRIVATE_KEY='b7e5fb979d22f37fde49b872846696c5'
+// var BT_ENVIRONMENT='Sandbox'
+// var BT_MERCHANT_ID='8xckn8z7n2nbjnx3'
+// var BT_PUBLIC_KEY='c33zskmxg3x2w73m'
+// var BT_PRIVATE_KEY='b7e5fb979d22f37fde49b872846696c5'
 
 // Zeal Production
-// var BT_ENVIRONMENT='Production'
-// var BT_MERCHANT_ID='7hhdq8qffbmmdrjc'
-// var BT_PUBLIC_KEY='8zj5dpbwf82hp9jq'
-// var BT_PRIVATE_KEY='b9321cf408ddda7d5cf559343ade2687'
+var BT_ENVIRONMENT='Production'
+var BT_MERCHANT_ID='7hhdq8qffbmmdrjc'
+var BT_PUBLIC_KEY='8zj5dpbwf82hp9jq'
+var BT_PRIVATE_KEY='b9321cf408ddda7d5cf559343ade2687'
 
 environment = BT_ENVIRONMENT.charAt(0).toUpperCase() + BT_ENVIRONMENT.slice(1);
 

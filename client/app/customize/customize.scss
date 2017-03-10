@@ -52,6 +52,22 @@ section.east {
   text-transform: uppercase;
 
   &.gutter {
+
+    li {
+      position: relative;
+      justify-content: flex-start;
+
+      span {
+        margin-top: 14px;
+      }
+
+      img {
+        position: absolute;
+        bottom: 0;
+        opacity: .8;
+      }
+    }
+
     li:not(.gutter-checkout):hover {
       background-color: #444444;
       cursor: inherit;
