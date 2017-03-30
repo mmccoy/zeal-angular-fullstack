@@ -21,9 +21,8 @@ export class OrdersComponent {
   $onInit() {
     this.$http.get('/api/checkouts/' + this.orderId)
       .then(response => {
-        console.log(response.data);
         this.order = response.data[0];
-        console.log(this.order);
+        // console.log(this.order);
       });
   }
 }
