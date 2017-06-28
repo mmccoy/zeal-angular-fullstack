@@ -113,7 +113,7 @@ function handleError(res, statusCode) {
 
 function createOrder(data, transaction) {
 
-  var client = new postmark.Client("53f7ddd2-f777-40df-b9b4-2f0db0848923");
+  var client = new postmark.Client("8c55bd59-d81a-4af9-af0c-7255866e6e3f");
 
   var stick = data.cartData.items[0]._data;
   var customerData = {};
@@ -125,7 +125,7 @@ function createOrder(data, transaction) {
   client.sendEmailWithTemplate({
     "From": "orders@zealhockey.com",
     "To": customerData.email,
-    "TemplateId": 1008382,
+    "TemplateId": 2275281,
     "TemplateModel": {
       "firstName": customerData.firstName,
       "stickModel": data.cartData.items[0]._data.name,
@@ -144,8 +144,7 @@ function createOrder(data, transaction) {
     "From": "orders@zealhockey.com",
     "To": "marc@zealhockey.com, zealhockeyorders@gmail.com, pernilla@zealhockey.com, mmccoy@gmail.com",
     // "To": "mmccoy@gmail.com", // For testing
-    "TemplateId": 1008542, // Prod Template
-    // "TemplateId": 1209141, // Test template
+    "TemplateId": 2275261, // Prod Template
     "TemplateModel": {
       "orderNumber": transaction.id,
       "stick": data.cartData.items[0]._data,
